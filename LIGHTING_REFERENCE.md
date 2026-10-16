@@ -33,4 +33,4 @@ A320 当前 55 次/分钟对应 Collins 主红灯电源 8ES455967 的 55 ± 5/mi
 - [Talon Aerospace manufacturer announcements](https://www.talonaerospace.com/news--events.html)：777 翼尖及尾部频闪，737NG/777 后向白色航行灯 STC 配置。
 - [Talon TAE1228-5 power supply](https://www.talonaerospace.com/tae1228-5-led-power-supply.html)：可通过引脚选择双闪、延迟等，说明实际改装构型存在差异。
 
-可复查结果见 `Validation/v1.5/occlusion.json`。没有足够资料支持的参数已在应用机型说明内标为模拟值。
+历史本地结果 `Validation/v1.5/occlusion.json` 保留在本地归档中，未随公开源码发布。本次验证范围见 [docs/VALIDATION.md](docs/VALIDATION.md)。没有足够资料支持的参数已在应用机型说明内标为模拟值。

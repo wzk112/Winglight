@@ -26,6 +26,8 @@ python3 scripts/assets.py verify
 
 Git tracks sources and metadata; the resource archive contains 504 large/binary
 files including meshes, BVHs, textures, original Air China XCF and GeoFS WebPs.
+It also includes the project and upstream license/attribution texts; fetch keeps
+those copies in `.build/downloads/legal` without overwriting tracked documents.
 It complements the corresponding repository source; it is not standalone source.
 
 ## Asset regeneration

@@ -4,8 +4,8 @@
   "url": "https://github.com/wzk112/Winglight/releases/download/v1.5.0/Winglight-1.5.0-assets.tar.gz",
   "archive": {
     "name": "Winglight-1.5.0-assets.tar.gz",
-    "bytes": 1100899319,
-    "sha256": "58118f26eec046a50ce753759391c9a5e5ddd6cadea48a78f146bc0785b1f72f"
+    "bytes": 1100985330,
+    "sha256": "e16818c130ab0397e8f6d2a213be3c1827fa9464b1c5bb16f85c6b0357680748"
   },
   "files": [
     {
@@ -2527,6 +2527,233 @@
       "path": "ThirdParty/GeoFS/xiamenun.webp",
       "bytes": 157672,
       "sha256": "622751dc905b3c50f02c33c85f7ec57744d180338fbd2077c7fff644f9281220"
+    }
+  ],
+  "notices": [
+    {
+      "path": "LICENSE",
+      "bytes": 18046,
+      "sha256": "db296f2f7f35bca3a174efb0eb392b3b17bd94b341851429a3dff411b1c2fc73"
+    },
+    {
+      "path": "NOTICE",
+      "bytes": 776,
+      "sha256": "ca8928e37e737e7632b6f1c2a0f15532ae7a99ef6ca392d4c89c71c59959a177"
+    },
+    {
+      "path": "THIRD_PARTY.md",
+      "bytes": 6873,
+      "sha256": "8dc60ff28934bff31590e0cd6860e571f806caa1eacc7d2222c99561092a3ee8"
+    },
+    {
+      "path": "ThirdParty/Licenses/FGMEMBERS_A350XWB/COPYING",
+      "bytes": 18007,
+      "sha256": "dcc100d4161cc0b7177545ab6e47216f84857cda3843847c792a25289852dcaa"
+    },
+    {
+      "path": "ThirdParty/Licenses/FGMEMBERS_A350XWB/README.md",
+      "bytes": 335,
+      "sha256": "8ceec317f8a9a12259b0e70048a6ad6063935e8ea2b735142f275381ab481bcd"
+    },
+    {
+      "path": "ThirdParty/Licenses/IskenderWang_787-family/Authors.md",
+      "bytes": 1229,
+      "sha256": "e2896ac05bf1d658359a4dcfbc6fb4740cd9e6d2a4d31264c7c5384ff8225c72"
+    },
+    {
+      "path": "ThirdParty/Licenses/IskenderWang_787-family/LICENSE",
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    {
+      "path": "ThirdParty/Licenses/JMaverick16_Airbus_A330/LICENSE",
+      "bytes": 18046,
+      "sha256": "db296f2f7f35bca3a174efb0eb392b3b17bd94b341851429a3dff411b1c2fc73"
+    },
+    {
+      "path": "ThirdParty/Licenses/JMaverick16_Airbus_A330/README.md",
+      "bytes": 1268,
+      "sha256": "ba22aad72af39dbad4d5ca85f6229c4d62ef188aab9bd0db9033cc32cb3ffd2b"
+    },
+    {
+      "path": "ThirdParty/Licenses/Pillow-12.3.0/LICENSE",
+      "bytes": 70307,
+      "sha256": "dda12a98c1979cf3d94df1cff45d27a4cb3f04a60c76f76902ac54cac03ec0ce"
+    },
+    {
+      "path": "ThirdParty/Licenses/YV3399_737-800YV/LICENSE",
+      "bytes": 18047,
+      "sha256": "c03cea027b4b40e4402fabd08557736727ec3d5bc54ad64ab6472de432198cad"
+    },
+    {
+      "path": "ThirdParty/Licenses/YV3399_737-800YV/README.md",
+      "bytes": 283,
+      "sha256": "6813d328fc1f7d9bb1f4fbf284933bdc97c12d1d7c8f81c2ce27a16f3b9dcaa5"
+    },
+    {
+      "path": "ThirdParty/Licenses/franck-vmd_Boeing-777-Flightgear/LICENSE",
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    {
+      "path": "ThirdParty/Licenses/franck-vmd_Boeing-777-Flightgear/README.md",
+      "bytes": 4833,
+      "sha256": "7de28742cd7e9e73f533ff308a688804ab0f9c7341c2e182611a3a28b59bbcc8"
+    },
+    {
+      "path": "ThirdParty/Licenses/inventory.json",
+      "bytes": 12498,
+      "sha256": "fa2ca7711ea869e6a4924dcab9e8df50de819ad583cf31bbe5a61735ab88fb7d"
+    },
+    {
+      "path": "ThirdParty/Licenses/kolos26_GEOFS-LiverySelector/LICENSE",
+      "bytes": 1064,
+      "sha256": "8bb461cae10785a4a15b2c520810130ca420b56f119e6860a7410f11310c7b28"
+    },
+    {
+      "path": "ThirdParty/Licenses/legoboyvdlp_A320-family/LICENSE",
+      "bytes": 18046,
+      "sha256": "db296f2f7f35bca3a174efb0eb392b3b17bd94b341851429a3dff411b1c2fc73"
+    },
+    {
+      "path": "ThirdParty/Licenses/legoboyvdlp_A320-family/README.copyright.md",
+      "bytes": 735,
+      "sha256": "bfbb9c4f50fb85a0c64d115fa5d5509d48f8beb60c039d03ea66ef96a22e6446"
+    },
+    {
+      "path": "ThirdParty/Licenses/legoboyvdlp_A320-family-liveries/LICENSE",
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    {
+      "path": "ThirdParty/Licenses/legoboyvdlp_A320-family-liveries/README.md",
+      "bytes": 2606,
+      "sha256": "04cd85443b452746aac647b43249bf8aaaaaed0bb369b3065ccdad3c69b75652"
+    },
+    {
+      "path": "ThirdParty/Licenses/mapbox-earcut-2.1.0/LICENSE.md",
+      "bytes": 938,
+      "sha256": "89ad38409121961753c5aa8863eceacd954183e9b3a7720d88be53fb1a3ecd87"
+    },
+    {
+      "path": "ThirdParty/Licenses/numpy-2.5.4/LICENSE.txt",
+      "bytes": 46826,
+      "sha256": "649a589ab31076e79e9ce62ba24eae9959598124176640dbc95f87bd10f34fcf"
+    },
+    {
+      "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/_core/include/numpy/libdivide/LICENSE.txt",
+      "bytes": 1018,
+      "sha256": "fbc539f47d0cf83bc61378080fb873d5c14630126cacbfe754035c3926daa5ec"
+    },
+    {
+      "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/_core/src/common/pythoncapi-compat/COPYING",
+      "bytes": 690,
+      "sha256": "3f2c1ffa76383a55ae0aac01c9737cd70050dff63e1f026694fbe9d662573c98"
+    },
+    {
+      "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/_core/src/highway/LICENSE",
+      "bytes": 20785,
+      "sha256": "e340270d4f64384569a91d546acb5b094d69ce47f0c015db77abb74dc6f815af"
+    },
+    {
+      "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/_core/src/multiarray/dragon4_LICENSE.txt",
+      "bytes": 1414,
+      "sha256": "f7b14309e5f54e5022b26448eefd419988ada2aec01d3c1162d84a0ea8f21f2c"
+    },
+    {
+      "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
+      "bytes": 1514,
+      "sha256": "211e7d737d6179a08f791ebb0a99897ce7cd2457410c542876d125576edfe910"
+    },
+    {
+      "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/_core/src/umath/svml/LICENSE",
+      "bytes": 1543,
+      "sha256": "c17011467b4fe6e20fbfbeda4df09e58c2bca5480a063e55735a4000a379aad9"
+    },
+    {
+      "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/fft/pocketfft/LICENSE.md",
+      "bytes": 1498,
+      "sha256": "a85ca13fdf90160b64a0698215868c13b74d835ad0a4e2ba44713b8c5058a056"
+    },
+    {
+      "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/linalg/lapack_lite/LICENSE.txt",
+      "bytes": 2266,
+      "sha256": "a14cc25e10d40a3aa705b7de2fb764a6535d8ee9b2db4e1724900585457dfd55"
+    },
+    {
+      "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/ma/LICENSE",
+      "bytes": 1593,
+      "sha256": "05f3b88351988ecfad10abe92c0c50e5875c6452d5009a0084cc291551ffcca6"
+    },
+    {
+      "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/random/LICENSE.md",
+      "bytes": 3511,
+      "sha256": "103166b62b80443afb9eb3488e052ea06be0cff566b908f199e561fde49af19f"
+    },
+    {
+      "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/random/src/distributions/LICENSE.md",
+      "bytes": 2745,
+      "sha256": "469778be8f33d54e1bcaab28c281cc472916d2d273f835e55bc487d30503face"
+    },
+    {
+      "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/random/src/mt19937/LICENSE.md",
+      "bytes": 2926,
+      "sha256": "0e111337b25494a773106695f0e799f642b8567aaacca4f116a74a8177179156"
+    },
+    {
+      "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/random/src/pcg64/LICENSE.md",
+      "bytes": 1154,
+      "sha256": "e7d4f4fb20358f314210a892ae17351e04993813646f697ec387385ca2a36918"
+    },
+    {
+      "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/random/src/philox/LICENSE.md",
+      "bytes": 1509,
+      "sha256": "6f5828a57223d4cc7f8ea505a2623e7b978b242752c1515e355f46ba2cec1800"
+    },
+    {
+      "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/random/src/sfc64/LICENSE.md",
+      "bytes": 1226,
+      "sha256": "9d4098846018319cd68e228ee6220361787f73bccbf00237a85e4fc9621b998f"
+    },
+    {
+      "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/random/src/splitmix64/LICENSE.md",
+      "bytes": 332,
+      "sha256": "268b0ca06759d31ea3ca68dd35f20e877916e927b1c2a835e4592a3c4354b1f9"
+    },
+    {
+      "path": "ThirdParty/Licenses/skogler_mapbox_earcut_python/LICENSE.md",
+      "bytes": 938,
+      "sha256": "89ad38409121961753c5aa8863eceacd954183e9b3a7720d88be53fb1a3ecd87"
+    },
+    {
+      "path": "ThirdParty/Licenses/skogler_mapbox_earcut_python/earcut-LICENSE",
+      "bytes": 738,
+      "sha256": "828f2aed51b6526881a236758ec9b08cd69928fbfc70346d9d44a0b3a3444fe1"
+    },
+    {
+      "path": "ThirdParty/Licenses/soitanen_737-800/LICENSE",
+      "bytes": 18047,
+      "sha256": "c03cea027b4b40e4402fabd08557736727ec3d5bc54ad64ab6472de432198cad"
+    },
+    {
+      "path": "ThirdParty/Licenses/soitanen_737-800/README.md",
+      "bytes": 40,
+      "sha256": "02707c8f8b2e08f33aac696f1a37d496c4c2bdf060e8d004afda8904b1e5d46d"
+    },
+    {
+      "path": "ThirdParty/Licenses/sriemmanuel787_FG-Liveries/LICENSE",
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    {
+      "path": "ThirdParty/Licenses/sriemmanuel787_FG-Liveries/README.md",
+      "bytes": 815,
+      "sha256": "433642c91ac1246510b0e17b965ce6270fedcab919f3579f71d6fde61de3326a"
+    },
+    {
+      "path": "ThirdParty/NOTICE.txt",
+      "bytes": 7921,
+      "sha256": "b9b0095353cade1c1099d471795cedc8de7f5555ef87eed27f17a66d81de28c2"
     }
   ]
 }

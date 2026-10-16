@@ -44,9 +44,14 @@ def pack(output):
     paths = sorted({p for pattern in patterns for p in ROOT.glob(pattern)})
     entries = [dict(path=p.relative_to(ROOT).as_posix(), bytes=p.stat().st_size,
                     sha256=digest(p)) for p in paths]
+    notices = sorted({ROOT / name for name in ['LICENSE', 'NOTICE', 'THIRD_PARTY.md',
+                                              'ThirdParty/NOTICE.txt']} |
+                     {p for p in (ROOT / 'ThirdParty/Licenses').rglob('*') if p.is_file()})
+    notice_entries = [dict(path=p.relative_to(ROOT).as_posix(), bytes=p.stat().st_size,
+                           sha256=digest(p)) for p in notices]
     output.parent.mkdir(parents=True, exist_ok=True)
     with tarfile.open(output, 'w:gz', compresslevel=6) as archive:
-        for path in paths:
+        for path in paths + notices:
             info = archive.gettarinfo(str(path), arcname=path.relative_to(ROOT).as_posix())
             info.uid = info.gid = info.mtime = 0
             info.uname = info.gname = ''
@@ -56,7 +61,7 @@ def pack(output):
     manifest = dict(schema=1, version='1.5.0',
                     url='https://github.com/wzk112/Winglight/releases/download/v1.5.0/' + output.name,
                     archive=dict(name=output.name, bytes=output.stat().st_size, sha256=digest(output)),
-                    files=entries)
+                    files=entries, notices=notice_entries)
     MANIFEST.write_text(json.dumps(manifest, indent=2) + '\n')
     print(f'Packed {len(entries)} resources: {output.stat().st_size:,} bytes; SHA-256 {digest(output)}')
 
@@ -76,7 +81,8 @@ def fetch(manifest, source=None):
         partial.replace(archive_path)
     if archive_path.stat().st_size != manifest['archive']['bytes'] or digest(archive_path) != manifest['archive']['sha256']:
         raise SystemExit('Archive size or checksum mismatch.')
-    expected = {entry['path']: entry for entry in manifest['files']}
+    expected = {entry['path']: entry for entry in manifest['files'] + manifest['notices']}
+    notice_paths = {entry['path'] for entry in manifest['notices']}
     seen = set()
     with tarfile.open(archive_path, 'r:gz') as archive:
         for member in archive:
@@ -86,7 +92,9 @@ def fetch(manifest, source=None):
                 raise SystemExit('Unexpected archive member: ' + name)
             if member.size != expected[name]['bytes']:
                 raise SystemExit('Unexpected resource size: ' + name)
-            destination = ROOT / name
+            # Keep the pack's notices alongside the downloaded archive; never
+            # overwrite a contributor's tracked documentation during asset fetch.
+            destination = cache / 'legal' / name if name in notice_paths else ROOT / name
             if any(p.is_symlink() for p in [destination, *destination.parents]):
                 raise SystemExit('Refusing symlink destination: ' + name)
             destination.parent.mkdir(parents=True, exist_ok=True)
