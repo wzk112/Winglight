@@ -28,6 +28,9 @@ Checks on 2026-10-16, Apple Silicon, Swift 6.4:
   All 504 resources and 45 accompanying license/attribution files were restored.
   A subsequent build and deep/strict signature check passed, with no changes to
   tracked files. This validates the published source/resource retrieval route.
+- Removed build caches and the temporary validation clone, then launched the
+  retained application again. Metal drawable/depth output and bundle signature
+  verification passed, confirming runtime resources load from the app bundle.
 
 CoreLocation previously returned `locationUnknown` on the development Mac.
 Permission/timeout unit tests cannot prove live coordinate retrieval. Manual
