@@ -3,6 +3,7 @@ using namespace metal;
 struct VertexOut { float4 position [[position]];float2 uv; };
 struct Uniforms { float2 size;float time;float environment;float4 options;float4 motion;float4 backgrounds;float4 weather;float4 lightning; };
 struct LampData { float4 geometry;float4 color;float4 info; };
+float hash21(float2 p);
 struct FlowUniforms { float4x4 mvp;float4 viewport;float4 options;float4 field;float4 silhouette;float4 silhouetteRadius;float4x4 aircraftTransform;float4 flowBounds; };
 struct FlowSegment { float4 start;float4 end; };
 struct FlowOut { float4 clip [[position]];float side;float distance;float speed;float id [[flat]]; };
@@ -156,15 +157,21 @@ fragment float4 meshFragment(MeshOut in [[stage_in]],constant MeshUniforms &u [[
     ambient=mix(ambient,mix(float3(.016,.022,.030),float3(.23,.25,.28),daylight),studio);
     float3 color=base*ambient*hemi;
     float3 sunDirection=normalize(u.sunlight.xyz);
-    float visibility=shadowVisibility(sun,u.sun,p,n);
     float direct=u.sunlight.w>0 ? smoothstep(-.0145,.06,u.conditions.w) : smoothstep(0.0,.8,u.conditions.y);
     float warmth=exp(-pow((u.conditions.y-1.0)*1.9,2));
     float3 sunColor=mix(float3(2.15,2.0,1.74),float3(1.8,.69,.25),warmth)*direct*(1-u.conditions.z)*(1-.94*u.weather.x);
-    color+=brdf(base,rough,metallic,n,v,sunDirection)*sunColor*visibility*(1-studio*.65);
+    // These terms are exactly zero outside their active lighting conditions.
+    // Preserve all samples/BRDFs when they contribute, including transitions.
+    if (direct>0 && u.conditions.z<1 && dot(n,sunDirection)>0) {
+        float visibility=shadowVisibility(sun,u.sun,p,n);
+        color+=brdf(base,rough,metallic,n,v,sunDirection)*sunColor*visibility*(1-studio*.65);
+    }
     float studioPower=mix(.16,1.0,daylight)*studio;
-    color+=brdf(base,max(rough,.22),metallic,n,v,normalize(float3(-.6,1,-.4)))*float3(2.4,2.30,2.14)*studioPower;
-    color+=brdf(base,max(rough,.28),metallic,n,v,normalize(float3(.8,.55,.3)))*float3(.80,1.05,1.36)*studioPower;
-    color+=brdf(base,max(rough,.32),metallic,n,v,normalize(float3(-.2,.5,1)))*float3(.85,.95,1.15)*studioPower;
+    if (studioPower>0) {
+        color+=brdf(base,max(rough,.22),metallic,n,v,normalize(float3(-.6,1,-.4)))*float3(2.4,2.30,2.14)*studioPower;
+        color+=brdf(base,max(rough,.28),metallic,n,v,normalize(float3(.8,.55,.3)))*float3(.80,1.05,1.36)*studioPower;
+        color+=brdf(base,max(rough,.32),metallic,n,v,normalize(float3(-.2,.5,1)))*float3(.85,.95,1.15)*studioPower;
+    }
     // Two physical point spotlights on the horizontal stabilizer, aimed at the
     // fin. Lambert/BRDF cosine, inverse-square falloff and depth-map occlusion.
     if (u.options.y>0) {
@@ -185,9 +192,11 @@ fragment float4 meshFragment(MeshOut in [[stage_in]],constant MeshUniforms &u [[
     float horizon=exp(-pow(reflection.y*3.2,2));
     float3 sky=mix(float3(.10,.15,.19),float3(.33,.53,.78),smoothstep(-.2,.6,reflection.y));
     sky=mix(sky,float3(.78,.82,.85),horizon*.65);
-    float box1=pow(max(0.0,dot(reflection,normalize(float3(-.6,1,-.4)))),18.0);
-    float box2=pow(max(0.0,dot(reflection,normalize(float3(.8,.55,.3)))),28.0);
-    sky=mix(sky,float3(.13,.16,.20)+float3(2.2,2.15,2.05)*box1+float3(1.0,1.20,1.5)*box2,studio);
+    if (studio>0) {
+        float box1=pow(max(0.0,dot(reflection,normalize(float3(-.6,1,-.4)))),18.0);
+        float box2=pow(max(0.0,dot(reflection,normalize(float3(.8,.55,.3)))),28.0);
+        sky=mix(sky,float3(.13,.16,.20)+float3(2.2,2.15,2.05)*box1+float3(1.0,1.20,1.5)*box2,studio);
+    }
     float nv=max(dot(n,v),0.0);
     float3 f0=mix(float3(part==5 ? .065 : .04),base,metallic);
     float3 fresnel=f0+(1-f0)*pow(1-nv,5);
@@ -214,16 +223,41 @@ fragment float4 meshFragment(MeshOut in [[stage_in]],constant MeshUniforms &u [[
         float3 edge=smoothstep(float3(0),fwidth(in.barycentric),in.barycentric);
         color=mix(float3(.12,.24,.29),color*.5,min(edge.x,min(edge.y,edge.z)));
     }
-    float3 reflectionFlash=base*float3(.64,.76,1.0)*u.lightning.x*(.35+.65*max(0.0,dot(n,normalize(float3(.5,1,-.3)))))*min(2.0,u.lightning.y);
+    float3 reflectionFlash=0;
+    if (u.lightning.x>0) {
+        float sourceX=.38+.46*hash21(float2(u.lightning.z,9));
+        float3 cameraDirection=normalize(u.eye.xyz);
+        float3 right=normalize(cross(float3(0,1,0),cameraDirection));
+        float3 flashDirection=normalize(float3(0,.9,0)-cameraDirection*.45+right*(sourceX-.5)*1.6);
+        // A distant flash lights the same physical materials as the sun/studio,
+        // with a small diffuse cloud-scattering fill rather than flat whitening.
+        reflectionFlash=(brdf(base,rough,metallic,n,v,flashDirection)*float3(1.15,1.30,1.55)
+            +base*float3(.035,.045,.065))*u.lightning.x*min(2.0,u.lightning.y);
+    }
     return float4(min(clamp(color,0.0,.95)+reflectionFlash,float3(u.lightning.y)),1);
 }
 vertex VertexOut sceneVertex(uint id [[vertex_id]]) {
     float2 p=float2((id<<1)&2,id&2);return {float4(p*float2(2,-2)+float2(-1,1),0,1),p};
 }
+vertex VertexOut backgroundVertex(uint id [[vertex_id]]) {
+    float2 p=float2((id<<1)&2,id&2);
+    return {float4(p*float2(2,-2)+float2(-1,1),1,1),p};
+}
 float hash21(float2 p) { return fract(sin(dot(p,float2(127.1,311.7)))*43758.5453); }
 float noise(float2 p) {
     float2 i=floor(p),f=fract(p);f=f*f*(3-2*f);
     return mix(mix(hash21(i),hash21(i+float2(1,0)),f.x),mix(hash21(i+float2(0,1)),hash21(i+1),f.x),f.y);
+}
+// Linear, multiscale offsets make angular stepped channels rather than a
+// smooth sine-wave ribbon. Repeated return strokes retain the same path.
+float lightningJitter(float t,float seed,float frequency) {
+    float cell=t*frequency,i=floor(cell);
+    return mix(hash21(float2(i,seed)),hash21(float2(i+1,seed)),fract(cell))-.5;
+}
+float lightningPath(float t,float seed,float origin) {
+    float lean=(hash21(float2(seed,27))-.5)*.18;
+    return origin+lean*t+lightningJitter(t,seed+7,11)*.075
+        +lightningJitter(t,seed+13,67)*.012;
 }
 float3 backgroundColor(float2 uv,constant Uniforms &u,int mode) {
     float2 q=(uv-.5)*float2(u.size.x/u.size.y,1);
@@ -288,26 +322,37 @@ float3 backgroundColor(float2 uv,constant Uniforms &u,int mode) {
         color=mix(color,mix(float3(.027,.039,.052),float3(.53,.59,.63),day),u.weather.z*veil);
         if (u.lightning.x>0.001) {
             float seed=u.lightning.z;
-            float x0=.50+.35*hash21(float2(seed,9));
-            float y=uv.y;
-            float path=x0+(noise(float2(y*9,seed+7))-.5)*.10+(noise(float2(y*47,seed+13))-.5)*.038;
-            float distance=abs(uv.x-path);
-            distance+=max(0.0,y-.72)*4;
+            float x0=.38+.46*hash21(float2(seed,9));
+            float top=.10+.13*hash21(float2(seed,17)),span=.43+.18*hash21(float2(seed,23));
+            float t=(uv.y-top)/span,aspect=u.size.x/u.size.y;
+            float path=lightningPath(t,seed,x0);
+            float distance=abs(uv.x-path)*aspect;
+            distance+=max(0.0,-t)*4+max(0.0,t-1)*4;
             float branchDistance=10;
-            for (int branch=0;branch<3;branch++) {
-                float originY=.16+float(branch)*.14;
-                float originX=x0+(noise(float2(originY*9,seed+7))-.5)*.10+(noise(float2(originY*47,seed+13))-.5)*.038;
-                float local=y-originY,side=branch==1 ? 1.0 : -1.0;
-                float branchX=originX+side*local*(.62+float(branch)*.2)+(noise(float2(local*50,seed+31+float(branch)))-.5)*.019*smoothstep(0.0,.04,local);
-                float d=abs(uv.x-branchX)+max(0.0,-local)*4+max(0.0,local-.13-float(branch)*.035)*4;
+            for (int branch=0;branch<4;branch++) {
+                float salt=seed+float(branch)*19;
+                float originT=.15+float(branch)*.17+hash21(float2(salt,31))*.07;
+                float originX=lightningPath(originT,seed,x0);
+                float local=t-originT,length=.13+hash21(float2(salt,37))*.18;
+                float side=hash21(float2(salt,41))>.5 ? 1 : -1;
+                float branchX=originX+side*local*(.35+hash21(float2(salt,43))*.45)
+                    +lightningJitter(local,salt+47,83)*.014*smoothstep(0.0,.035,local);
+                float d=abs(uv.x-branchX)*aspect+max(0.0,-local)*4+max(0.0,local-length)*4;
                 branchDistance=min(branchDistance,d);
             }
-            float width=max(0.0008,1.1/u.size.y);
-            float core=1-smoothstep(width,width*2.5,distance);
-            core=max(core,(1-smoothstep(width*.55,width*1.8,branchDistance))*.65);
-            float halo=exp(-distance*140)*.20+exp(-branchDistance*200)*.06;
-            float bloom=exp(-dot((uv-float2(x0,.25))*float2(1.5,1),(uv-float2(x0,.25))*float2(1.5,1))*7)*.34;
-            color+=float3(.70,.83,1)*u.lightning.x*(core*u.lightning.y+halo*min(3.0,u.lightning.y)+bloom);
+            float width=max(.00022,.75/u.size.y);
+            float core=1-smoothstep(width*.35,width*1.9,distance);
+            core=max(core,(1-smoothstep(width*.25,width*1.25,branchDistance))*.56*u.lightning.w);
+            float cloudDepth=noise(q*8.3+float2(seed*3,seed+4));
+            float transmission=mix(.16,.92,smoothstep(.24,.72,cloudDepth));
+            transmission*=smoothstep(0.0,.07,t)*(1-smoothstep(.87,1.0,t));
+            float halo=exp(-distance*680)*.12+exp(-branchDistance*950)*.035*u.lightning.w;
+            float2 glowPoint=(uv-float2(x0,top+.10))*float2(aspect,1);
+            float bloom=exp(-dot(glowPoint,glowPoint)*17)*(.22+.40*cloudDepth)*(.55+.45*coverage);
+            // Cloud scattering is broader and softer than the narrow white
+            // discharge channel; near cloud layers veil parts of that channel.
+            color+=float3(.57,.67,.86)*u.lightning.x*bloom;
+            color+=float3(.90,.95,1)*u.lightning.x*transmission*(core*u.lightning.y+halo*min(3.0,u.lightning.y));
         }
     }
     return color;
@@ -320,7 +365,10 @@ fragment float4 backgroundFragment(VertexOut in [[stage_in]],constant Uniforms &
     return float4(min(color,float3(u.lightning.y)),1);
 }
 fragment float4 copyFragment(VertexOut in [[stage_in]],texture2d<float> scene [[texture(0)]],texture2d<float> previous [[texture(1)]],constant float &blend [[buffer(0)]]) {
-    constexpr sampler s(filter::nearest);return mix(previous.sample(s,in.uv),scene.sample(s,in.uv),blend);
+    constexpr sampler s(filter::nearest);
+    float4 current=scene.sample(s,in.uv);
+    if (blend>=1) return current;
+    return mix(previous.sample(s,in.uv),current,blend);
 }
 struct FlareOut { float4 position [[position]];float2 pixel;uint lamp [[flat]]; };
 vertex FlareOut flareVertex(uint id [[vertex_id]],uint instance [[instance_id]],constant Uniforms &u [[buffer(0)]],constant LampData *lamps [[buffer(1)]]) {

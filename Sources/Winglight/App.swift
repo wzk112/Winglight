@@ -1,4 +1,5 @@
 import AppKit
+import Darwin
 import SwiftUI
 import WinglightCore
 
@@ -22,6 +23,14 @@ import WinglightCore
         let args = CommandLine.arguments
         func value(_ flag: String) -> String? {
             guard let i = args.firstIndex(of:flag), args.indices.contains(i+1) else { return nil }; return args[i+1]
+        }
+        if let directory=value("--audit-performance") {
+            NSApp.setActivationPolicy(.prohibited)
+            Task {
+                let success=await PerformanceAudit.run(directory:directory,frames:Int(value("--audit-frames") ?? "120") ?? 120,filter:value("--audit-filter"))
+                exit(success ? 0 : 1)
+            }
+            return
         }
         if let directory=value("--audit-flow") { FlowAudit.run(directory:directory);NSApp.terminate(nil);return }
         if let directory=value("--audit-lights") { LightingAudit.run(directory:directory);NSApp.terminate(nil);return }

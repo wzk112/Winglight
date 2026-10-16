@@ -60,6 +60,7 @@ struct MeshUniforms {
         let visible = window?.occlusionState.contains(.visible) ?? false
         preferredFramesPerSecond = min(s.quality.fps,window?.screen?.maximumFramesPerSecond ?? 60)
         let continuous=s.active && visible && !NSApp.isHidden
+        if isPaused == continuous { (delegate as? Renderer)?.lastFrame=0 }
         // Use either display-link drawing or demand drawing, never both.
         enableSetNeedsDisplay = !continuous
         isPaused = !continuous
@@ -102,7 +103,8 @@ struct AircraftStage: NSViewRepresentable {
         view.renderSubscription=state.renderRequests.sink { [weak view] _ in view?.scheduleRendering() }
         view.colorPixelFormat = .rgba16Float
         view.colorspace = CGColorSpace(name:CGColorSpace.extendedLinearSRGB)
-        view.framebufferOnly = false;view.autoResizeDrawable = false
+        // Only the explicit QA readback copies pixels out of the drawable.
+        view.framebufferOnly = state.qaOutput == nil;view.autoResizeDrawable = false
         view.enableSetNeedsDisplay = true;view.isPaused = true
         view.setAccessibilityLabel("三维飞机：拖动旋转，滚动缩放，双击复位")
         context.coordinator.configure(view);view.delegate = context.coordinator
@@ -159,6 +161,7 @@ struct AircraftStage: NSViewRepresentable {
     var lastDisplayUpdate = 0.0
     var gpuTimings = [Double](), frameTimes = [Double](),cpuTimings = [Double]()
     var lastFrame = 0.0, perfSaved = false
+    var auditHeadroom: Double?
     init(state: AppState) { self.state = state }
     func configure(_ view: MTKView) {
         guard let device = view.device else { state.rendererError = "此设备没有可用的 Metal 渲染器。";return }
@@ -184,14 +187,14 @@ struct AircraftStage: NSViewRepresentable {
             shadowPipeline = try make("shadowVertex",nil,1,true,false)
             for samples in [1,2,4] where device.supportsTextureSampleCount(samples) {
                 meshPipelines[samples] = try make("meshVertex","meshFragment",samples,true)
-                backgroundPipelines[samples] = try make("sceneVertex","backgroundFragment",samples,true)
+                backgroundPipelines[samples] = try make("backgroundVertex","backgroundFragment",samples,true)
                 flowPipelines[samples] = try make("flowVertex","flowFragment",samples,true)
                 rainPipelines[samples] = try make("rainVertex","rainFragment",samples,true)
             }
             let dd = MTLDepthStencilDescriptor();dd.depthCompareFunction = .lessEqual;dd.isDepthWriteEnabled = true
             depthState = device.makeDepthStencilState(descriptor:dd)
             dd.isDepthWriteEnabled = false;flowDepth = device.makeDepthStencilState(descriptor:dd)
-            dd.depthCompareFunction = .always;dd.isDepthWriteEnabled = false
+            dd.depthCompareFunction = .lessEqual;dd.isDepthWriteEnabled = false
             backgroundDepth = device.makeDepthStencilState(descriptor:dd)
             let loader = MTKTextureLoader(device:device)
             for name in ["Fuse-Main-Normal","Engine-CFM56-Normal"] {
@@ -359,7 +362,8 @@ struct AircraftStage: NSViewRepresentable {
         guard let device = view.device, let composite, let flarePipeline, let shadowPipeline, let meshPipeline = meshPipelines[samples], let backgroundPipeline = backgroundPipelines[samples], let queue,
               let (vertices,vertexCount) = models[state.assetID], view.bounds.width > 20, view.bounds.height > 20 else { return nil }
         let now = CACurrentMediaTime(), screen = view.window?.screen ?? NSScreen.main
-        let current = Double(screen?.maximumExtendedDynamicRangeColorComponentValue ?? 1)
+        let current = auditHeadroom ?? Double(screen?.maximumExtendedDynamicRangeColorComponentValue ?? 1)
+        let lightning=StormLighting.sample(time:state.backgroundTime,strength:state.weatherValue.w,headroom:current,hdr:state.hdr,reduceMotion:NSWorkspace.shared.accessibilityDisplayShouldReduceMotion)
         if now-lastDisplayUpdate > 1 {
             lastDisplayUpdate = now
             DispatchQueue.main.async { [weak self] in self?.state.updateDisplay(screen) }
@@ -406,7 +410,6 @@ struct AircraftStage: NSViewRepresentable {
         let sunChanged = simd_distance(sunDirection,shadowSun)>0.002 || shadowAircraft != state.assetID
         if sunChanged { shadowSun = sunDirection }
         let matrices = lightMatrices(sunDirection:shadowSun)
-        let lightning=StormLighting.sample(time:state.backgroundTime,strength:state.weatherValue.w,headroom:current,hdr:state.hdr,reduceMotion:NSWorkspace.shared.accessibilityDisplayShouldReduceMotion)
         var meshUniforms = MeshUniforms(mvp:mvp,eye:SIMD4(eye,1),options:SIMD4(state.auditUnlit ? 2 : (state.wireframe ? 1 : 0),state.settings.logo ? 1 : 0,!state.livery.isNeutral && loadedLivery.aircraft == state.settings.aircraft.rawValue ? (loadedLivery.engineTexture == nil ? 1 : 2) : 0,state.settings.aircraft.isWidebody ? 2 : (state.settings.aircraft == .airbus ? 0 : 1)),conditions:SIMD4(Float(state.flightTime),state.environmentValue,state.backgroundWeights.z,state.sunDirection.y),sunlight:SIMD4(sunDirection,state.solar.followsClock && state.solar.position != nil ? 1 : 0),engineGeometry:SIMD4(Float(state.sceneGeometry.engineXY[0]),Float(state.sceneGeometry.engineXY[1]),state.backgroundWeights.w,0),logoSource:SIMD4(SIMD3<Float>(state.sceneGeometry.point("logo")),1),logoTarget:SIMD4(SIMD3<Float>(state.sceneGeometry.point("logoTarget")),1),shadow0:matrices[0],shadow1:matrices[1],sun:matrices[2],weather:state.weatherValue,surface:SIMD4(state.cabinLights ? 1 : 0,windowMask == nil ? 0 : 1,Float(state.backgroundTime),NSWorkspace.shared.accessibilityDisplayShouldReduceMotion ? 1 : 0),lightning:lightning)
         var u = GPUUniforms(size:SIMD2(Float(w),Float(h)),time:Float(state.backgroundTime),environment:state.environmentValue,options:SIMD4(state.backdrop.index,state.grid && !state.focus ? 1 : 0,Float(Lighting.peak(headroom:current,hdr:state.hdr,strength:state.strength)),Float(state.glow)),motion:SIMD4(Float(state.motionIntensity),0,0,NSWorkspace.shared.accessibilityDisplayShouldReduceMotion ? 1 : 0),backgrounds:state.backgroundWeights,weather:state.weatherValue,lightning:lightning)
         // Aircraft, lights and shadow maps share model space. Whole-airframe motion
@@ -434,9 +437,6 @@ struct AircraftStage: NSViewRepresentable {
         scenePass.depthAttachment.depthResolveFilter = .min;scenePass.depthAttachment.clearDepth = 1
         if let enc = buffer.makeRenderCommandEncoder(descriptor:scenePass) {
             enc.label = "MSAA environment and aircraft"
-            enc.setRenderPipelineState(backgroundPipeline);enc.setDepthStencilState(backgroundDepth)
-            enc.setFragmentBytes(&u,length:MemoryLayout<GPUUniforms>.stride,index:0)
-            enc.drawPrimitives(type:.triangle,vertexStart:0,vertexCount:3)
             enc.setRenderPipelineState(meshPipeline);enc.setDepthStencilState(depthState);enc.setCullMode(.none)
             enc.setVertexBuffer(vertices,offset:0,index:0)
             enc.setVertexBytes(&meshUniforms,length:MemoryLayout<MeshUniforms>.stride,index:1)
@@ -448,6 +448,11 @@ struct AircraftStage: NSViewRepresentable {
             enc.setFragmentTexture(windowMask ?? fallbackTexture,index:24)
             enc.setFragmentSamplerState(textureSampler,index:0)
             enc.drawPrimitives(type:.triangle,vertexStart:0,vertexCount:vertexCount)
+            // Shade the far background only at uncovered MSAA samples. Keep it
+            // before blended flow/rain so their original composition is intact.
+            enc.setRenderPipelineState(backgroundPipeline);enc.setDepthStencilState(backgroundDepth)
+            enc.setFragmentBytes(&u,length:MemoryLayout<GPUUniforms>.stride,index:0)
+            enc.drawPrimitives(type:.triangle,vertexStart:0,vertexCount:3)
             if state.backgroundWeights.y > 0.001,let pipeline = flowPipelines[samples],let (lines,count) = flows[state.assetID] {
                 var flow = FlowUniforms(mvp:framing*cameraMVP,viewport:SIMD4(Float(w),Float(h),Float(backing)*0.72,Float(Airflow.samples)),options:SIMD4(Float(state.backgroundTime),state.environmentValue,Float(state.motionIntensity),state.backgroundWeights.y),field:SIMD4(Float(state.settings.aircraft.length/39.47),0.26,0,0))
                 func pixel(_ p: SIMD3<Float>) -> SIMD2<Float> {
@@ -501,7 +506,9 @@ struct AircraftStage: NSViewRepresentable {
                 visibilityCache[lamp.id]=visibility
             }
             let occluded = visibility == 0
-            diagnostics.append(["rayOccluded":occluded,"visibleFraction":Double(visibility),"id":lamp.id,"x":Double(screenPoint.x),"y":Double(screenPoint.y),"depth":Double(ndc.z),"depthTolerance":Double(tolerance),"angularGain":angular,"pulse":lamp.intensity,"preOcclusionIntensity":intensity])
+            if state.qaOutput != nil {
+                diagnostics.append(["rayOccluded":occluded,"visibleFraction":Double(visibility),"id":lamp.id,"x":Double(screenPoint.x),"y":Double(screenPoint.y),"depth":Double(ndc.z),"depthTolerance":Double(tolerance),"angularGain":angular,"pulse":lamp.intensity,"preOcclusionIntensity":intensity])
+            }
             return GPULamp(geometry:SIMD4(screenPoint.x,screenPoint.y,Float(pixelRadius),Float(intensity)*visibility),color:SIMD4(lamp.rgb,1),info:SIMD4(flash ? 1 : 0,occluded ? 1 : 0,ndc.z,tolerance))
         }
         if let enc = buffer.makeRenderCommandEncoder(descriptor:pass) {
@@ -553,6 +560,8 @@ struct AircraftStage: NSViewRepresentable {
             }
         }
         if state.perfOutput != nil && !perfSaved && frames > 30 {
+            // A covered/hidden window deliberately pauses its display link.
+            // Do not count that idle interval as a rendered frame duration.
             if lastFrame > 0 { frameTimes.append((now-lastFrame)*1000) };cpuTimings.append((CACurrentMediaTime()-cpuStart)*1000)
             buffer.addCompletedHandler { [weak self] cb in
                 let gpuMS = (cb.gpuEndTime-cb.gpuStartTime)*1000

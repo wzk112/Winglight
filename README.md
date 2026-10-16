@@ -63,6 +63,7 @@ python3 -m venv .venv
 ```
 
 参阅 [开发与复现](docs/DEVELOPMENT.md)、[验证记录](docs/VALIDATION.md) 和 [更新记录](CHANGELOG.md)。
+本地 1.5.1 的优化、画面对比与闪电调整见 [性能记录](docs/PERFORMANCE.md)。
 
 ## 开源与致谢
 

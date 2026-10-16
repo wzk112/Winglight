@@ -1,0 +1,419 @@
+{
+  "device": "Apple M5 Pro",
+  "width": 4720,
+  "height": 3280,
+  "framesPerScene": 300,
+  "headroom": 6,
+  "baselineCommit": "99093f5",
+  "baseline": [
+    {
+      "cpuMeanMS": 0.09434180722261469,
+      "cpuP95MS": 0.13208342716097832,
+      "device": "Apple M5 Pro",
+      "frames": 300,
+      "gpuMeanMS": 4.878482498849432,
+      "gpuP95MS": 5.418624961748719,
+      "headroom": 6,
+      "height": 3280,
+      "samples": 4,
+      "scene": "a320-clouds-day",
+      "width": 4720
+    },
+    {
+      "cpuMeanMS": 0.11187652708031237,
+      "cpuP95MS": 0.15045830514281988,
+      "device": "Apple M5 Pro",
+      "frames": 300,
+      "gpuMeanMS": 4.9143897245327635,
+      "gpuP95MS": 5.411250051110983,
+      "headroom": 6,
+      "height": 3280,
+      "samples": 4,
+      "scene": "a320-clouds-night",
+      "width": 4720
+    },
+    {
+      "cpuMeanMS": 0.10770319495350122,
+      "cpuP95MS": 0.15204166993498802,
+      "device": "Apple M5 Pro",
+      "frames": 300,
+      "gpuMeanMS": 3.817124027215565,
+      "gpuP95MS": 4.225000040605664,
+      "headroom": 6,
+      "height": 3280,
+      "samples": 4,
+      "scene": "a320-flow-day",
+      "width": 4720
+    },
+    {
+      "cpuMeanMS": 0.08099403271141152,
+      "cpuP95MS": 0.11083332356065512,
+      "device": "Apple M5 Pro",
+      "frames": 300,
+      "gpuMeanMS": 2.3834012472070754,
+      "gpuP95MS": 2.819749992340803,
+      "headroom": 6,
+      "height": 3280,
+      "samples": 4,
+      "scene": "a320-studio-day",
+      "width": 4720
+    },
+    {
+      "cpuMeanMS": 0.11097902703719835,
+      "cpuP95MS": 0.15479163266718388,
+      "device": "Apple M5 Pro",
+      "frames": 300,
+      "gpuMeanMS": 4.936909996516381,
+      "gpuP95MS": 5.550083355046809,
+      "headroom": 6,
+      "height": 3280,
+      "samples": 4,
+      "scene": "a320-storm-night",
+      "width": 4720
+    },
+    {
+      "cpuMeanMS": 0.09050305428293844,
+      "cpuP95MS": 0.12058333959430456,
+      "device": "Apple M5 Pro",
+      "frames": 300,
+      "gpuMeanMS": 3.0609417970602713,
+      "gpuP95MS": 3.5234999377280474,
+      "headroom": 6,
+      "height": 3280,
+      "samples": 4,
+      "scene": "a320-stars",
+      "width": 4720
+    },
+    {
+      "cpuMeanMS": 0.07291402861786385,
+      "cpuP95MS": 0.10850001126527786,
+      "device": "Apple M5 Pro",
+      "frames": 300,
+      "gpuMeanMS": 2.3959048631756255,
+      "gpuP95MS": 2.8552082367241383,
+      "headroom": 6,
+      "height": 3280,
+      "samples": 4,
+      "scene": "a320-wireframe",
+      "width": 4720
+    },
+    {
+      "cpuMeanMS": 0.09357985846387844,
+      "cpuP95MS": 0.11070840992033482,
+      "device": "Apple M5 Pro",
+      "frames": 300,
+      "gpuMeanMS": 3.4581290274703256,
+      "gpuP95MS": 3.7842500023543835,
+      "headroom": 6,
+      "height": 3280,
+      "samples": 4,
+      "scene": "b777-flow-night",
+      "width": 4720
+    },
+    {
+      "cpuMeanMS": 0.08747055777348578,
+      "cpuP95MS": 0.11499994434416294,
+      "device": "Apple M5 Pro",
+      "frames": 300,
+      "gpuMeanMS": 4.6300212588782115,
+      "gpuP95MS": 5.075749941170216,
+      "headroom": 6,
+      "height": 3280,
+      "samples": 2,
+      "scene": "a320-2x-msaa",
+      "width": 4720
+    }
+  ],
+  "final": [
+    {
+      "cpuMeanMS": 0.08125916821882129,
+      "cpuP95MS": 0.1007916871458292,
+      "device": "Apple M5 Pro",
+      "frames": 300,
+      "gpuMeanMS": 4.5192138873972,
+      "gpuP95MS": 4.978375043720007,
+      "headroom": 6,
+      "height": 3280,
+      "samples": 4,
+      "scene": "a320-clouds-day",
+      "width": 4720
+    },
+    {
+      "cpuMeanMS": 0.08499541785567999,
+      "cpuP95MS": 0.11437502689659595,
+      "device": "Apple M5 Pro",
+      "frames": 300,
+      "gpuMeanMS": 4.400959862784172,
+      "gpuP95MS": 4.808750003576279,
+      "headroom": 6,
+      "height": 3280,
+      "samples": 4,
+      "scene": "a320-clouds-night",
+      "width": 4720
+    },
+    {
+      "cpuMeanMS": 0.0903099961578846,
+      "cpuP95MS": 0.1292083179578185,
+      "device": "Apple M5 Pro",
+      "frames": 300,
+      "gpuMeanMS": 3.5529859752083817,
+      "gpuP95MS": 3.9920000126585364,
+      "headroom": 6,
+      "height": 3280,
+      "samples": 4,
+      "scene": "a320-flow-day",
+      "width": 4720
+    },
+    {
+      "cpuMeanMS": 0.0821484683547169,
+      "cpuP95MS": 0.10649999603629112,
+      "device": "Apple M5 Pro",
+      "frames": 300,
+      "gpuMeanMS": 2.289075968631854,
+      "gpuP95MS": 2.7484166203066707,
+      "headroom": 6,
+      "height": 3280,
+      "samples": 4,
+      "scene": "a320-studio-day",
+      "width": 4720
+    },
+    {
+      "cpuMeanMS": 0.09431347212133308,
+      "cpuP95MS": 0.14100002590566874,
+      "device": "Apple M5 Pro",
+      "frames": 300,
+      "gpuMeanMS": 4.509696115662034,
+      "gpuP95MS": 4.878000007010996,
+      "headroom": 6,
+      "height": 3280,
+      "samples": 4,
+      "scene": "a320-storm-night",
+      "width": 4720
+    },
+    {
+      "cpuMeanMS": 0.07405736017972231,
+      "cpuP95MS": 0.11633336544036865,
+      "device": "Apple M5 Pro",
+      "frames": 300,
+      "gpuMeanMS": 2.7615018060896546,
+      "gpuP95MS": 3.157083410769701,
+      "headroom": 6,
+      "height": 3280,
+      "samples": 4,
+      "scene": "a320-stars",
+      "width": 4720
+    },
+    {
+      "cpuMeanMS": 0.06612860675280292,
+      "cpuP95MS": 0.0931665999814868,
+      "device": "Apple M5 Pro",
+      "frames": 300,
+      "gpuMeanMS": 2.338122225676974,
+      "gpuP95MS": 2.761041629128158,
+      "headroom": 6,
+      "height": 3280,
+      "samples": 4,
+      "scene": "a320-wireframe",
+      "width": 4720
+    },
+    {
+      "cpuMeanMS": 0.08687958392935495,
+      "cpuP95MS": 0.10679173283278942,
+      "device": "Apple M5 Pro",
+      "frames": 300,
+      "gpuMeanMS": 3.1959840251753726,
+      "gpuP95MS": 3.527583321556449,
+      "headroom": 6,
+      "height": 3280,
+      "samples": 4,
+      "scene": "b777-flow-night",
+      "width": 4720
+    },
+    {
+      "cpuMeanMS": 0.09362361083428065,
+      "cpuP95MS": 0.13666669838130474,
+      "device": "Apple M5 Pro",
+      "frames": 300,
+      "gpuMeanMS": 4.4693108306576805,
+      "gpuP95MS": 4.852874903008342,
+      "headroom": 6,
+      "height": 3280,
+      "samples": 2,
+      "scene": "a320-2x-msaa",
+      "width": 4720
+    }
+  ],
+  "imageComparison": [
+    {
+      "scene": "a320-clouds-day",
+      "gpuBeforeMS": 4.878482498849432,
+      "gpuAfterMS": 4.5192138873972,
+      "gpuPercentSaved": 7.3643517535824765,
+      "cpuBeforeMS": 0.09434180722261469,
+      "cpuAfterMS": 0.08125916821882129,
+      "maxAbsoluteDifference": 0.00048828125,
+      "changedChannels": 56,
+      "rmse": 3.3229299551931275e-07,
+      "nonfiniteChannels": 0,
+      "peaks": [
+        6.0,
+        6.0
+      ],
+      "aboveSDRChannels": [
+        60924,
+        60924
+      ],
+      "passed": true
+    },
+    {
+      "scene": "a320-clouds-night",
+      "gpuBeforeMS": 4.9143897245327635,
+      "gpuAfterMS": 4.400959862784172,
+      "gpuPercentSaved": 10.44747955550891,
+      "cpuBeforeMS": 0.11187652708031237,
+      "cpuAfterMS": 0.08499541785567999,
+      "maxAbsoluteDifference": 0.0,
+      "changedChannels": 0,
+      "rmse": 0.0,
+      "nonfiniteChannels": 0,
+      "peaks": [
+        6.0,
+        6.0
+      ],
+      "aboveSDRChannels": [
+        5812,
+        5812
+      ],
+      "passed": true
+    },
+    {
+      "scene": "a320-flow-day",
+      "gpuBeforeMS": 3.817124027215565,
+      "gpuAfterMS": 3.5529859752083817,
+      "gpuPercentSaved": 6.919818431990043,
+      "cpuBeforeMS": 0.10770319495350122,
+      "cpuAfterMS": 0.0903099961578846,
+      "maxAbsoluteDifference": 0.00048828125,
+      "changedChannels": 56,
+      "rmse": 3.3236087679756664e-07,
+      "nonfiniteChannels": 0,
+      "peaks": [
+        6.0,
+        6.0
+      ],
+      "aboveSDRChannels": [
+        47318,
+        47318
+      ],
+      "passed": true
+    },
+    {
+      "scene": "a320-studio-day",
+      "gpuBeforeMS": 2.3834012472070754,
+      "gpuAfterMS": 2.289075968631854,
+      "gpuPercentSaved": 3.9575912232887367,
+      "cpuBeforeMS": 0.08099403271141152,
+      "cpuAfterMS": 0.0821484683547169,
+      "maxAbsoluteDifference": 0.00048828125,
+      "changedChannels": 93,
+      "rmse": 4.816514510743037e-07,
+      "nonfiniteChannels": 0,
+      "peaks": [
+        6.0,
+        6.0
+      ],
+      "aboveSDRChannels": [
+        48511,
+        48511
+      ],
+      "passed": true
+    },
+    {
+      "scene": "a320-stars",
+      "gpuBeforeMS": 3.0609417970602713,
+      "gpuAfterMS": 2.7615018060896546,
+      "gpuPercentSaved": 9.78260975946027,
+      "cpuBeforeMS": 0.09050305428293844,
+      "cpuAfterMS": 0.07405736017972231,
+      "maxAbsoluteDifference": 0.0,
+      "changedChannels": 0,
+      "rmse": 0.0,
+      "nonfiniteChannels": 0,
+      "peaks": [
+        6.0,
+        6.0
+      ],
+      "aboveSDRChannels": [
+        5781,
+        5781
+      ],
+      "passed": true
+    },
+    {
+      "scene": "a320-wireframe",
+      "gpuBeforeMS": 2.3959048631756255,
+      "gpuAfterMS": 2.338122225676974,
+      "gpuPercentSaved": 2.4117250391179623,
+      "cpuBeforeMS": 0.07291402861786385,
+      "cpuAfterMS": 0.06612860675280292,
+      "maxAbsoluteDifference": 0.000244140625,
+      "changedChannels": 27,
+      "rmse": 1.3449654079937804e-07,
+      "nonfiniteChannels": 0,
+      "peaks": [
+        6.0,
+        6.0
+      ],
+      "aboveSDRChannels": [
+        39050,
+        39050
+      ],
+      "passed": true
+    },
+    {
+      "scene": "b777-flow-night",
+      "gpuBeforeMS": 3.4581290274703256,
+      "gpuAfterMS": 3.1959840251753726,
+      "gpuPercentSaved": 7.5805442831239915,
+      "cpuBeforeMS": 0.09357985846387844,
+      "cpuAfterMS": 0.08687958392935495,
+      "maxAbsoluteDifference": 0.0,
+      "changedChannels": 0,
+      "rmse": 0.0,
+      "nonfiniteChannels": 0,
+      "peaks": [
+        5.3125,
+        5.3125
+      ],
+      "aboveSDRChannels": [
+        1359,
+        1359
+      ],
+      "passed": true
+    },
+    {
+      "scene": "a320-2x-msaa",
+      "gpuBeforeMS": 4.6300212588782115,
+      "gpuAfterMS": 4.4693108306576805,
+      "gpuPercentSaved": 3.471051626649957,
+      "cpuBeforeMS": 0.08747055777348578,
+      "cpuAfterMS": 0.09362361083428065,
+      "maxAbsoluteDifference": 0.00048828125,
+      "changedChannels": 55,
+      "rmse": 3.3102367816931364e-07,
+      "nonfiniteChannels": 0,
+      "peaks": [
+        6.0,
+        6.0
+      ],
+      "aboveSDRChannels": [
+        60913,
+        60913
+      ],
+      "passed": true
+    }
+  ],
+  "shaderSHA256": "c3c3dece0be5afecd50e50937abb764907586eb73e5ada2ce3d6ccd60deea080",
+  "rendererSHA256": "9adb58dfa5699c88c5a482911f83bed6cf1afc6f385613a22164f14d27bc37f5",
+  "note": "Lightning was intentionally redesigned after the performance-only comparison. The final storm image is assessed separately; its timing includes both changes."
+}

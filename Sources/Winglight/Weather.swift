@@ -21,12 +21,23 @@ enum SceneWeather: String,CaseIterable,Identifiable {
 enum StormLighting {
     static func sample(time: Double,strength: Float,headroom: Double,hdr: Bool,reduceMotion: Bool) -> SIMD4<Float> {
         let period=11.7,cycle=floor(max(0,time)/period),phase=max(0,time)-cycle*period
+        // Stable within one flash; event timing varies between weather cycles.
+        func random(_ salt: Double) -> Double {
+            let x=sin(cycle*127.1+salt*311.7)*43758.5453
+            return x-floor(x)
+        }
+        let start=3.2+(cycle == 0 ? 0 : (random(1)-0.5)*1.4)
         func pulse(_ start: Double,_ duration: Double) -> Double {
             guard phase>=start && phase<start+duration else { return 0 }
-            let t=(phase-start)/duration
-            return min(1,t/0.08)*pow(1-t,0.55)
+            let elapsed=phase-start,t=elapsed/duration
+            let tail=max(0,min(1,(1-t)/0.30))
+            return min(1,elapsed/0.0015)*exp(-elapsed/0.05)*tail*tail*(3-2*tail)
         }
-        let amplitude=reduceMotion ? 0 : (pulse(3.2,0.085)+pulse(3.37,0.13)*0.82)*Double(strength)
-        return SIMD4(Float(amplitude),Float(hdr ? max(1,min(headroom,12)) : 1),Float(cycle),0)
+        let initial=pulse(start,0.050)
+        let returns=pulse(start+0.105+random(2)*0.025,0.038)*0.78
+            + pulse(start+0.205+random(3)*0.035,0.032)*(0.38+random(4)*0.22)
+        let amplitude=reduceMotion ? 0 : (initial+returns)*Double(max(0,min(1,strength)))
+        // Subsequent return strokes reuse the channel, with much fainter branches.
+        return SIMD4(Float(amplitude),Float(hdr ? max(1,min(headroom,12)) : 1),Float(cycle),initial>0 ? 1 : 0.10)
     }
 }
