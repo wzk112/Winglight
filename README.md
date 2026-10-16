@@ -5,6 +5,22 @@
 Native macOS aircraft-light visualizer built with SwiftUI, AppKit, and Metal.
 GPL v2; bundled artwork retains its upstream license and attribution.
 
+## 下载 1.5.1
+
+[发布页与更新说明](https://github.com/wzk112/Winglight/releases/tag/v1.5.1) ·
+[macOS Apple Silicon 完整应用 ZIP](https://github.com/wzk112/Winglight/releases/download/v1.5.1/Winglight-1.5.1-macOS-arm64.zip) ·
+[SHA-256 校验文件](https://github.com/wzk112/Winglight/releases/download/v1.5.1/SHA256SUMS.txt)
+
+需要 **macOS 15+ 和 Apple Silicon**。解压后将 `Winglight.app` 拖到「应用程序」。
+应用已内置全部运行资源，直接运行无需另下资源包。
+此版本使用 Apple Development 签名，**未做 Developer ID 公证**；macOS
+可能要求在「系统设置 → 隐私与安全性」确认允许打开。也可按下文从源码构建。
+
+1.5.1 在保留分辨率、MSAA、模型、粒子数量和 HDR 上限的前提下减少重复渲染；
+开发机六个代表场景的 GPU 时间降低约 4.0–10.4%，不等同于各设备的帧率或续航增幅。
+闪电更新为细折线主通道、不规则分支、局部云层照明及多次回击。
+详见 [更新记录](CHANGELOG.md) 和 [性能与画面对比](docs/PERFORMANCE.md)。
+
 ## 从源码运行
 
 需要 macOS 15+、Xcode（Swift 6 与 Apple Metal Toolchain）及 Python 3。
@@ -13,19 +29,21 @@ macOS 26+ 使用原生 Liquid Glass，较早系统使用材质回退。
 ```sh
 git clone https://github.com/wzk112/Winglight.git
 cd Winglight
+git checkout v1.5.1
 python3 scripts/assets.py fetch
 ./scripts/build.sh
 open dist/Winglight.app
 ```
 
-模型和贴图以约 1.1 GB 的 [Release 资源包](https://github.com/wzk112/Winglight/releases/tag/v1.5.0)单独提供；解压后约 2.6 GB。
+模型和贴图以约 1.1 GB 的 [1.5.0 资源包](https://github.com/wzk112/Winglight/releases/download/v1.5.0/Winglight-1.5.0-assets.tar.gz)单独提供；解压后约 2.6 GB。
+**1.5.1 未改变这些资源，继续使用同一份不可变资源包**；下载脚本已指定其版本和哈希。
 下载脚本仅使用 Python 标准库，校验压缩包及全部 504 个文件的 SHA-256。
 资源准备完成后，构建和运行无需联网；常规构建无需安装 Python 第三方包。
 GitHub 自动源码 ZIP 不含大文件，仍须运行下载命令。
 
 默认输出 `dist/Winglight.app`，采用临时签名。`BUILD_DIR`、`APP_PATH` 和
 `SIGNING_IDENTITY` 可设置本地输出及签名，不需要提交证书或账号凭据。
-本仓库发布源码和资源包，不提供已公证的安装程序。
+GitHub 同时提供完整应用 ZIP；当前没有已公证的安装程序。
 
 ## 使用
 
@@ -63,7 +81,7 @@ python3 -m venv .venv
 ```
 
 参阅 [开发与复现](docs/DEVELOPMENT.md)、[验证记录](docs/VALIDATION.md) 和 [更新记录](CHANGELOG.md)。
-本地 1.5.1 的优化、画面对比与闪电调整见 [性能记录](docs/PERFORMANCE.md)。
+1.5.1 的优化、画面对比与闪电调整见 [性能记录](docs/PERFORMANCE.md)。
 
 ## 开源与致谢
 

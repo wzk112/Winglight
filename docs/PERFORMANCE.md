@@ -1,8 +1,9 @@
 # Performance and lightning update — 2026-10-16
 
-Local application: **1.5.1, build 10**. Original Apple Development identity and
-bundle identifier retained. The previous installed application is backed up
-outside the source tree.
+Release application: **1.5.1, build 10**, macOS 15+, Apple Silicon. Original Apple
+Development identity and bundle identifier retained. This signature is not a
+Developer ID notarization. Release files and corresponding-source instructions
+are on the [1.5.1 release page](https://github.com/wzk112/Winglight/releases/tag/v1.5.1).
 
 ## Changes
 

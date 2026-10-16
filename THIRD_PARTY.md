@@ -8,6 +8,18 @@ permission to use later GPL versions where stated upstream.
 [Package.swift](Package.swift) declares no external Swift packages.
 FlightGear's engine is not linked; its community projects provide model and artwork data.
 
+## Release 1.5.1
+
+The performance and lightning update adds no third-party dependency, model or
+texture. The application includes this inventory, the full GPL v2 text, project
+notices and all 40 upstream license/attribution evidence files (plus their inventory) under
+`Contents/Resources/Legal`. Its corresponding source is the `v1.5.1` Git tag
+together with the unchanged, checksummed `Winglight-1.5.0-assets.tar.gz` resource
+pack. Original AC3D sources, editable source artwork, pinned provenance and
+conversion instructions remain available through those two downloads. Current
+tracked notices accompany the app; the resource archive retains its original
+1.5.0 notice snapshot. The applicable upstream grants are unchanged.
+
 ## Bundled resources
 
 Links identify the exact upstream revisions. Copied licenses and author/README

@@ -1,7 +1,9 @@
 # Validation
 
-Public-source packaging does not constitute a new complete visual audit.
-No renderer or light-timing algorithm changed. Two entries without a verified
+## 1.5.0 public-source packaging
+
+Public-source packaging did not constitute a new complete visual audit.
+No renderer or light-timing algorithm changed in 1.5.0. Two entries without a verified
 license grant were removed; the public catalog has 309 combinations.
 
 The release-preparation checks below are run on the consolidated checkout.
@@ -31,6 +33,26 @@ Checks on 2026-10-16, Apple Silicon, Swift 6.4:
 - Removed build caches and the temporary validation clone, then launched the
   retained application again. Metal drawable/depth output and bundle signature
   verification passed, confirming runtime resources load from the app bundle.
+
+## 1.5.1 release preparation — 2026-10-16
+
+- Rebuilt the release executable and Metal library from the release checkout.
+  The Apple Silicon app reports 1.5.1 / build 10, macOS 15 minimum. Deep/strict
+  signature verification passed using the existing Apple Development identity;
+  this is not a Developer ID notarization.
+- Re-ran all 40 Swift tests (23 core, 17 application) and 5 Python geometry tests:
+  zero failures. All 504 source resources still match the immutable 1.5.0 manifest.
+- Verified all 501 bundled runtime resources against that manifest, and all 40
+  upstream license/attribution evidence files against their inventory. Current
+  project license/notices and the shader source/library match the checkout.
+- Ran the rebuilt standalone bundle through the production Metal storm renderer
+  at 4720 × 3280, 4× MSAA and fixed 6× SDR headroom. Its floating-point lightning
+  capture is bit-identical to the final audited 1.5.1 capture. The shader and
+  renderer hashes match the controlled performance evidence in
+  [PERFORMANCE.md](PERFORMANCE.md). This release smoke check is not a new benchmark.
+- The ZIP carries the complete app, license notices, release notes and a
+  `SOURCE.txt` with its exact Git commit and corresponding-source downloads.
+  The compatible 1.5.0 resource archive remains unchanged.
 
 CoreLocation previously returned `locationUnknown` on the development Mac.
 Permission/timeout unit tests cannot prove live coordinate retrieval. Manual

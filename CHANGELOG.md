@@ -1,6 +1,10 @@
 # Changelog
 
-## 1.5.1 — local performance update, 2026-10-16
+## 1.5.1 — 2026-10-16
+
+- Publish a complete macOS 15+ Apple Silicon application ZIP, checksums and
+  corresponding-source instructions. The unchanged 1.5.0 resource pack remains
+  compatible; all upstream license texts and credits are included in the app.
 
 - Skip lighting and shadow calculations only when their contribution is exactly
   zero; preserve active lighting and fractional scene transitions.
@@ -15,6 +19,9 @@
   through their existing material response. Reduced-motion and SDR/HDR limits remain.
 - Add deterministic full-resolution performance/float-image audits and a comparison
   script. Measurements and quality checks are recorded in `docs/PERFORMANCE.md`.
+- On the development M5 Pro, six representative unchanged scenes used 4.0–10.4%
+  less GPU time at identical resolution/MSAA. These are controlled GPU timings,
+  not a guarantee of higher FPS or lower battery use on every Mac.
 
 ## 1.5.0 — 2026-10-16
 

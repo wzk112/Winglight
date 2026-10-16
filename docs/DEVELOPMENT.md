@@ -81,3 +81,11 @@ Keep corresponding source, resource pack and notices together. Built apps includ
 license texts in `Contents/Resources/Legal`. Preserve GPL corresponding source,
 conversion instructions, artist credits and original grants for distributed versions.
 See [THIRD_PARTY.md](../THIRD_PARTY.md).
+
+The 1.5.1 Apple Silicon application ZIP contains the signed `Winglight.app`,
+installation/release notes, notices and `SOURCE.txt`. The source reference is the
+exact release commit at `v1.5.1`, complemented by the unchanged 1.5.0 resource
+archive. `SHA256SUMS.txt` identifies both downloads. Apple Development signing
+is disclosed separately from Developer ID notarization; the current public build
+has not been notarized. Validate the extracted archive, then download the public
+asset and verify its hash and signature again before reporting publication complete.
