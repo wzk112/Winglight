@@ -57,7 +57,7 @@ are included in `ThirdParty/Licenses/` and its inventory, including bundled-libr
 | [NumPy](https://github.com/numpy/numpy) | Geometry/array operations | BSD-3-Clause; wheel includes additional component notices |
 | [Pillow](https://github.com/python-pillow/Pillow) | Image validation/masks | MIT-CMU; wheel includes additional component notices |
 | [mapbox-earcut bindings](https://github.com/skogler/mapbox_earcut_python/tree/v2.1.0) | Polygon triangulation | ISC, © Samuel Kogler |
-| [Mapbox earcut](https://github.com/mapbox/earcut.hpp) | Algorithm used by the bindings | ISC, © Mapbox; exact bundled notice retained from wheel |
+| [Mapbox earcut](https://github.com/mapbox/earcut.hpp) | Algorithm used by the bindings | ISC, © Mapbox; vendored notice retained from the bindings' v2.1.0 source |
 
 Swift/SwiftPM, Python and Xcode/Metal tools are installed separately. SwiftUI,
 AppKit, Metal, MetalKit, CoreLocation, Combine, QuartzCore, simd and the optional

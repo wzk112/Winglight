@@ -22,6 +22,12 @@ Checks on 2026-10-16, Apple Silicon, Swift 6.4:
   an A320 night scene. This is a runtime smoke check, not a full visual review.
 - Public file scan found no machine home paths or private-key/token patterns;
   no tracked file exceeds 50 MiB. Upstream source bytes are preserved by Git attributes.
+- Cloned the public repository from GitHub, retrieved the complete resource pack
+  through the anonymous public download URL, and verified archive SHA-256
+  `e16818c130ab0397e8f6d2a213be3c1827fa9464b1c5bb16f85c6b0357680748`.
+  All 504 resources and 45 accompanying license/attribution files were restored.
+  A subsequent build and deep/strict signature check passed, with no changes to
+  tracked files. This validates the published source/resource retrieval route.
 
 CoreLocation previously returned `locationUnknown` on the development Mac.
 Permission/timeout unit tests cannot prove live coordinate retrieval. Manual
