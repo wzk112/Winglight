@@ -1,0 +1,282 @@
+[
+  {
+    "model": "b787",
+    "repository": "IskenderWang/787-family",
+    "commit": "02626b5b659d89b9399943ee167bbb0b46f0c871",
+    "path": "Models/787-8.ac",
+    "local": "b787/787-8.ac",
+    "sha256": "80c9c4e3a770e64d8c480ea22f143576615b894ae9de48c3b29f6a8b67ce5084"
+  },
+  {
+    "model": "b787",
+    "repository": "IskenderWang/787-family",
+    "commit": "02626b5b659d89b9399943ee167bbb0b46f0c871",
+    "path": "Models/787-9.ac",
+    "local": "b787/787-9.ac",
+    "sha256": "6f31bbfe81ed579468e5b41c0e6b30d3bfcaa140fb8b95107133cb6495a0b2a4"
+  },
+  {
+    "model": "b787",
+    "repository": "IskenderWang/787-family",
+    "commit": "02626b5b659d89b9399943ee167bbb0b46f0c871",
+    "path": "Models/787-10.ac",
+    "local": "b787/787-10.ac",
+    "sha256": "90a70529c8495e868ed4b16b65e149d514012412c365455753b90fe01b14fae8"
+  },
+  {
+    "model": "b787",
+    "repository": "IskenderWang/787-family",
+    "commit": "02626b5b659d89b9399943ee167bbb0b46f0c871",
+    "path": "Models/GEnx.ac",
+    "local": "b787/GEnx.ac",
+    "sha256": "da70d8efe65609a2e6fde5b3382bc5b125aec19e9bb4d62e7f59893ba2c24709"
+  },
+  {
+    "model": "b787",
+    "repository": "IskenderWang/787-family",
+    "commit": "02626b5b659d89b9399943ee167bbb0b46f0c871",
+    "path": "Models/Trent1000.ac",
+    "local": "b787/Trent1000.ac",
+    "sha256": "df9d0793d59dd74d1833853de6f24dc4949e4b17728892fa3ec66da7471b42f2"
+  },
+  {
+    "model": "b787",
+    "repository": "IskenderWang/787-family",
+    "commit": "02626b5b659d89b9399943ee167bbb0b46f0c871",
+    "path": "Models/animation-common.xml",
+    "local": "b787/animation-common.xml",
+    "sha256": "1174dfb3005303146c7f0af0797bfe9c680c7fd298f52c214ae11aa7d5e45471"
+  },
+  {
+    "model": "b787",
+    "repository": "IskenderWang/787-family",
+    "commit": "02626b5b659d89b9399943ee167bbb0b46f0c871",
+    "path": "Models/GEnx.xml",
+    "local": "b787/GEnx.xml",
+    "sha256": "2a04e04714d5de3231d0244f72505db608c4d4e4a60a1b5d8b83e55cf72a63ba"
+  },
+  {
+    "model": "b787",
+    "repository": "IskenderWang/787-family",
+    "commit": "02626b5b659d89b9399943ee167bbb0b46f0c871",
+    "path": "Models/Trent1000.xml",
+    "local": "b787/Trent1000.xml",
+    "sha256": "9fda60a25432de31ed5bffa0f171e52b4a62593af371b3dd4906c6c9b1b5fbaf"
+  },
+  {
+    "model": "b787",
+    "repository": "IskenderWang/787-family",
+    "commit": "02626b5b659d89b9399943ee167bbb0b46f0c871",
+    "path": "Models/787-9-GEnx.xml",
+    "local": "b787/787-9-GEnx.xml",
+    "sha256": "e48ebf3327bd1eb8682560ac49ef939af45d7b87708a49a0c54911e8dcff8a4c"
+  },
+  {
+    "model": "b787",
+    "repository": "IskenderWang/787-family",
+    "commit": "02626b5b659d89b9399943ee167bbb0b46f0c871",
+    "path": "LICENSE",
+    "local": "b787/LICENSE",
+    "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+  },
+  {
+    "model": "b787",
+    "repository": "IskenderWang/787-family",
+    "commit": "02626b5b659d89b9399943ee167bbb0b46f0c871",
+    "path": "Authors.md",
+    "local": "b787/Authors.md",
+    "sha256": "e2896ac05bf1d658359a4dcfbc6fb4740cd9e6d2a4d31264c7c5384ff8225c72"
+  },
+  {
+    "model": "a330",
+    "repository": "JMaverick16/Airbus_A330",
+    "commit": "f016c7c0ad8c6c48b7d9eed7ed7dde49dc69059d",
+    "path": "Models/a330-200-main.ac",
+    "local": "a330/a330-200-main.ac",
+    "sha256": "72b34c19ab9e1f1505e12979a51a801540996f42d6e83495d0083f3ae23cc21c"
+  },
+  {
+    "model": "a330",
+    "repository": "JMaverick16/Airbus_A330",
+    "commit": "f016c7c0ad8c6c48b7d9eed7ed7dde49dc69059d",
+    "path": "Models/a330-300-main.ac",
+    "local": "a330/a330-300-main.ac",
+    "sha256": "e5ea7b1bc0fcc45fcfea07117db44394068706ac3a690f2aa3b02916a8591652"
+  },
+  {
+    "model": "a330",
+    "repository": "JMaverick16/Airbus_A330",
+    "commit": "f016c7c0ad8c6c48b7d9eed7ed7dde49dc69059d",
+    "path": "Models/trent772b-60.ac",
+    "local": "a330/trent772b-60.ac",
+    "sha256": "a875e091488543786c6f609e57024537e468d9995e66c71fea4ab5af44f8a9ba"
+  },
+  {
+    "model": "a330",
+    "repository": "JMaverick16/Airbus_A330",
+    "commit": "f016c7c0ad8c6c48b7d9eed7ed7dde49dc69059d",
+    "path": "Models/pw4000.ac",
+    "local": "a330/pw4000.ac",
+    "sha256": "80fca5b65258cf6f3eeeb97e780d2563439852a0f946195bb43780833b5a6f35"
+  },
+  {
+    "model": "a330",
+    "repository": "JMaverick16/Airbus_A330",
+    "commit": "f016c7c0ad8c6c48b7d9eed7ed7dde49dc69059d",
+    "path": "Models/cf6-80e1.ac",
+    "local": "a330/cf6-80e1.ac",
+    "sha256": "dd69f55fe9f4f8097f740c5b66a533818fbe508afe7ef46d4642be7ec5319d79"
+  },
+  {
+    "model": "a330",
+    "repository": "JMaverick16/Airbus_A330",
+    "commit": "f016c7c0ad8c6c48b7d9eed7ed7dde49dc69059d",
+    "path": "Models/a332-animations.xml",
+    "local": "a330/a332-animations.xml",
+    "sha256": "752d38cbb59f1f66c144e834d379567cac71b673b65d540c2846144b59994528"
+  },
+  {
+    "model": "a330",
+    "repository": "JMaverick16/Airbus_A330",
+    "commit": "f016c7c0ad8c6c48b7d9eed7ed7dde49dc69059d",
+    "path": "Models/a333-animations.xml",
+    "local": "a330/a333-animations.xml",
+    "sha256": "ddd5eb3293c27cd70413c3e9ea12cc7f2803e0a6b8658227f8926f9b4df035e6"
+  },
+  {
+    "model": "a330",
+    "repository": "JMaverick16/Airbus_A330",
+    "commit": "f016c7c0ad8c6c48b7d9eed7ed7dde49dc69059d",
+    "path": "Models/A330-343-main.xml",
+    "local": "a330/A330-343-main.xml",
+    "sha256": "71d75e40701fe60ea8e6bf9ca5b1d6168aeb7b4ee1e69e20e9058b56ea804ec1"
+  },
+  {
+    "model": "a330",
+    "repository": "JMaverick16/Airbus_A330",
+    "commit": "f016c7c0ad8c6c48b7d9eed7ed7dde49dc69059d",
+    "path": "Models/A330-343-RR.xml",
+    "local": "a330/A330-343-RR.xml",
+    "sha256": "5cd5c2d341cd355bfb0caa6a5b75183b4cead349e93372826909168f98b2ec68"
+  },
+  {
+    "model": "a330",
+    "repository": "JMaverick16/Airbus_A330",
+    "commit": "f016c7c0ad8c6c48b7d9eed7ed7dde49dc69059d",
+    "path": "Models/A330-243-main.xml",
+    "local": "a330/A330-243-main.xml",
+    "sha256": "5abb1f343ac431986fe23eb8383a184bee0150ea2aa660b19b8e81d84344f312"
+  },
+  {
+    "model": "a330",
+    "repository": "JMaverick16/Airbus_A330",
+    "commit": "f016c7c0ad8c6c48b7d9eed7ed7dde49dc69059d",
+    "path": "Models/trent772b-60.xml",
+    "local": "a330/trent772b-60.xml",
+    "sha256": "affd6ede0fd21e4e44831a7b5aa032e29bb31501d9452a942c404250d39e93b1"
+  },
+  {
+    "model": "a330",
+    "repository": "JMaverick16/Airbus_A330",
+    "commit": "f016c7c0ad8c6c48b7d9eed7ed7dde49dc69059d",
+    "path": "LICENSE",
+    "local": "a330/LICENSE",
+    "sha256": "db296f2f7f35bca3a174efb0eb392b3b17bd94b341851429a3dff411b1c2fc73"
+  },
+  {
+    "model": "a350",
+    "repository": "FGMEMBERS/A350XWB",
+    "commit": "04da937ab1ba0b07dabfd71d91aa33eb38316b90",
+    "path": "Models/A350XWB-900.ac",
+    "local": "a350/A350XWB-900.ac",
+    "sha256": "3fed417dd0bb6f2e7afc7e9d25dd285d2b95a108c5aaf5cfd118f6406bd8985e"
+  },
+  {
+    "model": "a350",
+    "repository": "FGMEMBERS/A350XWB",
+    "commit": "04da937ab1ba0b07dabfd71d91aa33eb38316b90",
+    "path": "Models/A350XWB-900.xml",
+    "local": "a350/A350XWB-900.xml",
+    "sha256": "3a6b0227cc6ae50f5a07de529aa5081bd022d08c4b9a66eda6afb1f5fc3b26de"
+  },
+  {
+    "model": "a350",
+    "repository": "FGMEMBERS/A350XWB",
+    "commit": "04da937ab1ba0b07dabfd71d91aa33eb38316b90",
+    "path": "COPYING",
+    "local": "a350/COPYING",
+    "sha256": "dcc100d4161cc0b7177545ab6e47216f84857cda3843847c792a25289852dcaa"
+  },
+  {
+    "model": "a350",
+    "repository": "FGMEMBERS/A350XWB",
+    "commit": "04da937ab1ba0b07dabfd71d91aa33eb38316b90",
+    "path": "README.md",
+    "local": "a350/README.md",
+    "sha256": "8ceec317f8a9a12259b0e70048a6ad6063935e8ea2b735142f275381ab481bcd"
+  },
+  {
+    "model": "b777",
+    "repository": "franck-vmd/Boeing-777-Flightgear",
+    "commit": "821f2d9cf77cf3953c1b28df46a32740c77c73d4",
+    "path": "777-VMD/Models/Liveries-300ER/777-300.ac",
+    "local": "b777/777-300.ac",
+    "sha256": "ecbb6b77f1467e4d926f0c1d1e2a75da0e4f5b6cee882fe70e10c87d7e2e60cf"
+  },
+  {
+    "model": "b777",
+    "repository": "franck-vmd/Boeing-777-Flightgear",
+    "commit": "821f2d9cf77cf3953c1b28df46a32740c77c73d4",
+    "path": "LICENSE",
+    "local": "b777/LICENSE",
+    "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+  },
+  {
+    "model": "b777",
+    "repository": "franck-vmd/Boeing-777-Flightgear",
+    "commit": "821f2d9cf77cf3953c1b28df46a32740c77c73d4",
+    "path": "README.md",
+    "local": "b777/README.md",
+    "sha256": "7de28742cd7e9e73f533ff308a688804ab0f9c7341c2e182611a3a28b59bbcc8"
+  },
+  {
+    "model": "b777",
+    "repository": "franck-vmd/Boeing-777-Flightgear",
+    "commit": "821f2d9cf77cf3953c1b28df46a32740c77c73d4",
+    "path": "777-VMD/Models/777-300-v2.xml",
+    "local": "b777/777-300-v2.xml",
+    "sha256": "d810c53fbceb0b5d2f7331157dc54d180465349d7dab9650f158f07b48c353d5"
+  },
+  {
+    "model": "b777",
+    "repository": "franck-vmd/Boeing-777-Flightgear",
+    "commit": "821f2d9cf77cf3953c1b28df46a32740c77c73d4",
+    "path": "777-VMD/Models/777-300ER-v2.xml",
+    "local": "b777/777-300ER-v2.xml",
+    "sha256": "b7c3d2d958d8e5495863545946111b2688f9dc4f4a13221b0374ce1a45aaad5b"
+  },
+  {
+    "model": "b777",
+    "repository": "franck-vmd/Boeing-777-Flightgear",
+    "commit": "821f2d9cf77cf3953c1b28df46a32740c77c73d4",
+    "path": "777-VMD/Models/777-300F-v2.xml",
+    "local": "b777/777-300F-v2.xml",
+    "sha256": "47e610c03b0cc7c070b68fc709c0c2763625af2b5e69e80a20c0180dc790df20"
+  },
+  {
+    "model": "b777",
+    "repository": "franck-vmd/Boeing-777-Flightgear",
+    "commit": "821f2d9cf77cf3953c1b28df46a32740c77c73d4",
+    "path": "777-VMD/Models/Cockpit/flightdeck-300.xml",
+    "local": "b777/flightdeck-300.xml",
+    "sha256": "a200e43f38e887a2af66c3c6018c65bc2e9f5f867757fc7b148269cd7423b81b"
+  },
+  {
+    "model": "b777",
+    "repository": "franck-vmd/Boeing-777-Flightgear",
+    "commit": "821f2d9cf77cf3953c1b28df46a32740c77c73d4",
+    "path": "777-VMD/Models/Cockpit/flightdeck.ac",
+    "local": "b777/flightdeck.ac",
+    "sha256": "c9a947762f66997ffd5991607688858bc065b869ad6cc432e1b4d60ecb738d63"
+  }
+]

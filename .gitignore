@@ -1,0 +1,18 @@
+.build/
+.swiftpm/
+.DS_Store
+dist/
+.venv/
+__pycache__/
+*.py[cod]
+*.partial
+Validation/
+# Binary assets are published as a checksummed GitHub Release asset pack.
+Sources/Winglight/Resources/Models/*.mesh
+Sources/Winglight/Resources/Models/*.bvh
+Sources/Winglight/Resources/Models/*.png
+Sources/Winglight/Resources/Textures/*.png
+Sources/Winglight/Resources/Liveries/*.png
+Sources/Winglight/Resources/Lights.metallib
+ThirdParty/**/*.xcf
+ThirdParty/GeoFS/*.webp

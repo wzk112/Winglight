@@ -1,0 +1,4 @@
+# Preserve upstream files byte-for-byte for provenance/hash checks.
+ThirdParty/** -text -whitespace
+ThirdParty/**/*.ac -diff
+*.csv text eol=lf

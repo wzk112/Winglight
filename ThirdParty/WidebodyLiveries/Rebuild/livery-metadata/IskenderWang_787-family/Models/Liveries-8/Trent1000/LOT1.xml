@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+  <externaladdons>
+    <wifi>0</wifi>
+  </externaladdons>
+
+<sim>    
+  <model>        
+    <livery>
+	<name type="string">LOT Polish Airlines (SP-LRF)</name>
+      <texture-fuselage>Liveries-8/Trent1000/LOT1.png</texture-fuselage>
+      <texture-engines>Liveries-engines/LOT.png</texture-engines>
+    </livery>
+  </model>
+</sim>
+
+</PropertyList>

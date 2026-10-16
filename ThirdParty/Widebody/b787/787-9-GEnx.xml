@@ -1,0 +1,1069 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<PropertyList>
+
+    <path>787-9.ac</path>
+    <main include="animation-common.xml" omit-node="y" />
+
+    <!-- Livery select -->
+    <nasal>
+        <load>
+         var livery_update = aircraft.livery_update.new("Aircraft/787-family/Models/Liveries-9/GEnx", 10);
+        </load>
+
+        <unload>
+         livery_update.stop();
+        </unload>
+    </nasal>
+	
+	<!-- wifiantenna -->
+
+	<animation>
+	  <object-name>wifiantenna</object-name>
+	  <type>select</type>
+	  <condition>
+	     <equals>
+		<property>externaladdons/wifi</property>
+		<value>1</value>
+	     </equals>
+	  </condition>
+	</animation>
+
+    <animation>
+        <type>material</type>
+        <!--
+            All of these objects are parented together, so they will share any effects applied to
+            the parent (the fuselage). Also, any effects applied to the children will be overriden
+            by the effects of the parent.
+        -->
+        <object-name>fuselage</object-name>
+        <object-name>aftcargodoor</object-name>
+        <object-name>antennae</object-name>
+        <object-name>bodyfairing</object-name>
+        <object-name>bulkcargodoor</object-name>
+        <object-name>cac</object-name>
+        <object-name>cacdeflectorbackground</object-name>
+        <object-name>fin</object-name>
+        <object-name>fuselage.001</object-name>
+        <object-name>fuselage.004</object-name>
+        <object-name>fwdcargodoor</object-name>
+        <object-name>gearbay</object-name>
+        <object-name>lhcacdeflector</object-name>
+        <object-name>lhelevator</object-name>
+        <object-name>lhfdoor</object-name>
+        <object-name>lhfnosedoor</object-name>
+        <object-name>lhgearibdoor</object-name>
+        <object-name>lhibaileron</object-name>
+        <object-name>lhibdoor</object-name>
+        <object-name>lhibfairing</object-name>
+        <object-name>lhibflap</object-name>
+        <object-name>lhibflapa</object-name>
+        <object-name>lhibslat</object-name>
+        <object-name>lhibspoilera</object-name>
+        <object-name>lhibspoilera.001</object-name>
+        <object-name>lhkflap</object-name>
+        <object-name>lhkflap.001</object-name>
+        <object-name>lhmfairing</object-name>
+        <object-name>lhnosedoor</object-name>
+        <object-name>lhobaileron</object-name>
+        <object-name>lhobdoor</object-name>
+        <object-name>lhobfairing</object-name>
+        <object-name>lhobflapa</object-name>
+        <object-name>lhobflapb</object-name>
+        <object-name>lhobslata</object-name>
+        <object-name>lhobslatb</object-name>
+        <object-name>lhobslatc</object-name>
+        <object-name>lhobspoilera</object-name>
+        <object-name>lhobspoilerb</object-name>
+        <object-name>lhspoilera</object-name>
+        <object-name>lstab</object-name>
+        <object-name>lwing</object-name>
+        <object-name>lwinga</object-name>
+        <object-name>lwingb</object-name>
+        <object-name>lwingc</object-name>
+        <object-name>pitot_tubes</object-name>
+        <object-name>rhcacdeflector</object-name>
+        <object-name>rhelevator</object-name>
+        <object-name>rhfdoor</object-name>
+        <object-name>rhfnosedoor</object-name>
+        <object-name>rhgearibdoor</object-name>
+        <object-name>rhibaileron</object-name>
+        <object-name>rhibdoor</object-name>
+        <object-name>rhibfairing</object-name>
+        <object-name>rhibflap</object-name>
+        <object-name>rhibflapa</object-name>
+        <object-name>rhibslat</object-name>
+        <object-name>rhibspoilera</object-name>
+        <object-name>rhibspoilera.001</object-name>
+        <object-name>rhkflap</object-name>
+        <object-name>rhkflap.001</object-name>
+        <object-name>rhmfairing</object-name>
+        <object-name>rhnosedoor</object-name>
+        <object-name>rhobaileron</object-name>
+        <object-name>rhobdoor</object-name>
+        <object-name>rhobfairing</object-name>
+        <object-name>rhobflapa</object-name>
+        <object-name>rhobflapb</object-name>
+        <object-name>rhobslata</object-name>
+        <object-name>rhobslatb</object-name>
+        <object-name>rhobslatc</object-name>
+        <object-name>rhobspoilera</object-name>
+        <object-name>rhobspoilerb</object-name>
+        <object-name>rhspoilera</object-name>
+        <object-name>rstab</object-name>
+        <object-name>rudder</object-name>
+        <object-name>rwing</object-name>
+        <object-name>rwinga</object-name>
+        <object-name>rwingb</object-name>
+        <object-name>rwingc</object-name>
+        <object-name>wifiantenna</object-name>
+        <property-base>sim/model/livery</property-base>
+        <texture-prop>texture-fuselage</texture-prop>
+        <texture>787-9.png</texture>
+    </animation>
+
+    <model>
+        <name>Pushback</name>
+        <path>Autopush/Goldhofert.xml</path>
+        <offsets>
+            <!-- The truck should be -0.346 x-m from the plane's nose wheel -->
+            <x-m>-24.181</x-m>
+            <y-m>0</y-m>
+            <z-m>-3.55</z-m>
+        </offsets>
+    </model>
+
+    <!-- Flight Deck -->
+
+    <model>
+        <name>flightdeck</name>
+        <path>FlightDeck/b787.flightdeck.xml</path>
+        <offsets>
+            <x-m>-2.982308</x-m>
+
+            <z-m>0.09158</z-m>
+        </offsets>
+    </model>
+
+    <!-- Engine -->
+
+    <model>
+        <name>genx</name>
+        <path>GEnx.xml</path>
+    </model>
+
+    <!-- Landing Gear Animations -->
+
+    <animation>
+        <type>rotate</type>
+        <object-name>lhnosedoor</object-name>
+        <property>gear/gear[0]/position-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>0.1</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>0.25</ind>
+                <dep>-80.0</dep>
+            </entry>
+            <entry>
+                <ind>0.75</ind>
+                <dep>-80.0</dep>
+            </entry>
+            <entry>
+                <ind>0.9</ind>
+                <dep>-70.0</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>-70.0</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>-24.24606</x-m>
+            <y-m>-0.6</y-m>
+            <z-m>-1.35</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+
+            <z>-0.13</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>lhlightdoor</object-name>
+        <property>gear/gear[0]/position-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>0.1</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>0.25</ind>
+                <dep>-80.0</dep>
+            </entry>
+            <entry>
+                <ind>0.75</ind>
+                <dep>-80.0</dep>
+            </entry>
+            <entry>
+                <ind>0.9</ind>
+                <dep>-70.0</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>-70.0</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>-21</x-m>
+            <y-m>-0.6</y-m>
+            <z-m>-1.35</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+
+            <z>-0.13</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>rhnosedoor</object-name>
+        <property>gear/gear[0]/position-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>0.1</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>0.25</ind>
+                <dep>-80.0</dep>
+            </entry>
+            <entry>
+                <ind>0.75</ind>
+                <dep>-80.0</dep>
+            </entry>
+            <entry>
+                <ind>0.9</ind>
+                <dep>-70.0</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>-70.0</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>-24.24606</x-m>
+            <y-m>0.6</y-m>
+            <z-m>-1.35</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+
+            <z>0.13</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>rhlightdoor</object-name>
+        <property>gear/gear[0]/position-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>0.1</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>0.25</ind>
+                <dep>-80.0</dep>
+            </entry>
+            <entry>
+                <ind>0.75</ind>
+                <dep>-80.0</dep>
+            </entry>
+            <entry>
+                <ind>0.9</ind>
+                <dep>-70.0</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>-70.0</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>-21</x-m>
+            <y-m>0.6</y-m>
+            <z-m>-1.35</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+
+            <z>0.13</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>lhfnosedoor</object-name>
+        <property>gear/gear[0]/position-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>0.1</ind>
+                <dep>-80.0</dep>
+            </entry>
+            <entry>
+                <ind>0.9</ind>
+                <dep>-80.0</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>0.0</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>-25.74606</x-m>
+            <y-m>-0.85</y-m>
+            <z-m>-1.07</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+
+            <z>-0.2</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>lhlighteddoor</object-name>
+        <property>gear/gear[0]/position-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>0.1</ind>
+                <dep>-80.0</dep>
+            </entry>
+            <entry>
+                <ind>0.9</ind>
+                <dep>-80.0</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>0.0</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>-22.5</x-m>
+            <y-m>-0.8</y-m>
+            <z-m>-1.07</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+
+            <z>-0.2</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>rhfnosedoor</object-name>
+        <property>gear/gear[0]/position-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>0.1</ind>
+                <dep>-80.0</dep>
+            </entry>
+            <entry>
+                <ind>0.9</ind>
+                <dep>-80.0</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>0.0</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>-25.74606</x-m>
+            <y-m>0.85</y-m>
+            <z-m>-1.07</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+
+            <z>0.2</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>rhlighteddoor</object-name>
+        <property>gear/gear[0]/position-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>0.1</ind>
+                <dep>-80.0</dep>
+            </entry>
+            <entry>
+                <ind>0.9</ind>
+                <dep>-80.0</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>0.0</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>-22.5</x-m>
+            <y-m>0.8</y-m>
+            <z-m>-1.07</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+
+            <z>0.2</z>
+        </axis>
+    </animation>
+
+    <!-- Landing Lights -->
+    <model>
+        <name>NoseLandingLight</name>
+        <path>Aircraft/787-family/Models/Lights/landing-nose.xml</path>
+        <condition>
+            <equals>
+                <property>gear/gear[0]/position-norm</property>
+                <value type="bool">true</value>
+            </equals>
+        </condition>
+        <offsets>
+            <x-m> -23.9012</x-m>
+            <y-m>  0.00</y-m>
+            <z-m> -2</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>NoseLandingLight-ALS</name>
+        <path>Aircraft/787-family/Models/Lights/ALS/landinglightF.xml</path>
+        <condition>
+            <equals>
+                <property>gear/gear[0]/position-norm</property>
+                <value type="bool">true</value>
+            </equals>
+        </condition>
+        <offsets>
+            <x-m> -23.9012</x-m>
+            <y-m>  0.00</y-m>
+            <z-m> -2</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>taxilight</name>
+        <path>Aircraft/787-family/Models/Lights/taxi.xml</path>
+        <condition>
+            <equals>
+                <property>gear/gear[0]/position-norm</property>
+                <value type="bool">true</value>
+            </equals>
+        </condition>
+        <offsets>
+            <x-m> -23.9012</x-m>
+            <y-m>  0.00</y-m>
+            <z-m> -2</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>taxilight-ALS</name>
+        <path>Aircraft/787-family/Models/Lights/ALS/taxilight.xml</path>
+        <condition>
+            <equals>
+                <property>gear/gear[0]/position-norm</property>
+                <value type="bool">true</value>
+            </equals>
+        </condition>
+        <offsets>
+            <x-m> -23.9012</x-m>
+            <y-m>  0.00</y-m>
+            <z-m> -2</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/787-family/Models/Lights/landing-port.xml</path>
+        <name>LeftWingLandinglight</name>
+        <offsets>
+            <x-m>-6.9776</x-m>
+            <y-m>-3.3768</y-m>
+            <z-m> 0.3411</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/787-family/Models/Lights/ALS/landinglightL.xml</path>
+        <name>LeftWingLandinglight-ALS</name>
+        <offsets>
+            <x-m>-6.9776</x-m>
+            <y-m>-3.3768</y-m>
+            <z-m> 0.3411</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/787-family/Models/Lights/landing-stbd.xml</path>
+        <name>RightWingLandinglight</name>
+        <offsets>
+            <x-m>-6.9776</x-m>
+            <y-m> 3.3768</y-m>
+            <z-m> 0.3411</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/787-family/Models/Lights/ALS/landinglightR.xml</path>
+        <name>RightWingLandinglight-ALS</name>
+        <offsets>
+            <x-m>-6.9776</x-m>
+            <y-m> 3.3768</y-m>
+            <z-m> 0.3411</z-m>
+        </offsets>
+    </model>
+
+    <!-- Beacon Lights -->
+
+    <model>
+        <path>Aircraft/787-family/Models/Lights/beacon.xml</path>
+        <name>Beaconlight.top</name>
+        <offsets>
+            <x-m>-17.0408</x-m>
+            <y-m>0.00</y-m>
+            <z-m>4.48228</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/787-family/Models/Lights/ALS/beacon.xml</path>
+        <name>Beaconlight.top-ALS</name>
+        <offsets>
+            <x-m>-17.0408</x-m>
+            <y-m>0.00</y-m>
+            <z-m>4.48228</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/787-family/Models/Lights/beacon.xml</path>
+        <name>Beaconlight.bottom</name>
+        <offsets>
+            <x-m>-10.3147</x-m>
+            <y-m> 0.00</y-m>
+            <z-m>-1.67195</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/787-family/Models/Lights/ALS/beacon.xml</path>
+        <name>Beaconlight.bottom-ALS</name>
+        <offsets>
+            <x-m>-10.3147</x-m>
+            <y-m> 0.00</y-m>
+            <z-m>-1.67195</z-m>
+        </offsets>
+    </model>
+
+    <!--  Tail Animations -->
+    <animation>
+        <type>rotate</type>
+        <object-name>lstab</object-name>
+        <object-name>lstab.lead2</object-name>
+        <object-name>rstab</object-name>
+        <object-name>rstab.lead2</object-name>
+        <object-name>logolts</object-name>
+        <object-name>lhelevator</object-name>
+        <object-name>rhelevator</object-name>
+        <property>controls/flight/elevator-trim</property>
+        <factor>15</factor>
+        <offset-deg>0</offset-deg>
+        <center>
+            <x-m>25.111</x-m>
+
+            <z-m>2</z-m>
+        </center>
+        <axis>
+
+            <y>1</y>
+
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>lhelevator</object-name>
+        <property>/fdm/jsbsim/fcs/elevator-cmd-norm</property>
+        <factor>20</factor>
+        <offset-deg>0</offset-deg>
+        <center>
+            <x-m>30.82798</x-m>
+            <y-m>-5.716487</y-m>
+            <z-m>2.6</z-m>
+        </center>
+        <axis>
+            <x>-2.05</x>
+            <y>4</y>
+            <z>-0.53</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>rhelevator</object-name>
+        <property>/fdm/jsbsim/fcs/elevator-cmd-norm</property>
+        <factor>20</factor>
+        <offset-deg>0</offset-deg>
+        <center>
+            <x-m>30.82798</x-m>
+            <y-m>5.716487</y-m>
+            <z-m>2.6</z-m>
+        </center>
+        <axis>
+            <x>2.05</x>
+            <y>4</y>
+            <z>0.53</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>rudder</object-name>
+        <object-name>lightedrudder</object-name>
+        <property>/fdm/jsbsim/fcs/rudder-cmd-norm</property>
+        <factor>-20</factor>
+        <offset-deg>0</offset-deg>
+        <center>
+            <x-m>28.71076</x-m>
+            
+            <z-m>7.1</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+
+            <z>2.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>NoseGear</object-name>
+        <object-name>taxilight</object-name>
+        <object-name>noselanding</object-name>
+        <property>gear/gear/steering-norm</property>
+        <factor>-60</factor>
+        <offset-deg>0</offset-deg>
+        <center>
+            <x-m>-23.83516</x-m>
+            
+            <z-m>-1.164</z-m>
+        </center>
+        <axis>
+
+
+            <z>1</z>
+        </axis>
+    </animation>
+
+    <model>
+        <path>Aircraft/787-family/Models/Effects/tire-smoke-nose.xml</path>
+        <name>tyre-smoke-n</name>
+        <offsets>
+            <x-m>-20.56</x-m>
+
+            <z-m>-3.2</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/787-family/Models/Effects/wet-runway-nose.xml</path>
+        <name>tyre-smoke-n</name>
+        <offsets>
+            <x-m>-20.56</x-m>
+
+            <z-m>-3.2</z-m>
+        </offsets>
+    </model>
+
+    <!-- Landing Gears Animation -->
+
+    <!-- Nose Gear -->
+
+    <animation>
+        <type>rotate</type>
+        <object-name>NoseGear</object-name>
+        <property>gear/gear[0]/position-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>100</dep>
+            </entry>
+            <entry>
+                <ind>0.2</ind>
+                <dep>100</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>-23.25</x-m>
+            
+            <z-m>-1.063</z-m>
+        </center>
+        <axis>
+
+            <y>1</y>
+
+        </axis>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>NGearStrut</object-name>
+        <object-name>NoseWheel</object-name>
+        <object-name>chock_nose</object-name>
+        <property>/gear/gear[0]/compression-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.00</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>0.32</ind>
+                <dep>0.25</dep>
+            </entry>
+        </interpolation>
+        <axis>
+
+
+            <z>1</z>
+        </axis>
+    </animation>
+
+    <!-- Tyres Rolling Animation -->
+
+    <animation>
+        <type>spin</type>
+        <object-name>NoseWheel</object-name>
+        <property>/gear/gear[0]/rollspeed-ms</property>
+        <factor>10</factor>
+        <axis>
+
+            <y>-1</y>
+
+        </axis>
+        <center>
+            <x-m>-23.83516</x-m>
+
+            <z-m>-3.26425</z-m>
+        </center>
+    </animation>
+
+    <!-- Windshield Wipers :P -->
+
+    <animation>
+        <type>rotate</type>
+        <object-name>wiper.l</object-name>
+        <property>controls/wipers/degrees</property>
+        <factor>1.4</factor>
+        <axis>
+            <x1-m>-24.5469</x1-m>
+            <y1-m>-0.1953</y1-m>
+            <z1-m>1.7102</z1-m>
+            <x2-m>-24.5403</x2-m>
+            <y2-m>-0.1917</y2-m>
+            <z2-m>1.7049</z2-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>wiper.r</object-name>
+        <property>controls/wipers/degrees</property>
+        <factor>-1.4</factor>
+        <axis>
+            <x1-m>-24.5469</x1-m>
+            <y1-m>0.1953</y1-m>
+            <z1-m>1.7102</z1-m>
+            <x2-m>-24.5403</x2-m>
+            <y2-m>0.1917</y2-m>
+            <z2-m>1.7049</z2-m>
+        </axis>
+    </animation>
+
+    <!-- Ground stuff -->
+
+    <model>
+        <name>ground-lights</name>
+        <path>Ground/landing-ground-lights.xml</path>
+    </model>
+
+    <animation>
+        <type>select</type>
+        <object-name>ground-lights</object-name>
+        <condition>
+            <property>controls/lighting/landing-lights[0]</property>
+            <less-than>
+                <property>position/altitude-agl-ft</property>
+                <value>500</value>
+            </less-than>
+        </condition>
+    </animation>
+
+    <model>
+        <name>taxi-lights</name>
+        <path>Ground/taxi-ground-lights.xml</path>
+    </model>
+
+    <animation>
+        <type>select</type>
+        <object-name>taxi-lights</object-name>
+        <condition>
+            <property>controls/lighting/taxi-lights</property>
+            <less-than>
+                <property>position/altitude-agl-ft</property>
+                <value>500</value>
+            </less-than>
+            <equals>
+                <property>gear/gear[0]/position-norm</property>
+                <value>1</value>
+            </equals>
+        </condition>
+    </animation>
+
+    <!-- Window Lights -->
+
+    <animation>
+        <type>select</type>
+        <object-name>windows-bright</object-name>
+        <condition>
+            <and>
+                <greater-than-equals>
+                    <property>sim/time/sun-angle-rad</property>
+                    <value>1.57</value>
+                </greater-than-equals>
+                <or>
+                    <greater-than-equals>
+                        <property>/position/altitude-agl-ft</property>
+                        <value>8000</value>
+                    </greater-than-equals>
+                    <property>controls/electric/external-power</property>
+                </or>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>windows-dim</object-name>
+        <condition>
+            <and>
+                <greater-than-equals>
+                    <property>sim/time/sun-angle-rad</property>
+                    <value>1.57</value>
+                </greater-than-equals>
+                <less-than>
+                    <property>/position/altitude-agl-ft</property>
+                    <value>8000</value>
+                </less-than>
+                <not>
+                    <property>controls/electric/external-power</property>
+                </not>
+            </and>
+        </condition>
+    </animation>
+
+    <!-- Fuel Truck -->
+
+    <model>
+        <path>Aircraft/787-family/Models/Ground/Services/Fuel-Truck/Fuel_Truck_Short_VolvoFM.ac</path>
+        <condition>
+            <equals>
+                <property>services/fuel-truck/enable</property>
+                <value>1</value>
+            </equals>
+        </condition>
+    </model>
+
+    <animation>
+        <type>select</type>
+        <object-name>fuel_pipe</object-name>
+        <condition>
+            <equals>
+                <property>services/fuel-truck/connect</property>
+                <value>1</value>
+            </equals>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>fuel_pipe_disconnected</object-name>
+        <condition>
+            <equals>
+                <property>services/fuel-truck/connect</property>
+                <value>0</value>
+            </equals>
+        </condition>
+    </animation>
+
+    <!-- De-icing Truck -->
+
+    <model>
+        <path>Aircraft/787-family/Models/Ground/Services/De-Icing/volvo_deicing_truck.xml</path>
+        <condition>
+            <equals>
+                <property>services/deicing_truck/enable</property>
+                <value>1</value>
+            </equals>
+        </condition>
+        <offsets>
+            <x-m>-17</x-m>
+            <y-m>9.5</y-m>
+            <z-m>-3.77232</z-m>
+            <heading-deg>160</heading-deg>
+        </offsets>
+    </model>
+
+    <!-- Catering Truck -->
+
+    <model>
+        <path>Aircraft/787-family/Models/Ground/Services/Catering/Catering_Loader_Truck_VolvoFM.xml</path>
+        <condition>
+            <equals>
+                <property>services/catering/enable</property>
+                <value>1</value>
+            </equals>
+        </condition>
+    </model>
+
+    <!-- Baggage Truck -->
+
+    <model>
+        <path>Aircraft/787-family/Models/Ground/Services/Baggage/cargo_ramp.ac</path>
+        <condition>
+            <equals>
+                <property>services/baggage/enable</property>
+                <value>1</value>
+            </equals>
+        </condition>
+    </model>
+
+    <animation>
+        <type>select</type>
+        <object-name>cargo_door</object-name>
+        <object-name>cargo_inside</object-name>
+        <condition>
+            <equals>
+                <property>services/baggage/enable</property>
+                <value>1</value>
+            </equals>
+        </condition>
+    </animation>
+
+    <!-- Stairs -->
+
+    <model>
+    <path>Aircraft/787-family/Models/Ground/Services/Stairs/stairs.xml</path>
+    <condition>
+        <equals>
+        <property>services/stairs/enable</property>
+        <value>1</value>
+        </equals>
+    </condition>
+    <offsets>
+        <x-m>-24.763</x-m> <!-- front to back -->
+        <y-m>-9.8276</y-m> <!-- side to side -->
+        <z-m>1</z-m> <!-- height -->
+    </offsets>
+    </model>
+
+    <!-- External Power -->
+
+    <model>
+        <path>Aircraft/787-family/Models/Ground/Services/External-Power/ext-pwr-box.ac</path>
+        <condition>
+            <equals>
+                <property>services/ext-pwr/enable</property>
+                <value>1</value>
+            </equals>
+        </condition>
+    </model>
+
+    <!-- Chocks -->
+
+    <model>
+        <name>chock_nose</name>
+        <path>Aircraft/787-family/Models/Ground/Services/Chocks-9/chock_nose.ac</path>
+        <condition>
+            <equals>
+                <property>services/chocks/nose</property>
+                <value>1</value>
+            </equals>
+        </condition>
+    </model>
+
+    <model>
+        <name>chock_left</name>
+        <path>Aircraft/787-family/Models/Ground/Services/Chocks-9/chock_left.ac</path>
+        <condition>
+            <equals>
+                <property>services/chocks/left</property>
+                <value>1</value>
+            </equals>
+        </condition>
+    </model>
+
+    <model>
+        <name>chock_right</name>
+        <path>Aircraft/787-family/Models/Ground/Services/Chocks-9/chock_right.ac</path>
+        <condition>
+            <equals>
+                <property>services/chocks/right</property>
+                <value>1</value>
+            </equals>
+        </condition>
+    </model>
+
+</PropertyList>

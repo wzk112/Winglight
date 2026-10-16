@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+  <externaladdons>
+    <wifi>1</wifi>
+  </externaladdons>
+
+<sim>    
+  <model>        
+    <livery>
+	<name type="string">KLM KLM Royal Dutch Airlines (PH-BKA)</name>
+      <texture-fuselage>Liveries-10/GEnx/KLM1.png</texture-fuselage>
+      <texture-engines>Liveries-engines/KLM.png</texture-engines>
+    </livery>
+  </model>
+</sim>
+
+</PropertyList>

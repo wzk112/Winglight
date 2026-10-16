@@ -1,0 +1,292 @@
+[
+  {
+    "repository": "legoboyvdlp/A320-family",
+    "commit": "fec1ecba767c8fffd145337b27012e89c01e3ade",
+    "license": "GPL v2",
+    "evidence": [
+      {
+        "url": "https://raw.githubusercontent.com/legoboyvdlp/A320-family/fec1ecba767c8fffd145337b27012e89c01e3ade/LICENSE",
+        "path": "ThirdParty/Licenses/legoboyvdlp_A320-family/LICENSE",
+        "sha256": "db296f2f7f35bca3a174efb0eb392b3b17bd94b341851429a3dff411b1c2fc73"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/legoboyvdlp/A320-family/fec1ecba767c8fffd145337b27012e89c01e3ade/README.copyright.md",
+        "path": "ThirdParty/Licenses/legoboyvdlp_A320-family/README.copyright.md",
+        "sha256": "bfbb9c4f50fb85a0c64d115fa5d5509d48f8beb60c039d03ea66ef96a22e6446"
+      }
+    ]
+  },
+  {
+    "repository": "legoboyvdlp/A320-family-liveries",
+    "commit": "6673dc43d191163c1a4456b3bd7b00ace35f47f6",
+    "license": "GPL v2",
+    "evidence": [
+      {
+        "url": "https://raw.githubusercontent.com/legoboyvdlp/A320-family-liveries/6673dc43d191163c1a4456b3bd7b00ace35f47f6/LICENSE",
+        "path": "ThirdParty/Licenses/legoboyvdlp_A320-family-liveries/LICENSE",
+        "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/legoboyvdlp/A320-family-liveries/6673dc43d191163c1a4456b3bd7b00ace35f47f6/README.md",
+        "path": "ThirdParty/Licenses/legoboyvdlp_A320-family-liveries/README.md",
+        "sha256": "04cd85443b452746aac647b43249bf8aaaaaed0bb369b3065ccdad3c69b75652"
+      }
+    ]
+  },
+  {
+    "repository": "soitanen/737-800",
+    "commit": "5faef486500aba227804b59b014faf9619e3a18d",
+    "license": "GPL v2",
+    "evidence": [
+      {
+        "url": "https://raw.githubusercontent.com/soitanen/737-800/5faef486500aba227804b59b014faf9619e3a18d/LICENSE",
+        "path": "ThirdParty/Licenses/soitanen_737-800/LICENSE",
+        "sha256": "c03cea027b4b40e4402fabd08557736727ec3d5bc54ad64ab6472de432198cad"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/soitanen/737-800/5faef486500aba227804b59b014faf9619e3a18d/README.md",
+        "path": "ThirdParty/Licenses/soitanen_737-800/README.md",
+        "sha256": "02707c8f8b2e08f33aac696f1a37d496c4c2bdf060e8d004afda8904b1e5d46d"
+      }
+    ]
+  },
+  {
+    "repository": "YV3399/737-800YV",
+    "commit": "9d967d89dd2ee0ae1bf01d00c49839a574aa9da5",
+    "license": "GPL v2",
+    "evidence": [
+      {
+        "url": "https://raw.githubusercontent.com/YV3399/737-800YV/9d967d89dd2ee0ae1bf01d00c49839a574aa9da5/LICENSE",
+        "path": "ThirdParty/Licenses/YV3399_737-800YV/LICENSE",
+        "sha256": "c03cea027b4b40e4402fabd08557736727ec3d5bc54ad64ab6472de432198cad"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/YV3399/737-800YV/9d967d89dd2ee0ae1bf01d00c49839a574aa9da5/README.md",
+        "path": "ThirdParty/Licenses/YV3399_737-800YV/README.md",
+        "sha256": "6813d328fc1f7d9bb1f4fbf284933bdc97c12d1d7c8f81c2ce27a16f3b9dcaa5"
+      }
+    ]
+  },
+  {
+    "repository": "IskenderWang/787-family",
+    "commit": "02626b5b659d89b9399943ee167bbb0b46f0c871",
+    "license": "GPL v2",
+    "evidence": [
+      {
+        "url": "https://raw.githubusercontent.com/IskenderWang/787-family/02626b5b659d89b9399943ee167bbb0b46f0c871/LICENSE",
+        "path": "ThirdParty/Licenses/IskenderWang_787-family/LICENSE",
+        "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/IskenderWang/787-family/02626b5b659d89b9399943ee167bbb0b46f0c871/Authors.md",
+        "path": "ThirdParty/Licenses/IskenderWang_787-family/Authors.md",
+        "sha256": "e2896ac05bf1d658359a4dcfbc6fb4740cd9e6d2a4d31264c7c5384ff8225c72"
+      }
+    ]
+  },
+  {
+    "repository": "JMaverick16/Airbus_A330",
+    "commit": "f016c7c0ad8c6c48b7d9eed7ed7dde49dc69059d",
+    "license": "GPL v2",
+    "evidence": [
+      {
+        "url": "https://raw.githubusercontent.com/JMaverick16/Airbus_A330/f016c7c0ad8c6c48b7d9eed7ed7dde49dc69059d/LICENSE",
+        "path": "ThirdParty/Licenses/JMaverick16_Airbus_A330/LICENSE",
+        "sha256": "db296f2f7f35bca3a174efb0eb392b3b17bd94b341851429a3dff411b1c2fc73"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/JMaverick16/Airbus_A330/f016c7c0ad8c6c48b7d9eed7ed7dde49dc69059d/README.md",
+        "path": "ThirdParty/Licenses/JMaverick16_Airbus_A330/README.md",
+        "sha256": "ba22aad72af39dbad4d5ca85f6229c4d62ef188aab9bd0db9033cc32cb3ffd2b"
+      }
+    ]
+  },
+  {
+    "repository": "FGMEMBERS/A350XWB",
+    "commit": "04da937ab1ba0b07dabfd71d91aa33eb38316b90",
+    "license": "GPL v2 or later",
+    "evidence": [
+      {
+        "url": "https://raw.githubusercontent.com/FGMEMBERS/A350XWB/04da937ab1ba0b07dabfd71d91aa33eb38316b90/COPYING",
+        "path": "ThirdParty/Licenses/FGMEMBERS_A350XWB/COPYING",
+        "sha256": "dcc100d4161cc0b7177545ab6e47216f84857cda3843847c792a25289852dcaa"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/FGMEMBERS/A350XWB/04da937ab1ba0b07dabfd71d91aa33eb38316b90/README.md",
+        "path": "ThirdParty/Licenses/FGMEMBERS_A350XWB/README.md",
+        "sha256": "8ceec317f8a9a12259b0e70048a6ad6063935e8ea2b735142f275381ab481bcd"
+      }
+    ]
+  },
+  {
+    "repository": "franck-vmd/Boeing-777-Flightgear",
+    "commit": "821f2d9cf77cf3953c1b28df46a32740c77c73d4",
+    "license": "GPL v2",
+    "evidence": [
+      {
+        "url": "https://raw.githubusercontent.com/franck-vmd/Boeing-777-Flightgear/821f2d9cf77cf3953c1b28df46a32740c77c73d4/LICENSE",
+        "path": "ThirdParty/Licenses/franck-vmd_Boeing-777-Flightgear/LICENSE",
+        "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/franck-vmd/Boeing-777-Flightgear/821f2d9cf77cf3953c1b28df46a32740c77c73d4/README.md",
+        "path": "ThirdParty/Licenses/franck-vmd_Boeing-777-Flightgear/README.md",
+        "sha256": "7de28742cd7e9e73f533ff308a688804ab0f9c7341c2e182611a3a28b59bbcc8"
+      }
+    ]
+  },
+  {
+    "repository": "sriemmanuel787/FG-Liveries",
+    "commit": "eae9eaf1d079afd4a558ad115209d25cf9346205",
+    "license": "GPL v2",
+    "evidence": [
+      {
+        "url": "https://raw.githubusercontent.com/sriemmanuel787/FG-Liveries/eae9eaf1d079afd4a558ad115209d25cf9346205/LICENSE",
+        "path": "ThirdParty/Licenses/sriemmanuel787_FG-Liveries/LICENSE",
+        "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/sriemmanuel787/FG-Liveries/eae9eaf1d079afd4a558ad115209d25cf9346205/README.md",
+        "path": "ThirdParty/Licenses/sriemmanuel787_FG-Liveries/README.md",
+        "sha256": "433642c91ac1246510b0e17b965ce6270fedcab919f3579f71d6fde61de3326a"
+      }
+    ]
+  },
+  {
+    "repository": "kolos26/GEOFS-LiverySelector",
+    "commit": "bd05e90779060883a28b467a577077628c8b355c",
+    "license": "MIT",
+    "evidence": [
+      {
+        "url": "https://raw.githubusercontent.com/kolos26/GEOFS-LiverySelector/bd05e90779060883a28b467a577077628c8b355c/LICENSE",
+        "path": "ThirdParty/Licenses/kolos26_GEOFS-LiverySelector/LICENSE",
+        "sha256": "8bb461cae10785a4a15b2c520810130ca420b56f119e6860a7410f11310c7b28"
+      }
+    ]
+  },
+  {
+    "repository": "skogler/mapbox_earcut_python",
+    "commit": "v2.1.0",
+    "license": "ISC; development only",
+    "evidence": [
+      {
+        "url": "https://raw.githubusercontent.com/skogler/mapbox_earcut_python/v2.1.0/LICENSE.md",
+        "path": "ThirdParty/Licenses/skogler_mapbox_earcut_python/LICENSE.md",
+        "sha256": "89ad38409121961753c5aa8863eceacd954183e9b3a7720d88be53fb1a3ecd87"
+      }
+    ]
+  },
+  {
+    "repository": "numpy/numpy",
+    "version": "2.5.4",
+    "license": "BSD-3-Clause; wheel includes additional license notices",
+    "scope": "asset tooling only; not bundled Python runtime",
+    "evidence": [
+      {
+        "path": "ThirdParty/Licenses/numpy-2.5.4/LICENSE.txt",
+        "sha256": "649a589ab31076e79e9ce62ba24eae9959598124176640dbc95f87bd10f34fcf"
+      },
+      {
+        "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/_core/include/numpy/libdivide/LICENSE.txt",
+        "sha256": "fbc539f47d0cf83bc61378080fb873d5c14630126cacbfe754035c3926daa5ec"
+      },
+      {
+        "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/_core/src/common/pythoncapi-compat/COPYING",
+        "sha256": "3f2c1ffa76383a55ae0aac01c9737cd70050dff63e1f026694fbe9d662573c98"
+      },
+      {
+        "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/_core/src/highway/LICENSE",
+        "sha256": "e340270d4f64384569a91d546acb5b094d69ce47f0c015db77abb74dc6f815af"
+      },
+      {
+        "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/_core/src/multiarray/dragon4_LICENSE.txt",
+        "sha256": "f7b14309e5f54e5022b26448eefd419988ada2aec01d3c1162d84a0ea8f21f2c"
+      },
+      {
+        "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
+        "sha256": "211e7d737d6179a08f791ebb0a99897ce7cd2457410c542876d125576edfe910"
+      },
+      {
+        "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/_core/src/umath/svml/LICENSE",
+        "sha256": "c17011467b4fe6e20fbfbeda4df09e58c2bca5480a063e55735a4000a379aad9"
+      },
+      {
+        "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/fft/pocketfft/LICENSE.md",
+        "sha256": "a85ca13fdf90160b64a0698215868c13b74d835ad0a4e2ba44713b8c5058a056"
+      },
+      {
+        "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/linalg/lapack_lite/LICENSE.txt",
+        "sha256": "a14cc25e10d40a3aa705b7de2fb764a6535d8ee9b2db4e1724900585457dfd55"
+      },
+      {
+        "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/ma/LICENSE",
+        "sha256": "05f3b88351988ecfad10abe92c0c50e5875c6452d5009a0084cc291551ffcca6"
+      },
+      {
+        "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/random/LICENSE.md",
+        "sha256": "103166b62b80443afb9eb3488e052ea06be0cff566b908f199e561fde49af19f"
+      },
+      {
+        "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/random/src/distributions/LICENSE.md",
+        "sha256": "469778be8f33d54e1bcaab28c281cc472916d2d273f835e55bc487d30503face"
+      },
+      {
+        "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/random/src/mt19937/LICENSE.md",
+        "sha256": "0e111337b25494a773106695f0e799f642b8567aaacca4f116a74a8177179156"
+      },
+      {
+        "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/random/src/pcg64/LICENSE.md",
+        "sha256": "e7d4f4fb20358f314210a892ae17351e04993813646f697ec387385ca2a36918"
+      },
+      {
+        "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/random/src/philox/LICENSE.md",
+        "sha256": "6f5828a57223d4cc7f8ea505a2623e7b978b242752c1515e355f46ba2cec1800"
+      },
+      {
+        "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/random/src/sfc64/LICENSE.md",
+        "sha256": "9d4098846018319cd68e228ee6220361787f73bccbf00237a85e4fc9621b998f"
+      },
+      {
+        "path": "ThirdParty/Licenses/numpy-2.5.4/numpy/random/src/splitmix64/LICENSE.md",
+        "sha256": "268b0ca06759d31ea3ca68dd35f20e877916e927b1c2a835e4592a3c4354b1f9"
+      }
+    ]
+  },
+  {
+    "repository": "python-pillow/Pillow",
+    "version": "12.3.0",
+    "license": "MIT-CMU; wheel includes additional license notices",
+    "scope": "asset tooling only; not bundled Python runtime",
+    "evidence": [
+      {
+        "path": "ThirdParty/Licenses/Pillow-12.3.0/LICENSE",
+        "sha256": "dda12a98c1979cf3d94df1cff45d27a4cb3f04a60c76f76902ac54cac03ec0ce"
+      }
+    ]
+  },
+  {
+    "repository": "skogler/mapbox_earcut_python",
+    "version": "2.1.0",
+    "license": "ISC; Mapbox algorithm notice recorded separately",
+    "scope": "asset tooling only; not bundled Python runtime",
+    "evidence": [
+      {
+        "path": "ThirdParty/Licenses/mapbox-earcut-2.1.0/LICENSE.md",
+        "sha256": "89ad38409121961753c5aa8863eceacd954183e9b3a7720d88be53fb1a3ecd87"
+      }
+    ]
+  },
+  {
+    "repository": "mapbox/earcut.hpp",
+    "commit": "vendored in skogler/mapbox_earcut_python v2.1.0",
+    "license": "ISC",
+    "scope": "optional asset tooling",
+    "evidence": [
+      {
+        "url": "https://raw.githubusercontent.com/skogler/mapbox_earcut_python/v2.1.0/include/mapbox/LICENSE",
+        "path": "ThirdParty/Licenses/skogler_mapbox_earcut_python/earcut-LICENSE",
+        "sha256": "828f2aed51b6526881a236758ec9b08cd69928fbfc70346d9d44a0b3a3444fe1"
+      }
+    ]
+  }
+]

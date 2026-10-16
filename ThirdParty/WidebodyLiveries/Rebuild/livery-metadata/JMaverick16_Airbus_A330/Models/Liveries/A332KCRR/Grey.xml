@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name>Voyager KC (Default)</name>
+				<texture>243KCGrey.png</texture>
+			</livery>
+		</model>
+	</sim>
+
+	<options n="0">
+		<hasboom type="bool">0</hasboom>
+		<boom-pos-cmd type="double">0</boom-pos-cmd>
+	</options>
+</PropertyList>

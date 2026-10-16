@@ -1,0 +1,12 @@
+[
+  {
+    "file": "Fuse-Main-Normal.png",
+    "url": "https://raw.githubusercontent.com/legoboyvdlp/A320-family/fec1ecba767c8fffd145337b27012e89c01e3ade/Models/Effects/Lightmaps/Fuse-Main-Normal.png",
+    "sha256": "245251936f76b421fb6ea61254290300856be509a315a5b7edc1621141b1594f"
+  },
+  {
+    "file": "Engine-CFM56-Normal.png",
+    "url": "https://raw.githubusercontent.com/legoboyvdlp/A320-family/fec1ecba767c8fffd145337b27012e89c01e3ade/Models/Effects/Lightmaps/Engine-CFM56-Normal.png",
+    "sha256": "65762593ccadb9664a9349dada085db96755b3f298ee72eaf7d6cf4e8c4abe75"
+  }
+]

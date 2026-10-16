@@ -1,0 +1,310 @@
+aircraft,id,title,english,special,texture_width,texture_height,model,note
+airbus,airbus-CCA,中国国际航空,Air China (B-8490),False,8192,8192,airbus,原型 IAE；适配当前 CFM56 机身
+airbus,airbus-CES,中国东方航空,China Eastern Airlines (B-1292),False,4096,4096,airbus,原型 CFM-NEO；适配当前 CFM56 机身
+airbus,airbus-HKE,香港快运,Hong Kong Express (B-LCV),False,4096,4096,airbus,原型 PW-NEO；适配当前 CFM56 机身
+airbus,airbus-HDA,港龙航空,Cathay Dragon (B-HSK),False,4096,4096,airbus,原型 IAE；适配当前 CFM56 机身 · 历史涂装
+airbus,airbus-AAL,美国航空,American Airlines (N211US),False,4096,4096,airbus,CFM56 机身适配
+airbus,airbus-ACA,加拿大航空,Air Canada (C-FZQS),False,4096,4096,airbus,CFM56 机身适配
+airbus,airbus-AFR,法国航空,Air France (F-HBNJ),False,4096,4096,airbus,CFM56 机身适配
+airbus,airbus-AVA,哥伦比亚航空,Avianca (N481AV),False,4096,4096,airbus,CFM56 机身适配
+airbus,airbus-AZA,意大利航空,Alitalia (EI-DSG),False,4096,4096,airbus,CFM56 机身适配 · 历史涂装
+airbus,airbus-CFG,神鹰航空,Condor (LZ-FBG),False,4096,4096,airbus,CFM56 机身适配
+airbus,airbus-CSA,捷克航空,Czech Airlines (OK-HEU),False,4096,4096,airbus,CFM56 机身适配 · 历史涂装
+airbus,airbus-CTN,克罗地亚航空,Croatia Airlines (9A-CTJ),False,4096,4096,airbus,CFM56 机身适配
+airbus,airbus-DAL,达美航空,Delta Air Lines (N347NW),False,4096,4096,airbus,CFM56 机身适配
+airbus,airbus-DLH,汉莎航空,Lufthansa (D-AIWE),False,4096,4096,airbus,CFM56 机身适配
+airbus,airbus-EDW,雪绒花航空,Edelweiss Air (HB-IHX),False,4096,4096,airbus,CFM56 机身适配
+airbus,airbus-EIN,爱尔兰航空,Aer Linugs (EI-DVN),False,4096,4096,airbus,CFM56 机身适配
+airbus,airbus-ENT,Enter Air,Enter Air (LZ-MDO),False,4096,4096,airbus,CFM56 机身适配
+airbus,airbus-EWE,欧洲之翼,Eurowings Europe (OE-IEU),False,4096,4096,airbus,CFM56 机身适配
+airbus,airbus-EZY,易捷航空,easyJet (G-EZWC),False,4096,4096,airbus,CFM56 机身适配
+airbus,airbus-FIN,芬兰航空,Finnair (OH-LXH),False,4096,4096,airbus,CFM56 机身适配
+airbus,airbus-IBS,伊比利亚快运,Iberia Express (EC-MEG),False,4096,4096,airbus,CFM56 机身适配
+airbus,airbus-IRA,伊朗航空,IranAir (EP-IEE),False,4096,4096,airbus,CFM56 机身适配
+airbus,airbus-LAO,老挝航空,Lao Airlines (RDPL-34188),False,4096,4096,airbus,CFM56 机身适配
+airbus,airbus-PGT,飞马航空,Pegasus (TC-DCE),False,4096,4096,airbus,CFM56 机身适配
+airbus,airbus-SBI,S7 航空,Siberian (VP-BCZ),False,4096,4096,airbus,CFM56 机身适配
+airbus,airbus-TAM,LATAM 巴西航空,LATAM Brazil (PR-MHM),False,4096,4096,airbus,CFM56 机身适配
+airbus,airbus-TAP,葡萄牙航空,TAP Portugal (CS-TNT),False,4096,4096,airbus,CFM56 机身适配
+airbus,airbus-ASL,塞尔维亚航空,Air Serbia (YU-APH),False,4096,4096,airbus,原型 IAE；适配当前 CFM56 机身
+airbus,airbus-BAW,英国航空,British Airways (G-EUUC),False,4096,4096,airbus,原型 IAE；适配当前 CFM56 机身
+airbus,airbus-JBU,捷蓝航空,jetBlue (N536JB),False,4096,4096,airbus,原型 IAE；适配当前 CFM56 机身
+airbus,airbus-JST,捷星航空,JetStar(VH-VFK),False,4096,4096,airbus,原型 IAE；适配当前 CFM56 机身
+airbus,airbus-NKS,精神航空,Spirit Airlines (N651NK),False,4096,4096,airbus,原型 IAE；适配当前 CFM56 机身
+airbus,airbus-SAA,南非航空,South African(ZS-SZB),False,4096,4096,airbus,原型 IAE；适配当前 CFM56 机身
+airbus,airbus-SEY,塞舌尔航空,Air Seychelles (S7-AMI),False,4096,4096,airbus,原型 IAE；适配当前 CFM56 机身
+airbus,airbus-THY,土耳其航空,Turkish Airlines (TC-JUF),False,4096,4096,airbus,原型 IAE；适配当前 CFM56 机身
+airbus,airbus-VIV,Viva Aerobus,VivaAerobus (XA-VAB),False,4096,4096,airbus,原型 IAE；适配当前 CFM56 机身
+airbus,airbus-VTI,Vistara,Vistara (VT-TTB),False,4096,4096,airbus,原型 IAE；适配当前 CFM56 机身 · 历史涂装
+airbus,airbus-WZZ,维兹航空,Wizz Air (HA-LWT),False,4096,4096,airbus,原型 IAE；适配当前 CFM56 机身
+airbus,airbus-ANA,全日空,All Nippon Airways(JA212A),False,4096,4096,airbus,原型 PW-NEO；适配当前 CFM56 机身
+airbus,airbus-IGO,靛蓝航空,IndiGo (VT-IVZ),False,4096,4096,airbus,原型 PW-NEO；适配当前 CFM56 机身
+airbus,airbus-KZR,阿斯塔纳航空,Air Astana (P4-KBM),False,4096,4096,airbus,原型 PW-NEO；适配当前 CFM56 机身
+airbus,airbus-VOI,沃拉里斯航空 · 第 100 架飞机,Volaris (XA-VSH),True,4096,4096,airbus,原型 PW-NEO；适配当前 CFM56 机身
+airbus,airbus-AXB,印度快运航空,Air India Express (VT-ATD),False,4096,4096,airbus,原型 CFM-NEO；适配当前 CFM56 机身
+airbus,airbus-DRK,不丹航空 Drukair,Drukair (A5-JKW),False,4096,4096,airbus,原型 CFM-NEO；适配当前 CFM56 机身
+airbus,airbus-IBE,伊比利亚航空,Iberia (EC-MXY),False,4096,4096,airbus,原型 CFM-NEO；适配当前 CFM56 机身
+airbus,airbus-SAS,北欧航空,Scandinavian (SE-ROJ),False,4096,4096,airbus,原型 CFM-NEO；适配当前 CFM56 机身
+airbus,airbus-SKU,智利天空航空,Sky Airline (CC-AZO),False,4096,4096,airbus,原型 CFM-NEO；适配当前 CFM56 机身
+airbus,airbus-QTR,卡塔尔航空,Qatar Airways (A7-AHW),False,4096,4096,airbus,原型 IAE；适配当前 CFM56 机身
+airbus,airbus-AUA,奥地利航空,Austrian Airlines (OE-LBU),False,4096,4096,airbus,CFM56 机身适配
+airbus,airbus-SWR,瑞士国际航空,Swiss (HB-JLS),False,4096,4096,airbus,CFM56 机身适配
+boeing,boeing-CCA,中国国际航空,Air China,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-CES,中国东方航空,China Eastern,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-CHH,海南航空,Hainan Airlines,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-CAL,中华航空,China Airlines,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-CCA-SILVER,国航 · 银牡丹,Air China (Silver Peony Livery),True,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-CCA-GOLD,国航 · 金牡丹,Air China (Gold Peony Livery),True,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-CCA-YELLOW,国航 · 黄牡丹,Air China (Yellow Peony Livery),True,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-AAL,美国航空,American Airlines (2013),False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-DAL,达美航空,Delta Air Lines,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-SWA,美国西南航空,Southwest Airlines (2014),False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-ASA,阿拉斯加航空,Alaska Airlines (New Livery),False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-WJA,西捷航空,WestJet (with new winglets),False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-AMX,墨西哥航空,AeroMexico-DJK,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-CMP,巴拿马航空,Copa Airlines,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-ARG,阿根廷航空,Aerolineas Argentinas,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-GOL,巴西高尔航空,GOL nova,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-SCX,太阳城航空,Sun Country Airlines (2018),False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-SWG,太阳之翼,Sunwing Airlines,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-ANA,全日空,ANA,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-JAL,日本航空,Japan Airlines,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-JTA,日本越洋航空,Japan Transocean Air,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-KAL,大韩航空,Korean Air,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-ESR,易斯达航空,EASTAR jet (HL8269),False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-MAS,马来西亚航空,Malaysia Airlines (2010),False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-GIA,印度尼西亚鹰航,Garuda Indonesia,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-LNI,狮子航空,Lion Air,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-FDB,迪拜航空,FlyDubai,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-ELY,以色列航空,El Al,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-VT-AXA,印度快运航空,Air India Express (Elephant / Camel),False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-NOK,泰国皇雀航空 · 彩绘,NOK AIR,True,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-FJI,斐济航空,Fiji Airways,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-QFA,澳洲航空,Qantas,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-VOZ,维珍澳洲航空,Virgin Australia,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-KLM,荷兰皇家航空,KLM Royal Dutch Airlines,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-RYR,瑞安航空,Ryanair,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-THY,土耳其航空,Turkish Airlines,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-PGT,飞马航空,Pegasus Airlines,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-NAX,挪威航空,Norwegian (Blank tail),False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-TUI,途易航空,TUIfly,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-EXS,Jet2,Jet2,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-AEA,欧罗巴航空,Air Europa,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-SAS,北欧航空,SAS,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-LOT,波兰航空,LOT Polish Airlines,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-AFL,俄罗斯航空,Aeroflot,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-SBI,S7 航空,S7 Airlines,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-AUI,乌克兰国际航空,Ukraine International Airlines,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-ROT,罗马尼亚航空,TAROM,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-SXS,太阳快运航空,SunExpress,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-TVS,Smartwings,Smartwings,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-BRU,白俄罗斯航空,Belavia (2016),False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-KQA,肯尼亚航空,Kenya Airways,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-ETH,埃塞俄比亚航空,Ethiopian Airlines (ET-AOA),False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-MSR,埃及航空,Egypt Air new livery,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-SAA,南非航空,South African Airways,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-CAI,Corendon Airlines,Corendon Airlines,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+boeing,boeing-BAW,英国航空 · Comair,British Airways (comair),False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配 · 历史涂装
+boeing,boeing-BMS,蓝天航空 Blue Air,Blue Air,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配 · 历史涂装
+boeing,boeing-ENT,Enter Air,Enter Air,False,2048,2048,boeing,源涂装版本；机身与翼尖构型适配
+b78x,b78x-genx-ETD,阿提哈德航空,ETD Etihad Airways (A6-BMA),False,8192,8192,b78x-genx,GEnx · 原始贴图 8192 px
+b78x,b78x-genx-ETD1,阿提哈德航空 · A6-BMH,ETD Etihad Airways (A6-BMH),True,8192,8192,b78x-genx,GEnx · 原始贴图 8192 px · 特殊彩绘
+b78x,b78x-genx-EVA,长荣航空,EVA EVA Air (B-17801),False,8192,8192,b78x-genx,GEnx · 原始贴图 8192 px
+b78x,b78x-genx-KLM,荷兰皇家航空,KLM KLM Royal Dutch Airlines (PH-BKD),False,8192,8192,b78x-genx,GEnx · 原始贴图 8192 px
+b78x,b78x-genx-KLM1,荷兰皇家航空 · 100 周年 · PH-BKA,KLM KLM Royal Dutch Airlines (PH-BKA),True,8192,8192,b78x-genx,GEnx · 原始贴图 8192 px
+b78x,b78x-trent-ANA,全日空,ANA All Nippon Airways (JA900A),False,8192,8192,b78x-trent,Trent 1000 · 原始贴图 8192 px
+b78x,b78x-trent-BAW,英国航空,BAW British Airways (G-ZBLA),False,8192,8192,b78x-trent,Trent 1000 · 原始贴图 8192 px
+b78x,b78x-trent-SIA,新加坡航空,SIA Singapore Airlines (9V-SCE),False,8192,8192,b78x-trent,Trent 1000 · 原始贴图 8192 px
+b788,b788-genx-AAL,美国航空,AAL American Airlines (N800AN),False,8192,8192,b788-genx,GEnx · 原始贴图 8192 px
+b788,b788-genx-ACA,加拿大航空,ACA Air Canada (C-GHPQ),False,8192,8192,b788-genx,GEnx · 原始贴图 8192 px
+b788,b788-genx-AIC,印度航空,AIC Air India (VT-ANS),False,8192,8192,b788-genx,GEnx · 原始贴图 8192 px
+b788,b788-genx-BBC,孟加拉国航空,BBC Biman Bangladesh (S2-AJS),False,8192,8192,b788-genx,GEnx · 原始贴图 8192 px
+b788,b788-genx-BOE,波音原厂涂装,BOE House Livery (N787ZA),False,8192,8192,b788-genx,GEnx · 原始贴图 8192 px
+b788,b788-genx-TOM,途易航空,TOM Tui Airways (G-TUIA),False,8192,8192,b788-genx,GEnx · 原始贴图 8192 px
+b788,b788-trent-BAW,英国航空,BAW British Airways (G-ZBJM),False,8192,8192,b788-trent,Trent 1000 · 原始贴图 8192 px
+b788,b788-trent-LAN,LATAM 智利航空,LAN Latam Airlines (CC-BBI),False,8192,8192,b788-trent,Trent 1000 · 原始贴图 8192 px
+b788,b788-trent-LOT,波兰航空,LOT Polish Airlines (SP-LRA),False,8192,8192,b788-trent,Trent 1000 · 原始贴图 8192 px
+b788,b788-trent-LOT1,波兰航空 · SP-LRF,LOT Polish Airlines (SP-LRF),False,8192,8192,b788-trent,Trent 1000 · 原始贴图 8192 px · 特殊彩绘
+b788,b788-trent-REU,留尼汪航空,REU Air Austral (F-OLRB),False,8192,8192,b788-trent,Trent 1000 · 原始贴图 8192 px
+b788,b788-trent-TGW,酷航,TGW Scoot (9V-OFB),False,8192,8192,b788-trent,Trent 1000 · 原始贴图 8192 px
+b789,b789-genx-DLH,汉莎航空,DLH Lufthansa (D-ABPD),False,8192,8192,b789-genx,GEnx · 原始贴图 8192 px
+b789,b789-genx-KLM,荷兰皇家航空,KLM KLM Royal Dutch Airlines (PH-BHP),False,8192,8192,b789-genx,GEnx · 原始贴图 8192 px
+b789,b789-genx-KLM1,荷兰皇家航空 · 100 周年 · PH-BHH,KLM KLM Royal Dutch Airlines (PH-BHH),True,8192,8192,b789-genx,GEnx · 原始贴图 8192 px
+b789,b789-genx-THY,土耳其航空,THY Turkish Airlines (TC-LLG),False,8192,8192,b789-genx,GEnx · 原始贴图 8192 px
+b789,b789-genx-TOM,途易航空,TOM TUI Airways (G-TUIL),False,8192,8192,b789-genx,GEnx · 原始贴图 8192 px
+b789,b789-trent-BAW,英国航空,BAW British Airways (G-ZBKA),False,8192,8192,b789-trent,Trent 1000 · 原始贴图 8192 px
+b789,b789-trent-LOT,波兰航空,LOT Polish Airlines (SP-LSA),False,8192,8192,b789-trent,Trent 1000 · 原始贴图 8192 px
+b789,b789-trent-LOT1,波兰航空 · 波兰独立百年纪念,LOT Polish Airlines (SP-LSC),True,8192,8192,b789-trent,Trent 1000 · 原始贴图 8192 px · 特殊彩绘
+b789,b789-trent-NRS,挪威航空,NRS Norwegian Air UK (G-CKWE),False,8192,8192,b789-trent,Trent 1000 · 原始贴图 8192 px
+b789,b789-trent-TGW,酷航,TGW Scoot (9V-OJD),False,8192,8192,b789-trent,Trent 1000 · 原始贴图 8192 px
+b789,b789-trent-VIR,维珍大西洋航空,VIR Virgin Atlantic (G-VZIG),False,8192,8192,b789-trent,Trent 1000 · 原始贴图 8192 px
+b78x,b78x-genx-KLM-100-2-extra,荷兰皇家航空 · 100 周年 · B787-10,KLM Royal Dutch Airlines (PH-BKD),True,8192,8192,b78x-genx,GEnx · 原始贴图 8192 px · 特殊彩绘
+b78x,b78x-genx-KLM-100-extra,荷兰皇家航空 · 100 周年,KLM Royal Dutch Airlines (PH-BKA),True,8192,8192,b78x-genx,GEnx · 原始贴图 8192 px · 特殊彩绘
+b78x,b78x-genx-UAL-2019-extra,美国联合航空 · 新版,UAL United Airlines (N12010),False,8192,8192,b78x-genx,GEnx · 原始贴图 8192 px
+b78x,b78x-genx-UAL-extra,美国联合航空,UAL United Airlines (N14001),False,8192,8192,b78x-genx,GEnx · 原始贴图 8192 px
+b78x,b78x-trent-SVA-NEOM-extra,沙特阿拉伯航空 · NEOM,SVA Saudi Arabian Airlines (HZ-AR26),True,8192,8192,b78x-trent,Trent 1000 · 原始贴图 8192 px · 特殊彩绘
+b78x,b78x-trent-SVA-extra,沙特阿拉伯航空,SVA Saudi Arabian Airlines (HZ-AR24),False,8192,8192,b78x-trent,Trent 1000 · 原始贴图 8192 px
+b788,b788-genx-UAL-extra,美国联合航空,UAL United Airlines (N20904),False,8192,8192,b788-genx,GEnx · 原始贴图 8192 px
+b788,b788-trent-AEA-IGLESIAS-extra,欧罗巴航空 · Julio Iglesias,AEA Air Europa (EC-MIH),True,8192,8192,b788-trent,Trent 1000 · 原始贴图 8192 px · 特殊彩绘
+b788,b788-trent-AEA-SCHOLAS-extra,欧罗巴航空 · Scholas,AEA Air Europa (EC-MIG),True,8192,8192,b788-trent,Trent 1000 · 原始贴图 8192 px · 特殊彩绘
+b788,b788-trent-AEA-X-extra,欧罗巴航空 · 特别涂装,AEA Air Europa (EC-MLT),True,8192,8192,b788-trent,Trent 1000 · 原始贴图 8192 px · 特殊彩绘
+b788,b788-trent-AEA-extra,欧罗巴航空,AEA Air Europa (EC-MMX),False,8192,8192,b788-trent,Trent 1000 · 原始贴图 8192 px
+b789,b789-genx-KLM-100-extra,荷兰皇家航空 · 100 周年,KLM Royal Dutch Airlines (PH-BHA),True,8192,8192,b789-genx,GEnx · 原始贴图 8192 px · 特殊彩绘
+b789,b789-genx-UAL-2019-extra,美国联合航空 · 新版,UAL United Airlines (N29975),False,8192,8192,b789-genx,GEnx · 原始贴图 8192 px
+b789,b789-genx-UAL-extra,美国联合航空,UAL United Airlines (N38950),False,8192,8192,b789-genx,GEnx · 原始贴图 8192 px
+a332,a332-rr-CCA,中国国际航空,Air China,False,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px
+a332,a332-rr-CCA-SA,中国国际航空 · 星空联盟,Air China (Star Alliance),True,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px · 特殊彩绘
+a332,a332-rr-CES,中国东方航空,China Eastern Airlines,False,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px
+a332,a332-rr-CES_ST,中国东方航空 · 天合联盟,China Eastern (SkyTeam),True,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px · 特殊彩绘
+a332,a332-rr-CHH,海南航空,Hainan Airlines,False,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px
+a332,a332-rr-CRK,香港航空,Hong Kong Airlines,False,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px
+a332,a332-rr-SAA,南非航空,South African Airways,False,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px
+a332,a332-rr-AEA,欧罗巴航空,Air Europa,False,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px
+a332,a332-rr-MSR,埃及航空,Egyptair,False,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px
+a332,a332-rr-MSR-SA,埃及航空 · 星空联盟,Egyptair (Star Alliance),True,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px · 特殊彩绘
+a332,a332-rr-GIA,印度尼西亚鹰航,Garuda Indonesia,False,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px
+a332,a332-rr-VOZ,维珍澳洲航空,Virgin Australia,False,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px
+a332,a332-rr-FJI,斐济航空,Fiji Airways,False,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px
+a332,a332-rr-ETD,阿提哈德航空,Etihad Airways,False,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px
+a332,a332-rr-ETD1,阿提哈德航空 · 阿布扎比 F1,Etihad (F1 2017),True,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px · 特殊彩绘
+a332,a332-rr-ETD_EXPO,阿提哈德航空 · 米兰世博会,Etihad (EXPO 2015),True,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px · 特殊彩绘
+a332,a332-rr-AZU,巴西蓝色航空,Azul Linhas Aereas,False,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px
+a332,a332-rr-AZU2,巴西蓝色航空 · Azul Viagens,Azul viagens,True,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px · 特殊彩绘
+a332,a332-rr-AVA,哥伦比亚航空,Avianca,False,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px
+a332,a332-rr-KAC,科威特航空,Kuwait Airways,False,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px
+a332,a332-rr-OMA,阿曼航空,Oman Air,False,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px
+a332,a332-rr-SEY,塞舌尔航空,Air Seychelles,False,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px
+a332,a332-rr-GFA,海湾航空,Gulf Air (F1 2014),False,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px
+a332,a332-rr-GFA2,海湾航空 · 巴林 F1,Gulf Air (F1 2015),True,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px · 特殊彩绘
+a332,a332-rr-MEA,中东航空,Middle Eastern Airlines,False,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px
+a332,a332-rr-HAL,夏威夷航空,Hawaiian Air,False,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px
+a332,a332-rr-AAL,美国航空,American Airlines,False,2048,1024,a332-rr,Trent 700 · 原始贴图 2048 px
+a332,a332-pw-CSN,中国南方航空,China Southern Airlines,False,2048,1024,a332-pw,PW4000 · 原始贴图 2048 px
+a332,a332-pw-DAL,达美航空,Delta Airlines,False,2048,1024,a332-pw,PW4000 · 原始贴图 2048 px
+a332,a332-pw-GRL,格陵兰航空,Air Greenland,False,2048,1024,a332-pw,PW4000 · 原始贴图 2048 px
+a332,a332-pw-HVN,越南航空,Vietnam Airlines,False,2048,1024,a332-pw,PW4000 · 原始贴图 2048 px
+a332,a332-pw-HVN_ST,越南航空 · 天合联盟,Vietnam Airlines (SkyTeam),True,2048,1024,a332-pw,PW4000 · 原始贴图 2048 px · 特殊彩绘
+a332,a332-pw-RJA,皇家约旦航空,Royal Jordanian Airlines,False,2048,1024,a332-pw,PW4000 · 原始贴图 2048 px
+a332,a332-pw-TAP,葡萄牙航空,TAP Portugal,False,2048,1024,a332-pw,PW4000 · 原始贴图 2048 px
+a332,a332-pw-TAP-SA,葡萄牙航空 · 星空联盟,TAP (Star Alliance),True,2048,1024,a332-pw,PW4000 · 原始贴图 2048 px · 特殊彩绘
+a332,a332-pw-MAS,马来西亚航空 · Negaraku,"Malaysia Airlines ""Negaraku""",True,2048,1024,a332-pw,PW4000 · 原始贴图 2048 px
+a332,a332-pw-RZO,亚速尔航空,Azores Airlines,False,2048,1024,a332-pw,PW4000 · 原始贴图 2048 px
+a332,a332-pw-AUA,奥地利航空,Austrian,False,2048,1024,a332-pw,PW4000 · 原始贴图 2048 px
+a332,a332-pw-THY-SA,土耳其航空 · 星空联盟,Turkish (Star Alliance),True,2048,1024,a332-pw,PW4000 · 原始贴图 2048 px · 特殊彩绘
+a332,a332-pw-KAL,大韩航空,Korean Air,False,2048,1024,a332-pw,PW4000 · 原始贴图 2048 px
+a332,a332-pw-BEL,布鲁塞尔航空,Brussels Airlines,False,2048,1024,a332-pw,PW4000 · 原始贴图 2048 px
+a332,a332-pw-FWI,加勒比航空,Air Caraibes,False,2048,1024,a332-pw,PW4000 · 原始贴图 2048 px
+a332,a332-pw-ARG,阿根廷航空,Aerolineas Argentinas,False,2048,1024,a332-pw,PW4000 · 原始贴图 2048 px
+a332,a332-ge-QTR,卡塔尔航空,QATAR Airways,False,2048,1024,a332-ge,CF6-80E1 · 原始贴图 2048 px
+a332,a332-ge-EVA,长荣航空,EVA AIR,False,2048,1024,a332-ge,CF6-80E1 · 原始贴图 2048 px
+a332,a332-ge-QFA,澳洲航空,Qantas,False,2048,1024,a332-ge,CF6-80E1 · 原始贴图 2048 px
+a332,a332-ge-QFA-OW,澳洲航空 · 寰宇一家,Qantas OneWorld,True,2048,1024,a332-ge,CF6-80E1 · 原始贴图 2048 px · 特殊彩绘
+a332,a332-ge-AFR,法国航空,Air France,False,2048,1024,a332-ge,CF6-80E1 · 原始贴图 2048 px
+a332,a332-ge-EIN,爱尔兰航空,Aer Lingus,False,2048,1024,a332-ge,CF6-80E1 · 原始贴图 2048 px
+a332,a332-ge-EWG,欧洲之翼,Eurowings,False,2048,1024,a332-ge,CF6-80E1 · 原始贴图 2048 px
+a332,a332-ge-IBE,伊比利亚航空,Iberia,False,2048,1024,a332-ge,CF6-80E1 · 原始贴图 2048 px
+a332,a332-ge-KLM,荷兰皇家航空,KLM Airlines,False,2048,1024,a332-ge,CF6-80E1 · 原始贴图 2048 px
+a332,a332-ge-THY,土耳其航空,Turkish Airlines,False,2048,1024,a332-ge,CF6-80E1 · 原始贴图 2048 px
+a333,a333-rr-CCA,中国国际航空,Air China,False,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px
+a333,a333-rr-CES,中国东方航空,China Eastern,False,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px
+a333,a333-rr-CSN,中国南方航空,China Southern,False,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px
+a333,a333-rr-CPA,国泰航空,Cathay Pacific,False,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px
+a333,a333-rr-CPA-OW,国泰航空 · 寰宇一家,Cathay Pacific (oneworld),True,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px · 特殊彩绘
+a333,a333-rr-CPA_1K,"国泰航空 · 第 1,000 架空客",Cathay Pacific (1000th A330),True,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px · 特殊彩绘
+a333,a333-rr-ACA,加拿大航空,Air Canada,False,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px
+a333,a333-rr-ACA-SA,加拿大航空 · 星空联盟,Air Canada (Star Alliance),True,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px · 特殊彩绘
+a333,a333-rr-DLH,汉莎航空,Lufthansa,False,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px
+a333,a333-rr-DLH2,汉莎航空 · D-AIKG,"Lufthansa ""Shark Skin""",False,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px · 特殊彩绘
+a333,a333-rr-DLH3,汉莎航空 · 2018 版,Lufthansa (2018-),False,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px
+a333,a333-rr-THY,土耳其航空,Turkish Airlines,False,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px
+a333,a333-rr-THY2,土耳其航空 · Istanbul 2020,Turkish Airlines (Istanbul 2020),True,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px · 特殊彩绘
+a333,a333-rr-THA,泰国国际航空,Thai Airways Intl,False,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px
+a333,a333-rr-SWR,瑞士国际航空,SWISS,False,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px
+a333,a333-rr-SAS,北欧航空,Scandinavian,False,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px
+a333,a333-rr-SAS-SA,北欧航空 · 星空联盟,SAS (Star Alliance),True,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px · 特殊彩绘
+a333,a333-rr-SIA,新加坡航空,Singapore Airlines,False,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px
+a333,a333-rr-SVA,沙特阿拉伯航空,Saudi Arabian Airlines,False,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px
+a333,a333-rr-SVA_ST,沙特阿拉伯航空 · 天合联盟,Saudia (Skyteam),True,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px · 特殊彩绘
+a333,a333-rr-GIA_ST,印度尼西亚鹰航 · 天合联盟,Garuda Indonesia (Skyteam),True,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px · 特殊彩绘
+a333,a333-rr-ALK,斯里兰卡航空,SriLankan Airlines,False,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px
+a333,a333-rr-CEB,宿务太平洋航空,Cebu Pacific Air,False,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px
+a333,a333-rr-XAX,亚洲航空长途,AirAsia X (Indonesia),False,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px
+a333,a333-rr-VIR,维珍大西洋航空,Virgin Atlantic Airways,False,2048,1024,a333-rr,Trent 700 · 原始贴图 2048 px
+a333,a333-ge-QFA,澳洲航空,Qantas Airways (Old),False,2048,1024,a333-ge,CF6-80E1 · 原始贴图 2048 px
+a333,a333-ge-CAL,中华航空,China Airlines,False,2048,1024,a333-ge,CF6-80E1 · 原始贴图 2048 px
+a333,a333-ge-FIN,芬兰航空,Finnair,False,2048,1024,a333-ge,CF6-80E1 · 原始贴图 2048 px
+a333,a333-ge-KLM,荷兰皇家航空,KLM,False,2048,1024,a333-ge,CF6-80E1 · 原始贴图 2048 px
+a333,a333-ge-QTR,卡塔尔航空,Qatar Airways,False,2048,1024,a333-ge,CF6-80E1 · 原始贴图 2048 px
+a333,a333-ge-THY,土耳其航空,Turkish Airlines,False,2048,1024,a333-ge,CF6-80E1 · 原始贴图 2048 px
+a333,a333-ge-IBE,伊比利亚航空,Iberia,False,2048,1024,a333-ge,CF6-80E1 · 原始贴图 2048 px
+a333,a333-ge-PAL,菲律宾航空,Philippine Airlines,False,2048,1024,a333-ge,CF6-80E1 · 原始贴图 2048 px
+a333,a333-ge-EIN,爱尔兰航空,Aer Lingus (1996 - 2019),False,2048,1024,a333-ge,CF6-80E1 · 原始贴图 2048 px
+a333,a333-pw-DAL,达美航空,Delta Airlines,False,2048,1024,a333-pw,PW4000 · 原始贴图 2048 px
+a333,a333-pw-MAS,马来西亚航空,Malaysia Airlines,False,2048,1024,a333-pw,PW4000 · 原始贴图 2048 px
+a333,a333-pw-MAS-OW,马来西亚航空 · 寰宇一家,Malaysia Airlines (oneworld),True,2048,1024,a333-pw,PW4000 · 原始贴图 2048 px · 特殊彩绘
+a333,a333-pw-AAL,美国航空,American Airlines,False,2048,1024,a333-pw,PW4000 · 原始贴图 2048 px
+a333,a333-pw-AAR,韩亚航空,Asiana Airlines,False,2048,1024,a333-pw,PW4000 · 原始贴图 2048 px
+a333,a333-pw-KAL,大韩航空,Korean Airlines,False,2048,1024,a333-pw,PW4000 · 原始贴图 2048 px
+a333,a333-pw-THA,泰国国际航空,Thai Airways Intl,False,2048,1024,a333-pw,PW4000 · 原始贴图 2048 px
+a333,a333-ge-FIN-MU-extra,芬兰航空 · Marimekko Unikko,Finnair(Marimekko Unikko),True,8192,4096,a333-ge,CF6-80E1 · 原始贴图 8192 px · 特殊彩绘
+a333,a333-ge-KLM-100-extra,荷兰皇家航空 · 100 周年,KLM Royal Dutch Airlines(100 Years),True,8192,4096,a333-ge,CF6-80E1 · 原始贴图 8192 px · 特殊彩绘
+a333,a333-ge-KLM-2014-100-extra,荷兰皇家航空 · 100 周年 · 新版,"KLM Royal Dutch Airlines(2014, 100 Years)",True,8192,4096,a333-ge,CF6-80E1 · 原始贴图 8192 px · 特殊彩绘
+a333,a333-ge-KLM-2014-extra,荷兰皇家航空 · 新版,KLM Royal Dutch Airlines(2014),False,8192,4096,a333-ge,CF6-80E1 · 原始贴图 8192 px
+a333,a333-ge-KLM-95-extra,荷兰皇家航空 · 95 周年,KLM Royal Dutch Airlines(95 Years),True,8192,4096,a333-ge,CF6-80E1 · 原始贴图 8192 px · 特殊彩绘
+a333,a333-rr-CES-1988-extra,中国东方航空 · 1988,China Eastern Airlines (1988),False,8192,4096,a333-rr,Trent 700 · 原始贴图 8192 px
+a333,a333-rr-DLH-2018-extra,汉莎航空 · 新版,Lufthansa(2018),False,8192,4096,a333-rr,Trent 700 · 原始贴图 8192 px
+a333,a333-rr-SWR-2012-extra,瑞士国际航空 · 新版,Swiss International Airlines(2012),False,8192,4096,a333-rr,Trent 700 · 原始贴图 8192 px
+a359,a359-xwb-AFL-extra,俄罗斯航空,AFL - Aeroflot Russian Airlines,False,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px
+a359,a359-xwb-AFR-extra,法国航空,AFR - Air France,False,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px
+a359,a359-xwb-CAL-extra,中华航空,CAL - China Airlines,False,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px
+a359,a359-xwb-CCA-SA-extra,中国国际航空 · 星空联盟,Air China · Star Alliance,True,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px · 特殊彩绘
+a359,a359-xwb-CPA-extra,国泰航空,CPA - Cathay Pacific,False,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px
+a359,a359-xwb-CSN-extra,中国南方航空,CSN - China Southern Airlines,False,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px
+a359,a359-xwb-DAL-SPIRIT-extra,达美航空 · The Delta Spirit,DAL - Delta Air Lines - The Delta Spirit,True,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px · 特殊彩绘
+a359,a359-xwb-DAL-extra,达美航空,DAL - Delta Air Lines,False,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px
+a359,a359-xwb-ETH-SA-extra,埃塞俄比亚航空 · 星空联盟,ETH - Ethiopian Airlines - Star Alliance,True,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px · 特殊彩绘
+a359,a359-xwb-ETH-extra,埃塞俄比亚航空,ETH - Ethiopian Airlines,False,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px
+a359,a359-xwb-FIN-MK-extra,芬兰航空 · Marimekko Kivet,FIN - Finnair - Marrimekko Kivet,True,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px · 特殊彩绘
+a359,a359-xwb-FIN-OW-extra,芬兰航空 · 寰宇一家,FIN - Finnair - Oneworld,True,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px · 特殊彩绘
+a359,a359-xwb-FIN-extra,芬兰航空,FIN - Finnair,False,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px
+a359,a359-xwb-JAL-CASTLE-extra,日本航空 · 首里城,JAL - Japan Airlines - Castle,True,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px · 特殊彩绘
+a359,a359-xwb-JAL-GREEN-extra,日本航空 · A350 绿色纪念,JAL - Japan Airlines - Green,True,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px · 特殊彩绘
+a359,a359-xwb-JAL-RED-extra,日本航空 · A350 红色纪念,JAL - Japan Airlines - Red,True,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px · 特殊彩绘
+a359,a359-xwb-JAL-SILVER-extra,日本航空 · A350 银色纪念,JAL - Japan Airlines - Silver,True,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px · 特殊彩绘
+a359,a359-xwb-JAL-extra,日本航空,JAL - Japan Airlines,False,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px
+a359,a359-xwb-MAS-NEGARAKU-extra,马来西亚航空 · Negaraku,MAS - Malaysia Airlines - Negaraku,True,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px · 特殊彩绘
+a359,a359-xwb-MAS-extra,马来西亚航空,MAS - Malaysia Airlines,False,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px
+a359,a359-xwb-QTR-OW-extra,卡塔尔航空 · 寰宇一家,QTR - Qatar Airways - Oneworld,True,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px · 特殊彩绘
+a359,a359-xwb-QTR-extra,卡塔尔航空,QTR - Qatar Airways,False,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px
+a359,a359-xwb-SAA-extra,南非航空,SAA - South African Airways,False,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px
+a359,a359-xwb-SIA-10000-extra,"新加坡航空 · 第 10,000 架空客",SIA - Singapore Airlines - 10000th Airbus Aircraft,True,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px · 特殊彩绘
+a359,a359-xwb-SIA-extra,新加坡航空,SIA - Singapore Airlines,False,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px
+a359,a359-xwb-TAM-FIRST-extra,LATAM 巴西航空 · 首架 A350,TAM - TAM - First A350,True,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px · 特殊彩绘
+a359,a359-xwb-TAM-extra,LATAM 巴西航空,TAM - TAM,False,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px
+a359,a359-xwb-TAM2-extra,LATAM 巴西航空 · LATAM 版,TAM - LATAM,False,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px
+a359,a359-xwb-THA-extra,泰国国际航空,THA - Thai Airways International,False,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px
+a359,a359-xwb-THY-extra,土耳其航空,THY - Turkish Airlines,False,4096,4096,a359-xwb,Trent XWB · 原始贴图 4096 px
+b77w,b77w-ge90-AFR,法国航空,01 AIR FRANCE,False,4096,4096,b77w-ge90,GE90-115B · 原始贴图 4096 px
+b77w,b77w-ge90-AAL,美国航空,04 American,False,4096,4096,b77w-ge90,GE90-115B · 原始贴图 4096 px
+b77w,b77w-ge90-BAW,英国航空,05 British Airways,False,4096,4096,b77w-ge90,GE90-115B · 原始贴图 4096 px
+b77w,b77w-ge90-CPA,国泰航空,38 CATHAY,False,4096,4096,b77w-ge90,GE90-115B · 原始贴图 4096 px
+b77w,b77w-ge90-CPA-1994,国泰航空 · 1994,37 CATHAY 94,False,4096,4096,b77w-ge90,GE90-115B · 原始贴图 4096 px
+b77w,b77w-ge90-ETH,埃塞俄比亚航空,36 ETHIOPIAN,False,4096,4096,b77w-ge90,GE90-115B · 原始贴图 4096 px
+b77w,b77w-ge90-ETD,阿提哈德航空,33 ETIHAD,False,4096,4096,b77w-ge90,GE90-115B · 原始贴图 4096 px
+b77w,b77w-ge90-AIC,印度航空,25 INDIA,False,4096,4096,b77w-ge90,GE90-115B · 原始贴图 4096 px
+b77w,b77w-ge90-KLM,荷兰皇家航空,10 KLM,False,4096,4096,b77w-ge90,GE90-115B · 原始贴图 4096 px
+b77w,b77w-ge90-KLM100,荷兰皇家航空 · 100 周年,11 KLM100,True,4096,4096,b77w-ge90,GE90-115B · 原始贴图 4096 px · 特殊彩绘
+b77w,b77w-ge90-TAM,LATAM 巴西航空,19 LATAM,False,4096,4096,b77w-ge90,GE90-115B · 原始贴图 4096 px
+b77w,b77w-ge90-QTR,卡塔尔航空,32 QUATAR,False,4096,4096,b77w-ge90,GE90-115B · 原始贴图 4096 px
+b77w,b77w-ge90-SDM,俄罗斯航空 Rossiya,30 ROSSIYA,False,4096,4096,b77w-ge90,GE90-115B · 原始贴图 4096 px
+b77w,b77w-ge90-SDM-LEO,俄罗斯航空 Rossiya · 远东豹,31 ROSSIYA Leolet,True,4096,4096,b77w-ge90,GE90-115B · 原始贴图 4096 px · 特殊彩绘
+b77w,b77w-ge90-THY,土耳其航空,17 AIR Turkish,False,4096,4096,b77w-ge90,GE90-115B · 原始贴图 4096 px
+b77w,b77w-ge90-THY-SUPBAT,土耳其航空 · Batman v Superman,18 Turkish SUP-BAT,True,4096,4096,b77w-ge90,GE90-115B · 原始贴图 4096 px · 特殊彩绘
+b77w,b77w-ge90-BBC,孟加拉国航空,24 BIMAN,False,4096,4096,b77w-ge90,GE90-115B · 原始贴图 4096 px
+b77w,b77w-ge90-UAE,阿联酋航空,06 EMIRATES,False,4096,4096,b77w-ge90,GE90-115B · 原始贴图 4096 px
+b77w,b77w-ge90-UAE-BLUE,阿联酋航空 · 世博会 · 蓝色,07 EMIRATES bleu,True,4096,4096,b77w-ge90,GE90-115B · 原始贴图 4096 px · 特殊彩绘
+b77w,b77w-ge90-UAE-ORANGE,阿联酋航空 · 世博会 · 橙色,08 EMIRATES orange,True,4096,4096,b77w-ge90,GE90-115B · 原始贴图 4096 px · 特殊彩绘
+b77w,b77w-ge90-UAE-GREEN,阿联酋航空 · 世博会 · 绿色,09 EMIRATES vert,True,4096,4096,b77w-ge90,GE90-115B · 原始贴图 4096 px · 特殊彩绘
+b77w,b77w-ge90-AFL,俄罗斯航空,23 AREOFLOT,False,4096,4096,b77w-ge90,GE90-115B · 原始贴图 4096 px
+b789,b789-genx-CXA,厦门航空,XiamenAir,False,2048,2048,b789-genx-cxa,GEnx · 原始 2K · 投影适配；局部细节与原机有差异
+b789,b789-genx-CXA-UN,厦门航空 · 联合梦想号,XiamenAir United Dream,True,2048,2048,b789-genx-cxa,GEnx · 原始 2K · 投影适配；局部细节与原机有差异

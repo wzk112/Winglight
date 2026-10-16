@@ -1,0 +1,138 @@
+Winglight model provenance — 2026-10-16
+
+A320-family, GPL version 2
+https://github.com/legoboyvdlp/A320-family
+Commit fec1ecba767c8fffd145337b27012e89c01e3ade
+Copyright (c) 2025 Josh Davidson, Jonathan Redpath, merspieler,
+Matthew Maring, Thorsten Herrmann, Semir Gebran.
+Source files: A320-216.ac, CFM56.ac. Original LICENSE and copyright notice included.
+
+737-800, GNU GPL version 2
+https://github.com/soitanen/737-800
+Commit 5faef486500aba227804b59b014faf9619e3a18d
+Upstream authors: David Culp (FDM), Syd Adams (glass instruments),
+Innis Cunningham (3D and Panel), Michael Soitanen (current development).
+Source files: 737-800.ac, LWing.ac, RWing.ac, HorzStab.ac,
+VertStab.ac, winglet.ac. Original LICENSE and author metadata included.
+
+Winglight modifications: selected exterior objects; removed deployed gear,
+internals, opaque lens covers and alternative wingtip options; calibrated
+published major dimensions; converted coordinates to metres, triangulated
+polygons, computed normals, and assigned neutral untextured materials.
+Conversion source: scripts/convert_models.py. Exact emitted geometry and
+per-object bounds: Sources/Winglight/Resources/Models/audit.json.
+Original AC3D source accompanies the application in the Winglight source folder.
+See MODEL_ACCURACY.md for constraints and limitations.
+
+Airbus / Boeing / Collins documentation is used as a dimensional and timing
+reference. Their diagrams are not bundled or represented as our artwork.
+The app and models are not endorsed by these manufacturers.
+
+Winglight 1.2 additions — 2026-10-16
+
+Air China livery atlas CCA.png / CCA.xml from 737-800YV:
+https://github.com/YV3399/737-800YV
+Commit 9d967d89dd2ee0ae1bf01d00c49839a574aa9da5
+Original source: Models/Liveries-800/CCA.png and CCA.xml
+The atlas credits “PROUDLY PRODUCED BY FGPRC 0762”.
+CCA.png is bundled byte-for-byte as Resources/Textures/AirChina.png.
+Upstream GPL-2 LICENSE and livery XML are included in ThirdParty/AirChina.
+The original port/starboard UV islands are used without mirroring one side onto the other.
+
+A320 Fuse-Main.png, engine-CFM56.png, Static-Elements.png and fuselage.xml
+are from the same pinned A320-family commit listed above, under its GPL-2
+license. PNG assets are included unmodified in Resources/Textures.
+The aircraft XML provides provenance for the gear-door closed state.
+
+Additional Winglight modifications: UV preservation, sRGB/mipmapped materials,
+Air China trial paint, curved fuselage subdivision within calibrated bounds,
+737 visual fan blades and spinner, restoration of cabin glazing and selected
+closed gear doors, and BVH generation. Mesh conversion and all shader changes
+are included as source. Air China, Airbus and Boeing marks remain the property
+of their respective owners; this is an independent simulation, not an official
+or endorsed airline/manufacturer application.
+
+A320 Air China 8192 x 8192 atlas and editable XCF source:
+https://github.com/legoboyvdlp/A320-family-liveries
+Commit 6673dc43d191163c1a4456b3bd7b00ace35f47f6
+Original PNG: Liveries/IAE/8k/CCA-fuselage.png
+Editable source: Sources/A320-200-IAE/Air China B-8490/CCA-fuselage.xcf
+GPL-2. The repository license, contribution/readme terms, CCA.xml and original
+XCF accompany the source in ThirdParty/AirChina-A320. The PNG is byte-for-byte
+unchanged as Resources/Textures/AirChina-A320.png. Winglight uses this model's
+native UV coordinates, retaining independent left/right layouts. The donor
+livery represents B-8490, A320-232 / IAE / sharklets; Winglight currently uses
+CFM56 / conventional wing fences. This is an adapted trial paint scheme, not
+an exact replica of that registered airframe. CFM engine panel detail comes
+from the original A320-family CFM texture; the IAE engine atlas is not used.
+
+Winglight 1.3 modifications (2026-10-16): three-level body and two-level
+nacelle curvature subdivision, welded geometric normals with independent UVs,
+fixed aperture boundaries, and six cockpit panes generated from the 737
+window frame boundary loops. The original CCA PNG is unchanged; the renderer
+suppresses its obsolete painted windshield in the nose skin only, replacing
+it with the separate 3D glass material. Generated glass joins mesh/BVH shadows.
+
+Winglight 1.4 additional model geometry
+=====================================
+737YV/LWing.ac, RWing.ac and 737-800.ac are unmodified files from
+https://github.com/YV3399/737-800YV
+commit 9d967d89dd2ee0ae1bf01d00c49839a574aa9da5 (GPL-2.0).
+The converter uses engine assemblies and external passenger glazing only.
+Source geometry is calibrated and subdivided; the original files are retained.
+
+Historical local livery catalog (110 model/livery combinations)
+===================================================
+A320-family-liveries, A320-family and 737-800YV supply the public catalog.
+The former B737800-Liveries entries are excluded from publication because
+that repository has no verified license grant. See THIRD_PARTY.md.
+The retained images have per-file source URL,
+fixed commit, SHA-256, original livery XML and licenses in ThirdParty/Liveries.
+The catalog preserves the original airline/registration description. Some
+paint schemes are historical or adapted from different engine/wingtip options.
+See LIVERY_CATALOG.csv and scripts/fetch_liveries.py for the complete mapping.
+The upstream repositories retain their paintkit/source projects; original
+creator attribution and GPL license terms continue to apply.
+
+A320 normal atlases (unmodified): Models/Effects/Lightmaps/Fuse-Main-Normal.png
+and Engine-CFM56-Normal.png from the same pinned A320-family commit above.
+Exact URLs and hashes are recorded in ThirdParty/A320/normal-maps.json.
+
+Winglight 1.5 widebody assemblies and liveries
+============================================
+787-family: IskenderWang/787-family, GPL-2.0,
+02626b5b659d89b9399943ee167bbb0b46f0c871.
+A330: JMaverick16/Airbus_A330, GPL-2.0,
+f016c7c0ad8c6c48b7d9eed7ed7dde49dc69059d.
+A350: FGMEMBERS/A350XWB, GPL-2.0,
+04da937ab1ba0b07dabfd71d91aa33eb38316b90.
+777: franck-vmd/Boeing-777-Flightgear, GPL-2.0,
+821f2d9cf77cf3953c1b28df46a32740c77c73d4.
+Additional liveries: sriemmanuel787/FG-Liveries (naviat-dev origin), GPL-2.0,
+eae9eaf1d079afd4a558ad115209d25cf9346205.
+Original author notices, AC3D meshes, configuration files, model manifest
+and licenses are retained in ThirdParty/Widebody. Per-image source URLs,
+hashes, dimensions and livery XMLs are recorded in the bundled catalog
+and ThirdParty/WidebodyLiveries. No image is upscaled to claim extra detail.
+Modifications: exterior extraction, engine assembly, stowed gear-door
+transforms, metre-coordinate calibration, UV-preserving subdivision,
+normal generation, BVH generation and calibrated exterior light locations.
+
+Two XiamenAir B787-9 liveries: kolos26/GEOFS-LiverySelector,
+bd05e90779060883a28b467a577077628c8b355c, MIT, credited to B-20AJ / TCA Design.
+Original files and license: ThirdParty/GeoFS. Original artwork is unmodified;
+Winglight transfers side projections to its 787-9 GEnx geometry and corrects
+the starboard Chinese wordmark sampling. This is approximate UV adaptation.
+All airline names and marks identify represented paint schemes; no airline
+endorsement is implied. Catalog entries include historical and special paints,
+not a current fleet inventory. The complete application is distributed with
+GPL-2.0 source and notices; compatible MIT artwork retains its MIT notice.
+
+Public source release correction — 2026-10-16
+===========================================
+The public catalog contains 309 combinations. UAL-2019 and TRA-new from
+YV3399/B737800-Liveries are excluded because that repository at the pinned
+revision supplies no verified license grant. Older local counts above refer
+to historical builds, not this public release. See THIRD_PARTY.md.
+A350XWB explicitly permits GPL version 2 or later in its upstream README.
+All other upstream license grants and author notices remain unchanged.

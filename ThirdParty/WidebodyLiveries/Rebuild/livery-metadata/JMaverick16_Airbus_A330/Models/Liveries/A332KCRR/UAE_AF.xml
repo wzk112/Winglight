@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name>UAEAF, ARS</name>
+				<texture>Liveries/A332KCRR/UAE_AF.png</texture>
+			</livery>
+		</model>
+	</sim>
+
+	<options n="0">
+		<hasboom type="bool">1</hasboom>
+		<boom-pos-cmd type="double">0</boom-pos-cmd>
+	</options>
+</PropertyList>

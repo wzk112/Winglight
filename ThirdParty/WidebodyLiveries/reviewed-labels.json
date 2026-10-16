@@ -1,0 +1,50 @@
+{
+  "b78x-genx-ETD1": [
+    "阿提哈德航空 · A6-BMH",
+    true
+  ],
+  "b78x-genx-KLM1": [
+    "荷兰皇家航空 · 100 周年 · PH-BKA",
+    true
+  ],
+  "b789-genx-KLM1": [
+    "荷兰皇家航空 · 100 周年 · PH-BHH",
+    true
+  ],
+  "b788-trent-LOT1": [
+    "波兰航空 · SP-LRF",
+    false
+  ],
+  "b789-trent-LOT1": [
+    "波兰航空 · 波兰独立百年纪念",
+    true
+  ],
+  "a333-rr-DLH3": [
+    "汉莎航空 · 2018 版",
+    false
+  ],
+  "a333-rr-DLH2": [
+    "汉莎航空 · D-AIKG",
+    false
+  ],
+  "a359-xwb-TAM2-extra": [
+    "LATAM 巴西航空 · LATAM 版",
+    false
+  ],
+  "a332-rr-AZU2": [
+    "巴西蓝色航空 · Azul Viagens",
+    true
+  ],
+  "a332-pw-MAS": [
+    "马来西亚航空 · Negaraku",
+    true
+  ],
+  "airbus-VOI": [
+    "沃拉里斯航空 · 第 100 架飞机",
+    true
+  ],
+  "boeing-NOK": [
+    "泰国皇雀航空 · 彩绘",
+    true
+  ]
+}

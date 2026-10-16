@@ -1,0 +1,2532 @@
+{
+  "schema": 1,
+  "version": "1.5.0",
+  "url": "https://github.com/wzk112/Winglight/releases/download/v1.5.0/Winglight-1.5.0-assets.tar.gz",
+  "archive": {
+    "name": "Winglight-1.5.0-assets.tar.gz",
+    "bytes": 1100899319,
+    "sha256": "58118f26eec046a50ce753759391c9a5e5ddd6cadea48a78f146bc0785b1f72f"
+  },
+  "files": [
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-001b722b128778.png",
+      "bytes": 407903,
+      "sha256": "e74de0a7c01817664a2b0ec5b5323d4f0bb72c5ff48de4ca0ae7a60a3a89b521"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-014c2998f864a4.png",
+      "bytes": 464505,
+      "sha256": "6c711d3986a378d5639420cca34e8a9b37e7504a16e20318bc134cad8296d9e5"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-0a2269e3dc6ac6.png",
+      "bytes": 532357,
+      "sha256": "2f578d1d0185bf5c4bb8da427d4b44c481dc784ae601e3f0ae74e999f8ae2b36"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-0b8926c4205aa5.png",
+      "bytes": 483690,
+      "sha256": "e36df0001ddde5460b2d1a5a4759b6fc1873ff8d16f844c94a906118557f1a37"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-0f7bd6629b92ba.png",
+      "bytes": 411692,
+      "sha256": "20370a887a124c6ea8cd9a9e7ddb46a6497769172a372b74dc3c9080d3cdd567"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-10c681eb6b1eb3.png",
+      "bytes": 427691,
+      "sha256": "41656db9f45257847c967f2e2dd43ac3d5fc52b743f87b7ac7b06643a2cebcc6"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-119420c6d34d66.png",
+      "bytes": 392860,
+      "sha256": "73b6117c8a9e23c5bdafd8d8c6e7a4396c225f79b19644bcbccc881ad6dd0e42"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-1703da3f665ecd.png",
+      "bytes": 424665,
+      "sha256": "20f0bc576cb726412658e6513aafcec5627212cbb981606e37e20b73700549d4"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-191051509e1684.png",
+      "bytes": 450847,
+      "sha256": "16630d7014a743a18fe013cf2ab4164a67adafad6d20680478242130e8109ed5"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-1b54f923a35c28.png",
+      "bytes": 437702,
+      "sha256": "8438a60705898183759a0f3b0b06f6a336cfe6f469f9e415a07646921e803002"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-1bc16c9047b012.png",
+      "bytes": 490552,
+      "sha256": "50f98d3d46c3fb370aa9df83563edcfc6eb7ad460a0e830bba35d43459b4d808"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-1d0f11dca9b582.png",
+      "bytes": 412101,
+      "sha256": "634d323d2c044832ae1491646aedd8e6b73d6e3864bce4307a87abb5e49a6791"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-1dccc6448869e3.png",
+      "bytes": 440373,
+      "sha256": "743ed0f0f310a193bdd736e2b5b0aef09cb5cdf7aa95c15f5222690470fef45a"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-1f61529062af34.png",
+      "bytes": 419108,
+      "sha256": "98fb29952ce6b87d75fe45da0c44b2935009af77effb8973593a050297beedf0"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-21b4e88e50b48d.png",
+      "bytes": 285817,
+      "sha256": "5b95b5e18adbf0142cc393674a3f9e8d87336c53e4bfb5ec4c9d11820df3c3d3"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-23267906c3d717.png",
+      "bytes": 219135,
+      "sha256": "84007aececab4163d461bcd33908a2476e6304258763b7364a199939b21837df"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-24a0c37e276856.png",
+      "bytes": 290832,
+      "sha256": "9e616c5949d3ae33c41b39156a640daa074ab1bb086e924f5a6b1b3a4e5f7bdb"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-27cbd9d48bbc3a.png",
+      "bytes": 128374,
+      "sha256": "4174fcb46a6e796138183f0feb9537a8f2ae80e4a738e43ecac3269626fc87e5"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-28854a2834bae1.png",
+      "bytes": 331514,
+      "sha256": "72f506c6ec2d2c1f827014310557d2d36a775ccb3fa64b939d4b0abfb5df0437"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-28d4034a5b9177.png",
+      "bytes": 2185544,
+      "sha256": "5c937f59a2a4b0b8c0c0a2b40d80e06ab51704fc26c7cbb69fcafb5ad9cadcad"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-2934ae4d9c00b2.png",
+      "bytes": 772799,
+      "sha256": "b672099f361f8ad63b9ccc279fd4f72892e9329935ade235798ff253aac6a369"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-2bcc86ac50f218.png",
+      "bytes": 431702,
+      "sha256": "b99fa75b6ae9ed75f7615a698b15b847e5eca51d6e1bd0ab5d73280452fda7a7"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-2da7014b8bf12b.png",
+      "bytes": 400103,
+      "sha256": "07894694484d5bfb4e59dbecfb05b58b4daff4877d66787d09f41892779d811e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-2f100e67e52d7f.png",
+      "bytes": 318668,
+      "sha256": "2ccaafc38d877b7b8bf2449958061a6da622a29e39b35349dd44dc576bb2227d"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-321ad687f46024.png",
+      "bytes": 308084,
+      "sha256": "d3e69b721b0cad568dbcadefe7781a3103170b4239cc4c41edaa7ffe9e80df9e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-3c8808fa2ef02f.png",
+      "bytes": 459778,
+      "sha256": "6ad521eef7c4df2321ce3c01a45da4debf439f705062c657675532c577269a20"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-3ced8cbf77b7e4.png",
+      "bytes": 361342,
+      "sha256": "ab50c4c9daa24722a2fcd7ff93a68ee107e9893e1973b843cbee8f0132a6dd61"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-3e289df6948196.png",
+      "bytes": 364700,
+      "sha256": "93529ca552ecac1c07505d0c6b98b5600302def202b7c7c426f73ab982f00e4e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-4011133c736d60.png",
+      "bytes": 440157,
+      "sha256": "1e8513e754159e650a4f8797094b821a0e25845fbd30c55a67f9d45e44991319"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-42c01495ebcfaf.png",
+      "bytes": 344559,
+      "sha256": "01a171d9d4b42639e0c8076a11b4cf1f29cae3c67a770e6a7c309abfa24fe01c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-4512f5678e69ce.png",
+      "bytes": 481935,
+      "sha256": "da349ee0b489b0474026b666ccfe6b842ce1e10b8e9c20e1c2be1ba63a1785a5"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-475effaf9e8ae5.png",
+      "bytes": 440453,
+      "sha256": "3e6a8945d61817d3582b8e74f4439fe437cdd1dd1f960351a24f88a38a88acaa"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-4ac8c4bce658bd.png",
+      "bytes": 449529,
+      "sha256": "85d6bc91fdec58ad644cb4e6473b66eeb5fbd5859f11f2309d26e82a091518f5"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-50ba5c4ad1f50e.png",
+      "bytes": 373455,
+      "sha256": "8501720ac89d27d9dc9a770c4fa5a76890e0d8e89b0a47a7b018c26e9362f1ac"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-54e1714e931b43.png",
+      "bytes": 373408,
+      "sha256": "5a9c4d9c8c0abaea50984a69fa90ca4307413f9b1bb41a74a1df4bb09db90c89"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-57e8283b637f7f.png",
+      "bytes": 441051,
+      "sha256": "5d36786cefac169a7343bf9b378e9dcc2578772c5709e882925af27babcbf6b4"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-586086aa165f7b.png",
+      "bytes": 427234,
+      "sha256": "5620352ea83ea3737fc0a730becd2bec52773ea48f59a082f018dd6408043165"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-5cc3797089c71c.png",
+      "bytes": 336656,
+      "sha256": "bacf89125e2456158d422ee5d41688fbd4f846a0ddebcef6817d03050029915e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-5ece4b7e1c7724.png",
+      "bytes": 374421,
+      "sha256": "4fb2d1f2eaae366e37e3c421868a8d86ccd01503097b1b2b1aa3f7c5b90130f8"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-60c32a41ed9846.png",
+      "bytes": 446321,
+      "sha256": "a1fa14a307720b20d097089c36fbcf2120fb59d8921d72daa1a2e069a083628c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-6a2b2054b0340e.png",
+      "bytes": 365458,
+      "sha256": "0ff93336eda493ca0b25234c8990d359439ba6cb9f61a7f1e2f451a7b97cedbc"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-6a8823c61937fc.png",
+      "bytes": 388940,
+      "sha256": "5898f5f14a76fb3f1652bec541189771e1243e65304dcf0bedcad41ecd672956"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-6fd24ed1b9dbfb.png",
+      "bytes": 709119,
+      "sha256": "ce80075ace52c86ac06e4423db527bbcbcbc04b2774d9874127f9d39b9f97038"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-71c041eacdfe07.png",
+      "bytes": 500493,
+      "sha256": "f2da9093c74a6705088c4896a9a5ae640d758d35341a220c7115e60380e4ebbd"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-753a3306ccb504.png",
+      "bytes": 493551,
+      "sha256": "db80da60770bf771bf3497e71d1bf0bdfded67361ca852cbb97b2a7c0e6667e2"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-7bd80c9e340653.png",
+      "bytes": 399261,
+      "sha256": "f7592f52ea7a42d49fa1525df73439d898483501e65eac7513ffde5aafe02a0c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-7dadb627760169.png",
+      "bytes": 396681,
+      "sha256": "96838830069b290b7bf44d38e83483a6386fa1128a3ba40729f79998951b7205"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-7f639b3520c9a5.png",
+      "bytes": 455944,
+      "sha256": "183982b85cd95f582b03f7852979e7c7bc5025fbb376455494f72406dd133bee"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-7ffc2e39a0ede0.png",
+      "bytes": 388905,
+      "sha256": "9c13ed2dc404e83e3f5f69a7dd28ec56027eec8d829522d9c6230af126c69db6"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-85f09d02657761.png",
+      "bytes": 564102,
+      "sha256": "d10e7aed0fa0ba6e6cbaff77dbe22dd8f64a05b67a15ea6cdc375b1a6f74c5e3"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-88d4d01ea9a85a.png",
+      "bytes": 167647,
+      "sha256": "fd621732bd8d28fa99c8b3c634cf71ac43b05cede956e966e32f4f5d9a2843be"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-8b5892144b9d89.png",
+      "bytes": 437440,
+      "sha256": "762e71b01c4eb5b34a9403a076166b55e1cea73193a6a44d38f66a12835cf8fd"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-8f29a4d078c82b.png",
+      "bytes": 354657,
+      "sha256": "896827db7466c616c3e4dc5f2e6dbb6342c68b21e0b833b3737b7f488db8fb50"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-9054b36adccbe1.png",
+      "bytes": 327839,
+      "sha256": "b39729ec93f92a1ee56099029876314c1ccf935a30e44ccd3404993268cc124c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-9097277dbe8d08.png",
+      "bytes": 324148,
+      "sha256": "5a1989d14b9c04bf5b2abf03e4c08df42e210a89ed8cc7db3b634f80f6d199bc"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-919ae4a7a74b14.png",
+      "bytes": 412314,
+      "sha256": "6f9c418e4c4b0c2e60aeff0dfe3e0833a892bdd4a1d0280741b4f6722fdc8c3c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-91ed52106ddbe9.png",
+      "bytes": 469931,
+      "sha256": "128253945bffdd13169f74f433fda9ca4795f38a271e281197c6013529a16a25"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-920a2ce28c67dc.png",
+      "bytes": 1272419,
+      "sha256": "0057ff4a6a048e2df8ef2a143772d42c91a615c412e573e0a7d12dbdcca7ba50"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-9391780d3ea1dd.png",
+      "bytes": 385282,
+      "sha256": "ba94769cbb23cd4bc2801d38233ef4c05af39470ce10dec283c8ccb6fcf04dc3"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-93b8ff91ca6450.png",
+      "bytes": 42950,
+      "sha256": "7acd72ffa1c4678f197c098a0523a55962b95ca37a9eecf76b3fedb754fd0b0a"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-95f336cb0f1af5.png",
+      "bytes": 358888,
+      "sha256": "092f578b4221765d3f1f398790a2ea581794a2f6af7a5150ffb4617259ca37f8"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-995240e4d2b060.png",
+      "bytes": 341138,
+      "sha256": "bb6d40a8944cc87dc4f0b1814fd7c277bf1d8c206baa7ea855948016794c8cb4"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-9d3f22fbfb880d.png",
+      "bytes": 430319,
+      "sha256": "24f78c9b281067eb8efa9bd3b847557064b3e0663b66ab8f78e027eb269e8287"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-9da23014320af0.png",
+      "bytes": 451603,
+      "sha256": "0ea209a0998a2dfc111bd475493aad738f0c9d240f47ee66179e747596b17232"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-9dae0812bf5de8.png",
+      "bytes": 630814,
+      "sha256": "4d0d590354b4b9d4c2e38be1cb375cb4356e0d66cd4825c601a94b7aa7438984"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-9f32dd97ad87d4.png",
+      "bytes": 416906,
+      "sha256": "1c14849f17aea6d18ce3ad79981b281515af71a77ada78b2eb53238c8361964d"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-a4d47585795ea5.png",
+      "bytes": 400037,
+      "sha256": "265548d6b8a440d102266c80fb59e6e3166ae454ceb455409969811b88e471e0"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-a8bf52b42d9c43.png",
+      "bytes": 424303,
+      "sha256": "8e7dbe47da0131666187c042576b8369492536ce52ead40f25d5f92f3cf100d6"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-a995feb500281b.png",
+      "bytes": 667525,
+      "sha256": "4f8105f5dc407a07356e5bf443e34011179cc2b9263573e289b6c8d3377071d1"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-b15e5e3fc4612e.png",
+      "bytes": 315566,
+      "sha256": "3722e00885f13ae688e43a6912fe2435594b910b2437fd6cf10d5f4d44ac4c47"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-b3d20a75e6c632.png",
+      "bytes": 425991,
+      "sha256": "12de026e4eb44197e415617cbec6a3a272406d76375b6d308ffd4c166d1157fa"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-b3e265e605420a.png",
+      "bytes": 575927,
+      "sha256": "837531e828102833681476e584f9a8983fbd4c0b9f2c906483e84e393e7ff3c8"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-b4de408c021a55.png",
+      "bytes": 776764,
+      "sha256": "b601730771e505ef5c132063aedd8fb049ca39c119fec857a02e50ec7f22825a"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-c14761ed66bdc6.png",
+      "bytes": 466976,
+      "sha256": "36efbe109db2e91d9ef7a60b0da72fa85585fb09c1ec9dba8c19bcf6e31d5795"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-c22b4818152217.png",
+      "bytes": 323519,
+      "sha256": "9d28dfcd42ac1faf1afd565bad63aab9c025bb16ca688b4d4b0378e99e44c5b1"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-c72357426a2624.png",
+      "bytes": 85367,
+      "sha256": "be4934213d6d81822572edc06feb44c5ed01795c015d1d36160b0aa528469404"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-c8268fd0087655.png",
+      "bytes": 341552,
+      "sha256": "dc4b011c52b1a0c145a6edfa0d8a076fc6c50593c8dce6a07948a0ebbb36dd69"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-c9ac0a0aa652c9.png",
+      "bytes": 393022,
+      "sha256": "92e6ce89ac2eb48bb22c5ccaca924262ea918ba13ec996ab7144a05298a16d35"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-ca66a3abab0b4f.png",
+      "bytes": 890402,
+      "sha256": "7688711ce16156a970d1fdd017df8195c89ff962370e572e6a89db90c5c09302"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-ca8355ad99a88a.png",
+      "bytes": 443594,
+      "sha256": "b25d4a8852f8dd04b60388cef9865ccc1bb88738ec342953fd9e6fde2efaa844"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-ce9a2f3686ed46.png",
+      "bytes": 401105,
+      "sha256": "28eb352807cad984746ebdfba9435bd384d0ddc4307f78f936eaeb3077fa0b57"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-cf3d684719791b.png",
+      "bytes": 508340,
+      "sha256": "ce9f453153abfa1cdf9835a6696704015c130d35b856bd1aee8ebbd10f6374b2"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-cfdb8911d43e5e.png",
+      "bytes": 331976,
+      "sha256": "6096db5543d4a20a5f8d2a290b259a3c3784787fce45acda624d305aaa020b43"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-d9d044d9618c56.png",
+      "bytes": 661671,
+      "sha256": "ae3ab8859d62fb039a45e602393fd48448daa9f9d69de585ed8ccc99be278f9f"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-d9e7178329e726.png",
+      "bytes": 489087,
+      "sha256": "c9e64b6ad04e685e1718daf9a44b7fc668f13bbc334d4b36ad38062c1ef1097c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-da914168a28e97.png",
+      "bytes": 540853,
+      "sha256": "2268a897a8be983e868985bc7b6f3df2cb189cba202410379066ae378285c009"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-dd372472c31119.png",
+      "bytes": 385178,
+      "sha256": "5a0a2c79b6371747fa2f3db4d6d077a80e12954fe6032ea15e1c814cff71f96a"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-ddcab74cca3b16.png",
+      "bytes": 405316,
+      "sha256": "d98a7f4c2333fc7f5f2e5bcf2914af4d3d22b5fdfb26ec7f872e1be65da4f263"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-e2f06b03825d9b.png",
+      "bytes": 364845,
+      "sha256": "6c62f5bb21d11e10d398a6122712f7a674adca1691854ae3a87f2cbf046b2758"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-e579be340c94cf.png",
+      "bytes": 304156,
+      "sha256": "bda7caf969e528a1a2bca31a87d729ca3eb2399b43c7b66b82edf2de83804af4"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-e8fd72c2d2897b.png",
+      "bytes": 418518,
+      "sha256": "46fbbc0a91d5da52788dca5857e9a766179620faa43f863df12e8c31e3aa0187"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-ea91a2d8b6c051.png",
+      "bytes": 237078,
+      "sha256": "4ef87f672b4684b26ea1824105839148244829f4bc24aa31c91557587cb15e43"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-ed8792ef8e220c.png",
+      "bytes": 481406,
+      "sha256": "9cf12c5777d7811b709b47576dd9d0305b1b18ac19294c0e48b6b41d4de2549e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-ed8c976f28de0d.png",
+      "bytes": 434511,
+      "sha256": "be3699ade843d5c005ac4021e4f01e11b406c8317943ce06a232773602c0e68b"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-ee2a9927976bb2.png",
+      "bytes": 706649,
+      "sha256": "af7618bd56b8820b58cc16be375b81858728494d97c7290ee4df81d43744340f"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-ee8725be002aaa.png",
+      "bytes": 362334,
+      "sha256": "cabce23fccb51329947d8f3bd1dbd7de1db7026c3a42c791c691e4235ecf3aa4"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-f60e67aec45c81.png",
+      "bytes": 402242,
+      "sha256": "a3d92cef96b267ac60766994d4290ef187353ddf4d3fba480849780c35031314"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-f6167c2877d214.png",
+      "bytes": 312696,
+      "sha256": "82bae4d415aabb2a1273dd486af2f537b96e7f5d7404adb3700d3aecbd657e69"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-f87edf885d74d6.png",
+      "bytes": 377312,
+      "sha256": "c9d9be272da0b3d31b065d62ddd1f44f89cfb8e741b435557093422d0f5fa9d9"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-fa6ad0160cff1b.png",
+      "bytes": 389656,
+      "sha256": "6381170032a9b511b2c79c144123cc2bcff1b8cbf50e15525e21ae3f77c4926f"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-fc389af2efb12f.png",
+      "bytes": 539941,
+      "sha256": "6ab74eb79edf376a1f19c44ffcc2cfb3da97d0a0810823fdfd8fb5a9e5af6768"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-fd2a9c57db5f32.png",
+      "bytes": 710231,
+      "sha256": "e1e96a0ed331767875671b87ee6b8de21e0d3c380c666e1f04e94ee7fdfd9029"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/330-fe99a4251246b2.png",
+      "bytes": 352336,
+      "sha256": "7aa0d17c315cac32a36012d8bd1d3cc17b99dfcb66bda0221e852f7dac692555"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/350-8a761a7e2b430a.png",
+      "bytes": 603046,
+      "sha256": "f0a913753aabc46523f5c82503825ac0dcf8f4f095a560fb0ce9410275bd07f5"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-0156b8a7e1877d.png",
+      "bytes": 2581174,
+      "sha256": "205e24f166a9131433f9470227a634777a1d56e645c78a7d64554b3f14fccde3"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-015a3fb067d568.png",
+      "bytes": 3785096,
+      "sha256": "3ce216e0ae49f4b77c363a58135b53e6a8239024b794d3c3e73054a414dfe46a"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-064cbfb070fd4c.png",
+      "bytes": 2439450,
+      "sha256": "2792d2c50652f16ffc13f3a43be772615b6287b3f5cc20b18e582f5c73eaab75"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-0c7fcbf64ff164.png",
+      "bytes": 2012798,
+      "sha256": "00c604a7db58f7860b21ef08feed5425aab55e06aca73871798fbdb7252bd2b2"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-16d920a4750c5f.png",
+      "bytes": 3443509,
+      "sha256": "973f13fac071ebb83995046fdf52e1600eac09d39736507c918d467fee7ea168"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-18dbf36799e0de.png",
+      "bytes": 2362292,
+      "sha256": "15eedee7c8e53db21c2fe9964edf14c0bc2737a05cae69be9b024f98eba6bc67"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-1a80037364261c.png",
+      "bytes": 4198543,
+      "sha256": "11cccbb41e1a128fa33d652863574f743beffad5d19d935a055cc2335a116eae"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-1a80e1d8521a54.png",
+      "bytes": 397288,
+      "sha256": "cf12ff21ed5e8fe8bc4e9b901428908086f5de3d0e5fb2f737c0cebf74577059"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-1c1a8845671ab7.png",
+      "bytes": 2504893,
+      "sha256": "9179212333a55c31dca1d5cd2a86879500ffc06ab42b73798f1f8b0618cf1c98"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-1d5c2a558064b5.png",
+      "bytes": 2314616,
+      "sha256": "14b4da61b10abce7dbb79ab6e50748f11aba46a26cdc0a830666d1c22725e474"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-1e03a19f062cae.png",
+      "bytes": 2461804,
+      "sha256": "97b8d92988471456aeb988f9bd6b76cfcedf013918d4775d3c8aeddf6159d386"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-1e89536ab58c56.png",
+      "bytes": 972825,
+      "sha256": "d1dfc6bd6e66173b3a1b808168e6cf422aab293311ac919fd9399eec9ab07068"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-20a397edcebf60.png",
+      "bytes": 4356313,
+      "sha256": "db185ad2894b16a1e48fb7c4cbe42bcccc2cbf3df980f2fc753e01854ae7fb81"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-20afd2da66e92e.png",
+      "bytes": 4338252,
+      "sha256": "9769e3bd2c770426f6bc45c0d4986bcb4663956be6fe8bd96ea0ce8b84692805"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-227bc9f728891b.png",
+      "bytes": 2378841,
+      "sha256": "2666bf9ffae707855ed891892f52714f873048eaf339b1333fa8b76c507ad284"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-24d7911999771c.png",
+      "bytes": 983775,
+      "sha256": "8b18e4cdf26183cf136f97b251043423dec04aef08894fe90da4bee3946c0ec3"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-25768080c6da7c.png",
+      "bytes": 1111339,
+      "sha256": "81c4518cb8b88e671cb4149cc02e94bbae359977607079832e3cf88c26484d7c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-2586cda5d66ff3.png",
+      "bytes": 2428553,
+      "sha256": "99f45c2b18c15a3acd3401d98388ef29ac11d020cad5dfec3b729f5d334cc9d1"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-26e7d9250b361a.png",
+      "bytes": 7359633,
+      "sha256": "1b2007c766fe5463030190c9875cdc2cfa65555fc486c30d34e4e24c358395f8"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-28f17d9bbf542a.png",
+      "bytes": 893479,
+      "sha256": "6a1b431a6328d1c5fee48aa22cadbe765494d733c78df278bcc875bfca89a4e9"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-2b15d7a7a11dce.png",
+      "bytes": 4114860,
+      "sha256": "9700dde5e231059e81f2e06e03de5f374cd109b6b25d66c424debbf2137782d0"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-312683a01c999a.png",
+      "bytes": 1088597,
+      "sha256": "9eb9b0e83d0ce5c332bb7139a9ef2ace98f8e7c8d56971458593942b23cb5c97"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-328f1887d8e49d.png",
+      "bytes": 406622,
+      "sha256": "184cc43b53e2db375acc8a23a251145f38c9762e2798e57a5479a0b2d7eabe60"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-339d8c94ac129b.png",
+      "bytes": 7169497,
+      "sha256": "04939fb6cd5eb55a3a2db42c64408f0269900f9f306aa8e8089fca86489cf305"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-33e15f4ac3c56c.png",
+      "bytes": 903272,
+      "sha256": "2850b8aaa32ffd3ca9af968f317a134a374144167dfa102d8b295750baf92198"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-34ac2b7ba579df.png",
+      "bytes": 4353948,
+      "sha256": "f2f5db81efce6248c3240bf34545c30b3e658319aec9b1b3930ebeaeb6675809"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-34b695aa4ab596.png",
+      "bytes": 1975463,
+      "sha256": "1a7e68626d31e6c5b415f6ee22864ea8d8964335c40fc2ee888bdcc93edd3812"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-3a11378261d7a5.png",
+      "bytes": 4139919,
+      "sha256": "366c6fa17a025d20a513190a4932e97fbf1d1cec7f341cade10a18f5141010c6"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-3d1e46c2c93f56.png",
+      "bytes": 641526,
+      "sha256": "45d13193ab62d3852b8c3c8c51f69e6ea57f9b5e710051971175c9b15134cc9c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-416992b74a287a.png",
+      "bytes": 1074236,
+      "sha256": "cb792e16090d49a49c7df55a3af24e811565aa449db85cafd19c2ee0566d2b80"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-474a58dfe2ae26.png",
+      "bytes": 7461699,
+      "sha256": "96d7babe81e89687955e253daad57c656d05565401f0c451ceb6e53183564fb2"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-479247c15ef85a.png",
+      "bytes": 4354777,
+      "sha256": "9cca5d16e911b81f21e0807224a252af9acc16d2d89709bd2d05b96cc406fae2"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-49bfc7f75ee5ab.png",
+      "bytes": 964042,
+      "sha256": "b0550889fd18ecc9da105416dd01b590ccbb33bb98a110c39baab054e2a78485"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-4a249b39152416.png",
+      "bytes": 7249695,
+      "sha256": "4b3cf2fbcbc61576772da1913267755c143086ffe6e741d30159a93db9b3dc86"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-4bd5b4faf4fc7b.png",
+      "bytes": 1008763,
+      "sha256": "bebcee8b12a81f73dff4b38015868412668f852f3e4a31c69e7031e47ed98994"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-4c70541d9fa168.png",
+      "bytes": 1260748,
+      "sha256": "bbb5b7d388303ed280b683780086b68bb6c4838d8217a06c4c952e62fb65ba44"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-4ce4dff599d986.png",
+      "bytes": 2283815,
+      "sha256": "1e28f6ae7500349c31c4eee5cf86a3dd4b1ac4fc358e0b6cae6641606835ed0e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-533751ed50a87b.png",
+      "bytes": 2056012,
+      "sha256": "2bed9c4c2fbba697e6e9b18133f99e18a523d76065ffb96ad0ac982f496bb00f"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-595cfd0969bd3c.png",
+      "bytes": 4234661,
+      "sha256": "1f39d8e747f1ba5f822fd5f5391a1be7a9e050cd8b3135b440b0697c8dc4adbe"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-5b8f809c97b162.png",
+      "bytes": 4184719,
+      "sha256": "c8adb344ffa0dbc5b63bd6bb4e1cbd381be889479faa72307627d28ebe8f59a5"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-5c5cc06c45bf04.png",
+      "bytes": 2098451,
+      "sha256": "16efc03e5a402eaec53d930389ddb843dfddbf3c5361ea83cc53650304df1035"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-5ce9790a93acf5.png",
+      "bytes": 3019093,
+      "sha256": "85c204c7f6157dd207b73638f86afb920b5b133f9c7e71ed5bc54f0e3d729aff"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-632e46201b5b4e.png",
+      "bytes": 2073660,
+      "sha256": "3c601457f6c62093119962c194534bd8575e667e19242b9ac76e42a667da04a0"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-63bec9365b111a.png",
+      "bytes": 2930207,
+      "sha256": "1225dc748aec09b6d7f982580d6862b6cee403d6ef9fd00f30486f56d53f6c39"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-6d847a907a6a99.png",
+      "bytes": 7473422,
+      "sha256": "5000f72369d97e1e835fd2d4e24e405c8cf658ac65e77da1dbbed298c40e7f14"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-6f862c684e823e.png",
+      "bytes": 4240855,
+      "sha256": "cf47befdf972c4f6685e382db20a42e44e36ed09daf286aa0dd5a358483fab97"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-70c87b52f045dc.png",
+      "bytes": 1306651,
+      "sha256": "a2b34f4bc52482ef67e7bf6fd143689762c8ef5f8d51e5020754560b147b4b03"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-71448724cb28f5.png",
+      "bytes": 2534587,
+      "sha256": "d763d26b5f84a88f60c94248dc9cba85053ba63b79839b5625bafd492bfc7d2c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-71bc36fbca6e3f.png",
+      "bytes": 2182073,
+      "sha256": "79fc67b446dee0216227ee2282c08bb6916a4d8e8e9ef40d6e57bc1a7fb8e717"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-77ee9b837795ac.png",
+      "bytes": 2625756,
+      "sha256": "58bec8a1ab84e52161dd228b34e06802cfcf453df635c4d039703a0638d1df25"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-7e61f1b1554e32.png",
+      "bytes": 1050700,
+      "sha256": "e33f3fa419408ade1d127d6239da4d86d56c5fbd72b73aaa8e29f39251a7918b"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-7e900598906333.png",
+      "bytes": 558906,
+      "sha256": "94d07a973fd72b3a7a3244c31b3e924dcb920640d8d91f4df46125a0c1b5ef0c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-817ae1fb71095e.png",
+      "bytes": 2460345,
+      "sha256": "0f2c928f9cef06c6c228a2dbddceaa57b83378c2ab1af51410569155e85574ea"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-82d48b1d133998.png",
+      "bytes": 7370684,
+      "sha256": "0fe690df178c3b8bb708bbc083bd404b70f7983e37e52638d50d99ca6e4c17af"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-83f31f576dfc52.png",
+      "bytes": 2533457,
+      "sha256": "dc512173f0f0652b26e782c64e684be42bd84db14a1d8888ddfa92be8f9786c4"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-8735575e2b57f6.png",
+      "bytes": 2539530,
+      "sha256": "e7c8464f2999164b9b9c4be1f9bfe87344ae983e894a0efdfdd13c53e35b1b91"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-8828845401bd1e.png",
+      "bytes": 7091716,
+      "sha256": "d34db564df698b1fe0ab942e37db81eb13fbd1609febd3d5b7c02bcdcf689a0c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-901b2c07dbb48f.png",
+      "bytes": 6878701,
+      "sha256": "8fc5eee5f21695a4aaad2985a182abaf449088354756cc92deb231be28e20c5b"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-91b538c16d7140.png",
+      "bytes": 2084125,
+      "sha256": "4a7d4c691aa087ae6f5a804ca26fe828a756bff4bcd93a9e5633c74fe7c98995"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-92bd2129feef6c.png",
+      "bytes": 473445,
+      "sha256": "c061815252f80e4703967232ad2c69fb7450545a17721254248c3537ed22204c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-95b62729566f16.png",
+      "bytes": 4233226,
+      "sha256": "e8c3fe042763b3d7fbc1f1439c40876c3a4f334a99a8401a43d826763f9a67c2"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-990425d59e677a.png",
+      "bytes": 2316472,
+      "sha256": "c20b7a30d36153fc21d69beab4cc006c65d5f793392acdf6e8f13c18cfd5433b"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-991029016c49d6.png",
+      "bytes": 7382062,
+      "sha256": "342ffe86a85b1e1f14d1d816f1524ca6415f3bfb3f28d6229c0d215b2fb026a0"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-9ce5fe2e4bb9c8.png",
+      "bytes": 4221538,
+      "sha256": "5c6207dcafb7d869cc92b7ebe4710fb7ab748789323e10b1d28bffec151dffe0"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-9db82abe5aed74.png",
+      "bytes": 412854,
+      "sha256": "d24032cda216c5ad1dede29b83f5516c994e9b0a8931403a9e853fa81e658796"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-a355e89a3bb12e.png",
+      "bytes": 2597384,
+      "sha256": "8e164db916eb9bf89417b174f907c92e10b8fd3657eaf6dec3ca3ca5fe95ba08"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-a4e7f2d213639a.png",
+      "bytes": 402138,
+      "sha256": "c426423c0206ed6a697ffccdceb99a17a194b4db48450fa8c426ad5ea285bbda"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-a5067c582affb1.png",
+      "bytes": 4077881,
+      "sha256": "02a8db5b96fb2ad3f0e5c409e691a61e60b2e42239503e4e43693b38d0431585"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-a8b1a6eb798f67.png",
+      "bytes": 4158226,
+      "sha256": "799ef7d1ff900836cca9a30a889867693b3ab10e4fa770d9b5c7d4a84fa9bf4d"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-ae54aa19f24ce1.png",
+      "bytes": 1026211,
+      "sha256": "e163459b1638ba2be4a522be9e6f6ed6644214e5f66a315c3d3af1e98eae5f65"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-ae8001deede508.png",
+      "bytes": 2299681,
+      "sha256": "9ed690b2bf9fa80f7359e431930ba08bcf6249a197300e5b2ddd8dfde9f08d86"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-b3354835935aeb.png",
+      "bytes": 1919047,
+      "sha256": "e2fa7c737317fd339acb1a4bbec20da2d6331b173304f1565c4278278db0504c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-b3be09a9099788.png",
+      "bytes": 4202745,
+      "sha256": "72263d5acc0b9af0194242e5d01802a46800e28df3f2782f510ea55f65fe3d1d"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-b572f7934b00aa.png",
+      "bytes": 1295296,
+      "sha256": "742aeffcfc5ef48bd4cbb15e599cd9f5dccfd71da7754a6984a392b6f93d456a"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-b74b99c69ebefa.png",
+      "bytes": 7524190,
+      "sha256": "8b9ba92e20ca4ebabce740f585c93a0278d4c9485ce6619c10f35edbc35f8a24"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-b7b3fcdb6924ef.png",
+      "bytes": 2209046,
+      "sha256": "c65f5362f9295dc9532415b4e10fd82ea90f61fe3aa7536d358fd96bfc32396c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-b9845a2b6f9ed0.png",
+      "bytes": 589030,
+      "sha256": "0f0849c11927691d770b6f358062b1c69e0a6312cacf0a2dfcfaf94c108a762e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-ba8c3e7343e558.png",
+      "bytes": 488965,
+      "sha256": "003bcf2c33d451851c3e7b9b5ac30c89d81af8b0d42ced79f70c0801d728638f"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-bcd01e1a542c78.png",
+      "bytes": 342254,
+      "sha256": "03bd93bc116be11a8d53b9d3d779f075b81874549709d247f6f26f4101de41e3"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-be560394d56430.png",
+      "bytes": 2278679,
+      "sha256": "85758adfd86f81b1188344927ab83f3a4e898a969275af64541c2763096521c3"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-c0480c02b9451e.png",
+      "bytes": 2042402,
+      "sha256": "439938cf93b90ebd599d9c3f1ff2c949eb0aaf97922017b4229824412d9e87f6"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-c26cc7ac26442b.png",
+      "bytes": 4276873,
+      "sha256": "6a6328ca41ba79a0ded696f30973cb5f41707e923612c84612be25dd2dd7c564"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-c3864a889c8ab2.png",
+      "bytes": 2214700,
+      "sha256": "2fc435cf7dd263318e6c69e7d903bcb90f0d7987843bb66620cb8073af2e4cf8"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-c4a0af52b68432.png",
+      "bytes": 1292207,
+      "sha256": "3006cc53ec87e5832f17cd21eb0c3e689f18616a157289279d66910892545a1c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-c77bdcb57cc28f.png",
+      "bytes": 7376984,
+      "sha256": "7b692a7df5f721bc9f967baefe48e4858d1d3bfa7603aaad7648d4f1ff53d1f3"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-ccd3a84147fd1a.png",
+      "bytes": 1355637,
+      "sha256": "de68f30795322252e36670f51c754374bb70c17dc75b98d83d2f770eeda96c7d"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-d07f6188711cac.png",
+      "bytes": 2018174,
+      "sha256": "4ed1b3796275db14d3ec9bbb1f28128490931f936fe7386fc9f1715155ed9b40"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-d22348b418a07c.png",
+      "bytes": 2800558,
+      "sha256": "b50a6b4f01751dba6f907ca3fe1e46cf30260b007108eb42c6f582565e004b06"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-d2f8c4994d370d.png",
+      "bytes": 7226476,
+      "sha256": "0fb50df7d878e0aab417b6b6c1664df1797a74283bf9a5ac45c9852c496623c5"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-d5cfefa1c1871d.png",
+      "bytes": 1358245,
+      "sha256": "d8adf081faa1648ecf1b435fcab1c8be72db29dd0d53a2e1f1d3f107ab32f9ae"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-d6a9992cf8c8ee.png",
+      "bytes": 4362098,
+      "sha256": "badca6a46c4ea4249a1cad769f05bdf278fb344c7694760574441b4c5e6f2725"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-dad5ac702523ec.png",
+      "bytes": 937754,
+      "sha256": "3dac33c5405bf3dbc145cbcbf00c54da50891186e88ae855847ced1b1147577a"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-db1540a2a3ed0f.png",
+      "bytes": 7179127,
+      "sha256": "13c386dbeb93e14782f0bb31d449e3044d983b6c7347c4e60f27946e0f164431"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-de20eb2bd1400d.png",
+      "bytes": 887869,
+      "sha256": "04de615fddd0f3c1af3f35d519b86a229fbbc0e968156286c2912c4612a1833f"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-e1f2ac0eec71a9.png",
+      "bytes": 232539,
+      "sha256": "c5af194ced8273f54cc7dab5f33ef3b5810e1e683e949186fb1a479b4aad40fe"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-e53eb48e1cc6f4.png",
+      "bytes": 910431,
+      "sha256": "18b65e8b52ec2cadc61aaf927eabf57e9a6baf6c48630032f773317322110454"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-e5e31d8a372027.png",
+      "bytes": 7509722,
+      "sha256": "0cd804ddddd47bdf289dd218aab53b8ef21ff5e15d1eaa514cb54446b285adab"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-e73da44a52e364.png",
+      "bytes": 2084737,
+      "sha256": "c8b73de7cc087c7cd65da484050f8bbaed5c0ef225e1e0a1c27f3cf7bdce2bbf"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-e765887e3a9d77.png",
+      "bytes": 2255327,
+      "sha256": "cbb0d4bd26c0be9c0c244857944034532469919dae2d48db83ea9be835ae172c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-ea3abce2490142.png",
+      "bytes": 340149,
+      "sha256": "cf76941d42dae7e268a88efea30bbac47de05ec24f90b8c3b747fff54b7b0a55"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-ed86ab48e9c51d.png",
+      "bytes": 3227914,
+      "sha256": "89108ff665b86609970e72bf27306dbb29c02af5e84c9d9c5fbea0ca9b596479"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-ee55c3b3cd784a.png",
+      "bytes": 6796281,
+      "sha256": "5e17e32033576d2afda9843ded266cd041300b804c1bc6112eea9ad275340088"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-ef7a9c753cc9e5.png",
+      "bytes": 4085905,
+      "sha256": "7d9159aadd38e217b1c3434357c8c4017f650a2af4c336b1115fa420b802330a"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-f1ae61c177a9e3.png",
+      "bytes": 7940324,
+      "sha256": "9c23daff675602fd77ee78903df3ca722668a20dac60af035aed58c9cbff98ee"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-f20f9f8e1d82fc.png",
+      "bytes": 4330884,
+      "sha256": "a6451ef49b35166cd52fb4baf56ac8a0857ee3f5fa368feaefd10301482f7398"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-f891fb58c67041.png",
+      "bytes": 1072384,
+      "sha256": "c6f4ca725c9271be2db9898213013ec823bd00bb0509413ea88b5c62882d510a"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-f94d0ef0da9ecb.png",
+      "bytes": 2635771,
+      "sha256": "fb29285d47fd2eea376959662a3fb006070b7e4c6ed59504d2285af07b4d3da1"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-f9a640739fe485.png",
+      "bytes": 2374698,
+      "sha256": "76e2d426ac972f83324e606e6ac093faad63003885eb5654ef7766c5a3c09a8c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-fb73bed7a6dc21.png",
+      "bytes": 4158785,
+      "sha256": "c7e0bc234e98bafc3763fa9aabcce8bed7688c50166f5a030b5b110141c721f5"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-fd0760aaf7a935.png",
+      "bytes": 2176745,
+      "sha256": "bcd83be45a746f5a23772572dcd9557a6f1905aa659751576209fb9314633b0b"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/777-fed0b8dba6d18a.png",
+      "bytes": 2640850,
+      "sha256": "1b06bf0b32b452075e1a85107401d080a97f710a2b3a3855daa4bd78fc64fc95"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-068abfcd801a94.png",
+      "bytes": 3130683,
+      "sha256": "2e98f7b147dee82da170fff2efa5470e0666915660bb2cf162d79babb024b1df"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-081598cb757f93.png",
+      "bytes": 2785845,
+      "sha256": "bd2c263d0de8990a132041d6e30aedec4e7858f198f00fb7acb71961d3c5e718"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-0df0fd8b64fd63.png",
+      "bytes": 3599753,
+      "sha256": "f3eef4a8ab325ddae0c88faa995d69d2f7d925f8b63b6643e1b948c8ed79f3e7"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-0eaae2b34c0a14.png",
+      "bytes": 2965656,
+      "sha256": "06b32863aa134113d2fc285fb68b13bd862a57a88ff505495eea0cf47cc63132"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-0fb6172865a328.png",
+      "bytes": 2800956,
+      "sha256": "9db23f388dcbb9efa5a6419b663ef4857ac85793f1ee6c405d95dd1105e4b636"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-1000f6ea71ee72.png",
+      "bytes": 3008430,
+      "sha256": "66e797731ed4a799d06755146dbb9743e18d0f8b63672bcdc3123345631ae7e5"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-1a82754f8fbeaf.png",
+      "bytes": 3004002,
+      "sha256": "27b96283f3a2095dae13aca4766dd0954de8d27522c308db436698a5e4f7d17a"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-1d15f73f0f2291.png",
+      "bytes": 4009170,
+      "sha256": "e53b9ce86586b8216d3a946d9c580b02737fd0e1ef045258e1132b4fe41c4109"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-215317e3a00312.png",
+      "bytes": 3600087,
+      "sha256": "63a15a1cc71f829620558a630cbfdd1f269de0d5275131d163fb73706aa815f1"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-2a8774bd162d54.png",
+      "bytes": 2910905,
+      "sha256": "0c9b0403638681a6f9c246f9c2893853c810fca0a9721dce6288c3b10bd263bb"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-39ed13035a4c37.png",
+      "bytes": 3079133,
+      "sha256": "bf684ce3ebf25f74e89c59240cf4852db569886453192a162dcf6695b7990930"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-3fe9e77bd45601.png",
+      "bytes": 2684536,
+      "sha256": "ec23ef03de5ad1c0dab69c69edd28d7a85f3c59c593f138ecbba87ec8592f65e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-4248b841c9c452.png",
+      "bytes": 2730305,
+      "sha256": "26d4ca4bfee1c1ab9ceb5a918aa77bc84bce7436a89fb798054b863646e7eeb6"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-48dcec53f910b5.png",
+      "bytes": 2782600,
+      "sha256": "a0d2a6b23610ae888089d8979277090c68f2cabf2ed7609d096a0948ac0dd872"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-4da78d66c51535.png",
+      "bytes": 2710888,
+      "sha256": "ca894bc8438864af312ba8de873ab14be05ae1c277e70ee964cd1e54a3b30745"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-4e71797b4787e3.png",
+      "bytes": 3348437,
+      "sha256": "f62a9d08b6c16aa36a4ae38eba8dc1a83830fa17dc7fa48f4185b00929c5c94b"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-53188261b2dd00.png",
+      "bytes": 3590421,
+      "sha256": "586cfa34846898a6a51d9e300ecb00f0abba86440b8c96559b293918d5a5b6b5"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-64b8bf8dcac01d.png",
+      "bytes": 3344768,
+      "sha256": "9d84216677474db7e7341996a110e356699082790d1c5beb2a7849d681e1c4f7"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-64cdb11f155742.png",
+      "bytes": 3061158,
+      "sha256": "13e7d49e6cbd97bb13c0b49b4edcb3675fd60ebbdea4089da6f0af117c7b3579"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-7201158dd40589.png",
+      "bytes": 3282123,
+      "sha256": "ae68deb4bc4e1beae734e3e343dff7075b883758ee47266ecb8b860c914a974b"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-7259f62b410abc.png",
+      "bytes": 3586837,
+      "sha256": "f99a19024ba0d2619b224cb12cb54f2272a75ab3c4d84bc2b7de2fc0612799d0"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-73f8ac59a2db86.png",
+      "bytes": 2771420,
+      "sha256": "cb231956521cca161961b7457a0096c0a7f7aa3dfa36d29945ef3d651c3214f1"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-79f92d8e8c83d8.png",
+      "bytes": 2924202,
+      "sha256": "d7e35586de7b2003930fa19ff67a476e528706e6b63d08698a8fe050c00ece26"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-7a87caac71eff8.png",
+      "bytes": 2312693,
+      "sha256": "e33285bf633f256265c9e80c8a94d66dc2c5be21b5cafe852878bc00174e5605"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-810580bbfccb25.png",
+      "bytes": 3648544,
+      "sha256": "50ff80c1e4b766a001c5c55747fbdeb7b2c988648b59d6d43a48c1a650c668d4"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-8a761a7e2b430a.png",
+      "bytes": 760726,
+      "sha256": "ce31e2c6fa8cb883c0cbdd3bb9201d18a4bfaa1944d4b579a5978c36b0a563a6"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-8d0e7524250e1f.png",
+      "bytes": 3472695,
+      "sha256": "b755998938951b8a3d7f771b0383dc8005f25bce4b2d79ee07e3005ce56b0f8c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-8d65f754af3a51.png",
+      "bytes": 3395672,
+      "sha256": "10bc05a5f09d46a7e70dc831f4426e103973e3a55fd71457599a6c77c47aa934"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-90ad044b5857c7.png",
+      "bytes": 3014279,
+      "sha256": "685dc1a16cb1f988f759bad229d4641ca638ef52a80bf0edba370a1650f78534"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-9458d93e3cd6c8.png",
+      "bytes": 2948752,
+      "sha256": "9fee1dedf5d883a8fca3e5b2f8f68a95d80eb40995de29e4c2b5d7d1379a9b67"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-9b64ff7441c0ec.png",
+      "bytes": 3220182,
+      "sha256": "3968dad2210d48cf097b05c68970d98cb2d121e832d4a1c8876598a3211f9d39"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-9beaa6ab0669e1.png",
+      "bytes": 4026844,
+      "sha256": "9fa6549c28fc5d501ba1d81ce2a30a3583d73135c73a9ab7813e6bc923b762e2"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-a3d343f81e2ff4.png",
+      "bytes": 2933787,
+      "sha256": "a888a1f41e3e0b5a47c5268021519f4436facf705a8a60e41c506dd2cadf6aa6"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-aa2aec1914be82.png",
+      "bytes": 2964267,
+      "sha256": "d370603e6658ca4c099e3a06cfb3792732099d696a6a09483e72318e597a4925"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-ab87daa54b00ce.png",
+      "bytes": 2748849,
+      "sha256": "641c105ff64c36321106903cb12673dcea44325e2e04c5b43ca9be7b710a8e93"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-ab93277b6624f7.png",
+      "bytes": 2710888,
+      "sha256": "eaea6e89b28377bebd104d8b65d3e894dc5c924ef49a69b4c452230e87956624"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-b179a86670764b.png",
+      "bytes": 2722007,
+      "sha256": "1ebf1e02045c8eb8feca2b28307dad1c7c8c0a4cd659ae3540a166d6bda63cd3"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-b236cf63b3ab15.png",
+      "bytes": 3383657,
+      "sha256": "8c192f536a0c25ac43095dae68e13609d0fae56e22b1bcb37591542a0cdfe419"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-b356ebe171ddb2.png",
+      "bytes": 2839637,
+      "sha256": "23d778c1449052f2739cdf98919cfa2b587b3abef32b9dbaf41514d2579e2a5b"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-ba4e802fa201fc.png",
+      "bytes": 2990333,
+      "sha256": "19abe9744409c7217ff0ea3e19ddb6c8293e93a6ee82a05f335513a1de510c47"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-c4f483bfcc58cc.png",
+      "bytes": 3538681,
+      "sha256": "ace82eb25e3109e1ede50e46cb5069fa3d9ccbac1c235a01805ac40fef5ea9e0"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-cf14e1878bf996.png",
+      "bytes": 3539638,
+      "sha256": "0707a9ac48664d121a96119219e1d098fab1960941d48ceb6f37be25ac3958fd"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-d59a0d8aa3bd66.png",
+      "bytes": 2945296,
+      "sha256": "3cd23a37066a913cee73018fa883ade668a406e218925c01b14a18a6450aea3f"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-d8fdba2d919aa2.png",
+      "bytes": 2988954,
+      "sha256": "a0f1af0106bf125b71af7af4fcdde34cef843ed7f2e1c0b3cbb288c496d36a90"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-da3c72e0b22274.png",
+      "bytes": 3165075,
+      "sha256": "a46791c3b65b81fd58dc41f2746079f949785a446b587a4832fcbb32f0bd877b"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-f19a8532555b3d.png",
+      "bytes": 2772012,
+      "sha256": "f437d901ab80d02af0103be380efc389083cfd50698a9cdba7486a7a6a710dbf"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-f554b992cf81b7.png",
+      "bytes": 3004712,
+      "sha256": "3fd19a9577379a1b2f7c3e21fa996c73ffdc407984409cb30b5fa50dfa2d927b"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-fb04acfecd70b0.png",
+      "bytes": 2777660,
+      "sha256": "f4b29d73b8dd0d8dbf2bb1fcb56478d8ddb454c93a4e6ff25d6e75b97b090dbe"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-fbd96e521e0516.png",
+      "bytes": 2629610,
+      "sha256": "743aa62bf24de3df6e207181b1db20d34efbe7e2c590a3c2686665874f2b177c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/787-fc969abcb34548.png",
+      "bytes": 2938064,
+      "sha256": "92c01a59e70c1eda79bf09f5b392870cb1816875fed249d5b2e089f5d8cd6fbe"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-AAL.png",
+      "bytes": 2152261,
+      "sha256": "802ec9166cb81ad01dfd16afd8cac602fec5f57e3b473c7d43d24658c76fc62a"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-ACA.png",
+      "bytes": 1967585,
+      "sha256": "4d0a83fe35994baf06c60ec4d4548551497b0396c37ccdb8e7fda0fe76b7d181"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-AFR.png",
+      "bytes": 1435918,
+      "sha256": "ca5a9f9d1e72d34f73393d0aaebac4b8d1e593995403afb6d1f9076ed45f73d6"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-ANA.png",
+      "bytes": 1753872,
+      "sha256": "4e1185f4bbb379c6acb52e7b29e02281beedefec5555fb9df35d559fb67bd433"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-ASL.png",
+      "bytes": 2081208,
+      "sha256": "c24a65e004e02ad002497d0b97431c398ca1bc2c82b547f3f210e696ca274310"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-AUA.png",
+      "bytes": 1648783,
+      "sha256": "60ddae11fc32eed801b62bc7cd2db80c4708d452fc158c5f524b5cd4c929b028"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-AVA.png",
+      "bytes": 2182967,
+      "sha256": "50fd353f267f7dc660bc32f8e5a5cbbeda2207b3e755b5549c2e212e3f869975"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-AXB.png",
+      "bytes": 3228837,
+      "sha256": "eb5bce8cd2eb7f2c202bbc03c8625f60470bafe03afcd8d1204a3af0bc5ae330"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-AZA.png",
+      "bytes": 1551829,
+      "sha256": "f44763c04f26e68402d3f0070b477d61873d04cf877fd0bddaba26639b9712dc"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-BAW.png",
+      "bytes": 1558583,
+      "sha256": "84b534f02dcb9b48eebc782099968673db93317241acdc5bf579736ad17dfc34"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-CCA.png",
+      "bytes": 3972319,
+      "sha256": "de62bb56789c1509bebcc7183e3aa135c824ec12b448be1f1281e48240253a2f"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-CES.png",
+      "bytes": 1739616,
+      "sha256": "21dc372e67ebde4705d3a0cee721d79e4845e7a0d6066e32a8c48c41e34ff8fd"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-CFG.png",
+      "bytes": 2045335,
+      "sha256": "d61bc216ca4e2efe9e9ea9079c651dfb6308e274aad75e71ad72d9eeb788eeaa"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-CSA.png",
+      "bytes": 2139797,
+      "sha256": "02b2123352ff72957d28bc928474f441bfbf2f094d0ff568289dd4b07ff90907"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-CTN.png",
+      "bytes": 2083088,
+      "sha256": "cf4484f21ab57a5d09bd6f70d901b90454497cfabdeda0c3f158d0f814ef9bd2"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-DAL.png",
+      "bytes": 1482354,
+      "sha256": "0d603b264d74678c272d794bf185d98a177adda80cef39d2a5186d2fb5f53551"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-DLH.png",
+      "bytes": 1416631,
+      "sha256": "c6aca6a93910170b34500f0b06ffa842a70c3d137cf153fc69e63ffab7f1e7f0"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-DRK.png",
+      "bytes": 2414175,
+      "sha256": "8129301c0764b91da46c134f05e7d7c7e83734768f6d3d80d461af9add28a487"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-EDW.png",
+      "bytes": 1883063,
+      "sha256": "caf63b90f045e8e12edf7224a063a8370982a4aaad423d42790246f470658d4e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-EIN.png",
+      "bytes": 1551813,
+      "sha256": "af857796a3a8a1c2c701cab97cef98b5b46a7bbdf92e6b9879d1dc0b70947dc7"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-ENT.png",
+      "bytes": 1972181,
+      "sha256": "9c75e82330b860b91064c3b527a7e733b16a21967d8f23af99f83e78a1567974"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-EWE.png",
+      "bytes": 2174932,
+      "sha256": "32c890099fce0c22f1b72864ba81ab7aaa19564f1b12c6cbf039faf7a0c290f5"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-EZY.png",
+      "bytes": 2169256,
+      "sha256": "d722ef05bfa948118cbdc8958a644e95f15c6a8de6323344dbc805e31711cd6a"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-FIN.png",
+      "bytes": 2028751,
+      "sha256": "9def3fa835ac1261d306fab7a4e0f0f60a919aebe9401f6049de820a9f4696f8"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-HDA.png",
+      "bytes": 1519208,
+      "sha256": "55b420881e141cf56418a643316e14e7c0d661d7fc055e3eb18c7995252f5f89"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-HKE.png",
+      "bytes": 1822775,
+      "sha256": "8183178d8352d7b956c695001667a20408f75b9fa667871630ce3829aa524510"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-IBE.png",
+      "bytes": 2146359,
+      "sha256": "46bf1092611724adbf3fcf2a0a5363085c56f69198ac23b969ee4986344a9da2"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-IBS.png",
+      "bytes": 2124001,
+      "sha256": "23ddff6b7d23e4e41e9b4fead3dda1717003b0043ab7564ad05af8977987acf8"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-IGO.png",
+      "bytes": 1859631,
+      "sha256": "8a95a689a83a5144329d1fb243c8c2f3115609bd4fcb505ae5b06b8ffa9ec6b6"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-IRA.png",
+      "bytes": 1762771,
+      "sha256": "0032eadb0e2bff1f4319b3962343f6da2004c83edf4572614189bca469cf53ec"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-JBU.png",
+      "bytes": 1519190,
+      "sha256": "e87be84bb219b1ccbb36a51c5a32e90812cbd982070b52d92a4d85b0ddfa3dfc"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-JST.png",
+      "bytes": 1710478,
+      "sha256": "f82ce7bb4e78bb78a408a08ad7594ec88e31b7691c1cdbfca1a74cbda86c6d95"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-KZR.png",
+      "bytes": 2094374,
+      "sha256": "75066c67a9b89a83a4ce9b2c981e773c360760f880d1edf2b0564c2607a6e46c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-LAO.png",
+      "bytes": 2951069,
+      "sha256": "42e3f10796cb5c73ec05511dccb335f8ea6566525534c67c0ad128d4bd67a750"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-NKS.png",
+      "bytes": 1762526,
+      "sha256": "429914acaf65e7df63038e345b981f3c0452a5d7f6fdd6973ed99eb736718332"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-PGT.png",
+      "bytes": 2156561,
+      "sha256": "10a5397510e598cec033efd2eb31d7ea173d5a0937c38a973d7426b392e77a8c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-QTR.png",
+      "bytes": 1670275,
+      "sha256": "8506f3bdcf7bdb80e43897353f09980615616c40b57926f2d1c844516d5ebf8e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-SAA.png",
+      "bytes": 2822254,
+      "sha256": "6e370abdb5bf357cb3e868b47fb7e84194cab49e9b9f125601177410b8266516"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-SAS.png",
+      "bytes": 1534571,
+      "sha256": "b3ff5fca2ac1d937f3c1bcc928e931f99e1867002fb423a77c63cf24636fd5b2"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-SBI.png",
+      "bytes": 1587135,
+      "sha256": "964097289de65d3bc8b74dbfb1656eabdef517aff3dd6cdb51a5f7d600d58a17"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-SEY.png",
+      "bytes": 2666800,
+      "sha256": "ff52adc379a5a091dca4bef08f41bbc0f323284efb595f96f610377cf384f767"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-SKU.png",
+      "bytes": 2107089,
+      "sha256": "f14b7f1a289a6e99d95f1b140592e28c941cee7ae9b402478dc9e72984114fda"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-SWR.png",
+      "bytes": 1981364,
+      "sha256": "3d53a28696ddbf05e7c94118846d030d8883976d9fcdbd127f657db349769586"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-TAM.png",
+      "bytes": 2161094,
+      "sha256": "2fac1ba28be5c2841e4fba5d2b0117b4a189722d7140f01cefcb00152b43a45a"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-TAP.png",
+      "bytes": 2158328,
+      "sha256": "d1347674567e694db82ce42cef5ca3c7c4a0d50ba63ddf9a0d91992cf877be6f"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-THY.png",
+      "bytes": 1533624,
+      "sha256": "fd916be3396f639fbde9cae0f13244f5271ef63b8a64a05d392a40098083a957"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-VIV.png",
+      "bytes": 2012405,
+      "sha256": "bbba624a3c82004740aa8dc87f927c900fdc3dd0ea00f26f3c848f0fd7e31e4d"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-VOI.png",
+      "bytes": 2028635,
+      "sha256": "ed56e63019db68537802228780920b6ff6d64e282a28aa04b9e946d503fdcc21"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-VTI.png",
+      "bytes": 3452382,
+      "sha256": "f17bb5a6ea1730b581045026d24d8bde715ee9486a37c8dfbcb4f0fbfd20ea86"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/airbus-WZZ.png",
+      "bytes": 2270106,
+      "sha256": "f3e2fbb8f867f7fc8d3a9465b180016023b97cfdd009718ef92302993245bb13"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-AAL.png",
+      "bytes": 577774,
+      "sha256": "f9c83fb2a7fa335202ce4513b070a01858db39b76456a23e0cd159ee598c001c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-AEA.png",
+      "bytes": 756850,
+      "sha256": "56ee26498c81ab041d9c5b3da9ee2aefcba18146ad42c3bbf5a41de14c1b5a6f"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-AFL.png",
+      "bytes": 406934,
+      "sha256": "c1cb20f0296c5e9a7779f2905c629be8611dc405b2b67207b301cbf5eb00f6f1"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-AMX.png",
+      "bytes": 455066,
+      "sha256": "740abba084878a8cb5858c1249544000eec8f764eb2e5ba0925bb490f560da7f"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-ANA.png",
+      "bytes": 315898,
+      "sha256": "f7a82ce4fa15ace40d246c1af67981bf346c35df50a3ce8d5b34471705f8ac81"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-ARG.png",
+      "bytes": 538103,
+      "sha256": "acdef10edec3fa884c0603137cfc3632b91b32514146e27835a61594fb031c91"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-ASA.png",
+      "bytes": 1324806,
+      "sha256": "5b25eeaa5becdf2634ca7285ebdcb51d51a77c69d3287e754afe838a8ade102a"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-AUI.png",
+      "bytes": 351752,
+      "sha256": "323199d92cc5bcf914d38be4bda90ff069d00d75d47dd77c5a7e5a375cf5d9a9"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-BAW.png",
+      "bytes": 705956,
+      "sha256": "3cda31f63fce1d0c167a0565de377bbc8fc964cd7138bf7fbd67a73df3a37bac"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-BMS.png",
+      "bytes": 294104,
+      "sha256": "8541d12493c643b061465b711fe6a356d472209397c0f6f9bf270e8dc418c464"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-BRU.png",
+      "bytes": 380198,
+      "sha256": "c98df503543cb94236a5739e43e10204d3a0c87982aae107a65861a8f87d11c5"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-CAI.png",
+      "bytes": 352670,
+      "sha256": "0cc582abcb7270fcb581192238813cc6a20c6a27b6f74b44ff34dc288f83c3f1"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-CAL.png",
+      "bytes": 585380,
+      "sha256": "00e575dbdc2acde8aa5236f4de432f84a1ca360b3c76bccb472652f3ec57c87c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-CCA-GOLD.png",
+      "bytes": 625513,
+      "sha256": "b7be6c71f49a404972f61d25ffd765736fc8a1742c46a65f49642f7fbb5fe2bc"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-CCA-SILVER.png",
+      "bytes": 626671,
+      "sha256": "2e081048aede6f50a643fc79abd0fc228d77345b57f51376c295066267f6f30e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-CCA-YELLOW.png",
+      "bytes": 615525,
+      "sha256": "d400bfa4ac4986abafc2395fb85a09fc7f5c997e8cfba4356bf8f481632b238e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-CCA.png",
+      "bytes": 434758,
+      "sha256": "3194df6c6e6bbbb893e691cabc55e5c39cd064cc9a409f12927e43c14457ab1f"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-CES.png",
+      "bytes": 606960,
+      "sha256": "c4ea33628386173fa3eb2c5ed5b1d936a5044b4fe0d256c04423f9eae20121f0"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-CHH.png",
+      "bytes": 429522,
+      "sha256": "aa57099a6616a2bd51f49e52fc97a0caec921b56f7a6272b7f5f8c1b56e21ecb"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-CMP.png",
+      "bytes": 484900,
+      "sha256": "bbd1ac4cf1120279c42fd11a50921559ebf346b697a2ecb4c09e9ba120136639"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-DAL.png",
+      "bytes": 244879,
+      "sha256": "684e8000cb0c3fffc130eb1515aa7b3b61131ede4d939b0eea3b1f47fadd87c5"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-ELY.png",
+      "bytes": 335795,
+      "sha256": "e70ac20bc85d445de15c2f102bc75f2587096cee6daacfc041999d111d67c2d2"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-ENT.png",
+      "bytes": 181672,
+      "sha256": "1435932f25aaaac80fbd635e5562d8eb27d36e78104c9e80c3d43029138c80e5"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-ESR.png",
+      "bytes": 329239,
+      "sha256": "502deb058d47e443257dad90dea604a9d80e00206b8c3dc600cd8502d79aa9e6"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-ETH.png",
+      "bytes": 334462,
+      "sha256": "215dc7836c1f0e2f219dc3bb1872d9dc67c827c11ee2e9630d6a9acac27f4b33"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-EXS.png",
+      "bytes": 1073598,
+      "sha256": "dd6c591d79e31b5e85c529da59a1f8e5e7040187662c9c70e3f4c9b1c501b894"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-FDB.png",
+      "bytes": 525775,
+      "sha256": "41b288341a17ab0a72ad4f7271a972ab48348e656620fc53cff4d8c8d81799d5"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-FJI.png",
+      "bytes": 1026959,
+      "sha256": "9ce14fb7a1abd524362349667d1bffb9ddf3dd1e6c77d41ccd019a2052ec12e3"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-GIA.png",
+      "bytes": 524975,
+      "sha256": "c44076ee63bbafd4e08b71600d140eb2fec38f065d3691a50cabcae4171377c2"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-GOL.png",
+      "bytes": 634695,
+      "sha256": "22a86a9476fc5ed8f99764ecb1d90a3c4052b1052811ad489c42982e99aa6562"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-JAL.png",
+      "bytes": 722588,
+      "sha256": "c44305c84785b6d045c1d7c3cdbd7274dfefe1b76e281a47853d45bc97d88f01"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-JTA.png",
+      "bytes": 275836,
+      "sha256": "aa89ccf15904625c9fcd9a146ce2bad6133eb1d8a93cabc63897c677209c60aa"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-KAL.png",
+      "bytes": 318773,
+      "sha256": "f8db826ed28b09ca6870400513c993e4a31bf76239465c8b94f096aa1a88d9d8"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-KLM.png",
+      "bytes": 830539,
+      "sha256": "fffd6c650185dc8e4b3099b58aa5adb5b079c1188979ac4a83b6214b5f6797f1"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-KQA.png",
+      "bytes": 353181,
+      "sha256": "95a48736f89564d4b82d60c9f579db12ffdbb16edfbd6bcb8ce41d8d9e63fa8f"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-LNI.png",
+      "bytes": 342610,
+      "sha256": "13ce0afc0fc3b8e06e2b15690dbfb43c1f8a9a53b2cc46a86ef2e8ee81837cc0"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-LOT.png",
+      "bytes": 410951,
+      "sha256": "371b65fa2eac4e243cd478ec3e30aeb49dd0833987bd3de6df14e9dcf2fe8c72"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-MAS.png",
+      "bytes": 300106,
+      "sha256": "a3de899ede59a0143852e38484467663dff34ff8dcf49d27c432bdeeeb483320"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-MSR.png",
+      "bytes": 620196,
+      "sha256": "2d381f1266fad7eea55c16be25cfd2fc6d8e92cc9bc28c056481a6ccf4c67e1d"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-NAX.png",
+      "bytes": 261161,
+      "sha256": "d461f9dc2f5dd4718aef71a327d1374bbf938040c5745c092d93bcb77922e1fe"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-NOK.png",
+      "bytes": 1064519,
+      "sha256": "00de2e0a64590f745d6cbd6c186b4cda779316f7c5fd086994e32ac3082eb002"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-PGT.png",
+      "bytes": 414672,
+      "sha256": "f58746060ebb90b94ac9348c27b52e813e81421d9b7d1d08590d7d5651af49f6"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-QFA.png",
+      "bytes": 379326,
+      "sha256": "9ad3384736d4f36c3828799ee8738d9732e706f93f59717bc7f4bfa91fadc2dd"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-ROT.png",
+      "bytes": 324634,
+      "sha256": "d6b7c1364b414e8ac56e1880cb2017121326354bb351027669becaa6e37a9757"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-RYR.png",
+      "bytes": 307799,
+      "sha256": "aa7b9bbf601e77f9f49d89c37addff6d345f233ef2cdc360b9a5a4ce30f5eb1d"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-SAA.png",
+      "bytes": 323032,
+      "sha256": "96301fe862e36b42ff0bba562bab89cce429f2b63d6832bd6116047b270395ca"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-SAS.png",
+      "bytes": 278764,
+      "sha256": "79941d30f4b2d9f2d1995f439c7dee62d506646a207f857111eeb7966a469ab4"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-SBI.png",
+      "bytes": 296499,
+      "sha256": "bfe034ef3bb71487af904a1130cf7a24c3a2fa40c5cf669c270ee243629ddb73"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-SCX.png",
+      "bytes": 711680,
+      "sha256": "fe1a86bbc72084b908df2048cec59cd14f1a7f9668ff3650201364aba73553b0"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-SWA.png",
+      "bytes": 326403,
+      "sha256": "282e7212f72d28740ab917e9b89d01ce1903cdd9d683e63468813d91cd05cfcc"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-SWG.png",
+      "bytes": 469869,
+      "sha256": "b427b27baf62a65ef157549aa324b0520bcdd81bdde86b2ba35b9317adf071b7"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-SXS.png",
+      "bytes": 321381,
+      "sha256": "6ca48cf7440c169a70177a780289c96e60f8b28c1814acbe5fd223f513629544"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-THY.png",
+      "bytes": 696142,
+      "sha256": "8c519aba95a7bcff24e0d6d9574ea48a7052d120c7b7658fc1a2781a143ded0e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-TUI.png",
+      "bytes": 264097,
+      "sha256": "729b5f079dc0ad42fa8fd9f9c07ba0358a38e77d13dcabb53213099ed715dc04"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-TVS.png",
+      "bytes": 384649,
+      "sha256": "8df4e8133a7960d13c8557629b5c8d6274a3d8b279db3b14b18665cd1c1c9011"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-VOZ.png",
+      "bytes": 754948,
+      "sha256": "1c5818f55516f2519ce6a42f6d942d9b424cb6352e400441a445b74e3844375f"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-VT-AXA.png",
+      "bytes": 778571,
+      "sha256": "eff6ef90cbdd5644f8497240be3a3ed04798fc3d8a11a054ffc405b524047bdb"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/boeing-WJA.png",
+      "bytes": 268029,
+      "sha256": "e3efa414fda48b56b689644298c7ee04100d7149bfefdaa0ab16958dd6d1bc13"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-AAL.png",
+      "bytes": 490144,
+      "sha256": "336086566921425f321dfdd0c30ceb6b9950fbbd973fb06425be4356c4f45b54"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-ACA.png",
+      "bytes": 489900,
+      "sha256": "ca65ef07a4a3fe329f49e6452b7ebbbcff0ecb899cffbdea7c916553025e986b"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-AFR.png",
+      "bytes": 525190,
+      "sha256": "b2704525b45232535a921e3cce631978740db3eed6489aa97a289d747caba9e3"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-AUA.png",
+      "bytes": 495833,
+      "sha256": "aa416852b556c283d58f06f1abdbfeba79d7b7533f46f5f2c849f2345ed50640"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-AVA.png",
+      "bytes": 571213,
+      "sha256": "402b8a0aa82d323d93b77d1bc3ab60406058f4324909a35a8224a2bc4e19273c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-AZA.png",
+      "bytes": 497010,
+      "sha256": "bd15ca5006ff55a02ed894991269644407cd209b0521837d591581174d310422"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-CFG.png",
+      "bytes": 560804,
+      "sha256": "a18b97fd7e30f4b6c52c09e26d2cc7abd390c404116fa7774e9d9494b26ade87"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-CSA.png",
+      "bytes": 572060,
+      "sha256": "86a25bab74c65eec4c368cc4dcd6c417ab6e3d0d999c6f5a5a73cf19507b57ba"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-CTN.png",
+      "bytes": 577083,
+      "sha256": "d8164b917934e23c6dfe889e37c79632ed7a18515f7a0824daca7ff45ea0c669"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-DAL.png",
+      "bytes": 495527,
+      "sha256": "b1d46b3c47e5aa1b34b6814151ceea87a4f1700e7f28da797158bc386440ccb5"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-DLH.png",
+      "bytes": 495836,
+      "sha256": "ada0e3b699a8a70d90f9bc518d709e22de4f3044dc370bb900d93d8598bd245e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-EDW.png",
+      "bytes": 495836,
+      "sha256": "ada0e3b699a8a70d90f9bc518d709e22de4f3044dc370bb900d93d8598bd245e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-EIN.png",
+      "bytes": 496046,
+      "sha256": "fe396048853ab781230c0949d695f7367d2fa9a7ae010369191c053592c281e0"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-ENT.png",
+      "bytes": 495836,
+      "sha256": "ada0e3b699a8a70d90f9bc518d709e22de4f3044dc370bb900d93d8598bd245e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-EWE.png",
+      "bytes": 567349,
+      "sha256": "7a03e8dfe15d9b48876b1d5202eb5b04c199a41af5fa02f51d223d0d60e4ef1c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-EZY.png",
+      "bytes": 579492,
+      "sha256": "28b78f0b9ad14559a6dde617703fabdcac2c5d81e778594a18a45f75f1fd7968"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-FIN.png",
+      "bytes": 495836,
+      "sha256": "ada0e3b699a8a70d90f9bc518d709e22de4f3044dc370bb900d93d8598bd245e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-IBS.png",
+      "bytes": 601274,
+      "sha256": "941fd9b613b8fef6105b21b999882027530cf540356186900ff111a2c675a5ce"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-IRA.png",
+      "bytes": 495836,
+      "sha256": "ada0e3b699a8a70d90f9bc518d709e22de4f3044dc370bb900d93d8598bd245e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-LAO.png",
+      "bytes": 618975,
+      "sha256": "f15f2559af11ea2361641bb554a973a7e2df12e8bf8c766a72fcd070d6f754cf"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-PGT.png",
+      "bytes": 556474,
+      "sha256": "5c3fc3bc45e95f7a83b1ad1c013098139dbcaa813998abe8ad2fe916af82ab5b"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-SBI.png",
+      "bytes": 499003,
+      "sha256": "aa94d0fec24538fd7d837b90c57d67efa0a1dda39e067112558ecd7bad2b515e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-SWR.png",
+      "bytes": 495833,
+      "sha256": "aa416852b556c283d58f06f1abdbfeba79d7b7533f46f5f2c849f2345ed50640"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-TAM.png",
+      "bytes": 495836,
+      "sha256": "ada0e3b699a8a70d90f9bc518d709e22de4f3044dc370bb900d93d8598bd245e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/engine-TAP.png",
+      "bytes": 495836,
+      "sha256": "ada0e3b699a8a70d90f9bc518d709e22de4f3044dc370bb900d93d8598bd245e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-002767ee5713f5.png",
+      "bytes": 3466303,
+      "sha256": "3083728597d0a3b9d022259c1ee36aae35a13c9e7f0d5ae4ee6dec7b0490b45d"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-05aac5f7f16ce4.png",
+      "bytes": 545413,
+      "sha256": "f9f3a983d2278fa4eafea9d684112e2fca1a85d878ced397893c146842487f3a"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-08e44037282fd6.png",
+      "bytes": 3027079,
+      "sha256": "f940800e72fbe91106995955ce09f9c9219fe70d8e6350925c6f71c1ab84c56d"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-17dea770f48f63.png",
+      "bytes": 837831,
+      "sha256": "ac9c2d67a0df5234f156ec7ea956a4b543587892ec2721fe1437714aa99baa93"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-226c8d7f90505e.png",
+      "bytes": 687278,
+      "sha256": "e2828059452990c2877b155d7dc26c12c2cc9ffbb5143764b2cca456b0f86436"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-2bcc9343a8728b.png",
+      "bytes": 528496,
+      "sha256": "65ee351f6723ec0b443f3de0166634b588b621361d1a75be2d3d0c01005c2df9"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-30e49d40d375d4.png",
+      "bytes": 3115218,
+      "sha256": "44177f52055fcea3a016292a72dbebf4c7ccad4702a5f86e344e4475cb7934e3"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-3cdf844dba8cb6.png",
+      "bytes": 936103,
+      "sha256": "a04b3cb2c9c1aed94d8abad5ddf272394a0e24bd0afc1f3ac3b7906549138eb5"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-4189cf61bd146a.png",
+      "bytes": 852242,
+      "sha256": "3f2d9c8ac81928a6e320a7fd834b6ed9bd6aaa3c334724334faef2511c26e7cb"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-442dd70fda864e.png",
+      "bytes": 3265293,
+      "sha256": "91ebe71b0c84fbc89608f93fa6e2d7fe33394a32355ef5d3f986ac71db22188c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-4631dd18cc7b74.png",
+      "bytes": 3034770,
+      "sha256": "8a48b7d33c69db4e23e820350fdac3cfbe1269b4752385ab2f7b5f600e756613"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-47d6d4c90a13a1.png",
+      "bytes": 2758724,
+      "sha256": "1d75ac19aa7b3df1a4f1e92b78aadac07407a8fbd9ab02781d7786c6d8ddbda5"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-4d88135604ebab.png",
+      "bytes": 920903,
+      "sha256": "f1edf5533756b7e85d77697bae2721c506f3a6257526cac9f79fb453c73a7e75"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-4f786446fdcf08.png",
+      "bytes": 626843,
+      "sha256": "ef97647f0cf9c85410c9666d9e069fe9e8f1ef333ee426bd0acef365b795d421"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-503f14cfec97cc.png",
+      "bytes": 579139,
+      "sha256": "8b677b9fd9781500b5e2c685b9094150b7d44d3f03bcb1cab15efd927bdcee2b"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-577a3b724f6843.png",
+      "bytes": 547139,
+      "sha256": "cbeb705335ef3a72af889edf06cf32a3bb291bdab4dd7e867472747d8b5a5d85"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-5a848d13db2561.png",
+      "bytes": 615167,
+      "sha256": "7abab1d3251dbcac485991105e8e88f9dc720ff90a4443f8b686d79cca58d8dc"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-5aac3628067f74.png",
+      "bytes": 639715,
+      "sha256": "0ca71a61ff7c179ac410c1d739f828244900f54fa3b4baa87d7a7915b35a521f"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-5de1d15d26ecea.png",
+      "bytes": 725398,
+      "sha256": "934d6ce412a106fe239c830e6749de242ec47ee5b3a4ea78ab5460215e9f57ef"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-5ff8e4e5d7753c.png",
+      "bytes": 656201,
+      "sha256": "dfe0aef068f3d97c8e2ca2da461b5101524acc90f09dc0571a39dbfb9fd7c5eb"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-643d15821a0e44.png",
+      "bytes": 588707,
+      "sha256": "b8a54856daac69e5f37cf70a71a9dc1be7733876c0b1f9b16f22d09043a5345f"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-6547b43a52ddf3.png",
+      "bytes": 3074929,
+      "sha256": "2b1b9310dee866bf36ba9b448a2c3e9ac29b5888a7fee41d64bf9a0e0d9fd278"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-69d1d97eb89fbe.png",
+      "bytes": 675005,
+      "sha256": "31220dac97eadae0a1b9ddd481336ffa2d2f5d847611334e761b6608c2029115"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-6ad62355cb7280.png",
+      "bytes": 600257,
+      "sha256": "ab06a2dd3fa5eb20305339a682bc437b80ce04939426a9b7ceeede4caf699afa"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-6bdee7b57766a1.png",
+      "bytes": 3469699,
+      "sha256": "60507b12025bced916bac007df30082ebb9d900e4b04700e480e92fd404faabc"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-762ff2f2a48cb9.png",
+      "bytes": 3041190,
+      "sha256": "955923201e9bec5ae72ba0618cfb4b7fb9714736e7102da28b9e1786f2503ac2"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-79cbd7f3d96e89.png",
+      "bytes": 637768,
+      "sha256": "d829659e9fcb00c9796d993e5f3288537cf1effe95df51003141c60e4611da88"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-7bd0bd735fd9d4.png",
+      "bytes": 622373,
+      "sha256": "015d77b8c141956a5538cd209f0e51d4bc29cf594a0bc0fcc42dc208d608b898"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-7d1fea28abc13a.png",
+      "bytes": 2710888,
+      "sha256": "ca894bc8438864af312ba8de873ab14be05ae1c277e70ee964cd1e54a3b30745"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-7e587e070ca1d5.png",
+      "bytes": 615809,
+      "sha256": "d6d3920e7e0be0f83a23aaf3287324274d5f869339bd460a0996a316b96fe051"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-83894866d413f1.png",
+      "bytes": 3226352,
+      "sha256": "5fa23264d726634230b7d0a38d77816c9d5f9354ac0c44688921b559405775fb"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-8869d1846a90e6.png",
+      "bytes": 639396,
+      "sha256": "b713c5a0148e947a84eb404d412554caf7165b4cf57c4afbff2dcabc0712f407"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-8b5f3277019dba.png",
+      "bytes": 3151847,
+      "sha256": "6b3726d11e1a479a54c794e85e75f6ccabee742db02b36287a148f4014f50feb"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-8bca6395326f97.png",
+      "bytes": 549935,
+      "sha256": "1a8dc7aa2cf6960c8fd793d4af2fa10d5a7def3ff9e0ae0594befa850693365c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-8d44d4ef84c582.png",
+      "bytes": 913347,
+      "sha256": "ff0f4bc6ee0b2bac6da6c24c3e946b1b1816d0ba68ee7965c85fd835dbbd5f4c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-90b3f639108181.png",
+      "bytes": 977492,
+      "sha256": "59b86ea4d1e63eb3b99abcf8af2c23c72387b36ba6a34a0cccfe153d2264655d"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-9325000712e642.png",
+      "bytes": 598492,
+      "sha256": "b3e7137a1a52d33ca39078f85053d75a1896051685793d8772823b40f48fda4c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-941653d3b5bea8.png",
+      "bytes": 4288108,
+      "sha256": "edd6af9c96b2ef5af84e7db5aa231b363d6be57f00941d7d5cd19f0d6b69b4a3"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-94f1bf646507af.png",
+      "bytes": 3058539,
+      "sha256": "52c9652addc47f9b78cbcbf7a610ce45afd70b3d40bb1944ed0f2a9126895746"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-968db9097bf4e4.png",
+      "bytes": 609729,
+      "sha256": "18809cb14c7eb9c482f9c450d90e906090a3e89ee6300632b6f9a02329c3f97c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-9893866832d852.png",
+      "bytes": 3504388,
+      "sha256": "db577f540bab62879e2404dae2467d96f9cf5f0c9e8b13c5b65000ad25fef695"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-a1ac31e35412ac.png",
+      "bytes": 752530,
+      "sha256": "9bf9ff1b886d702fa664c2a9a64e34523ab9fe0e3056fe6944c09f9cf80af728"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-a67a35d51e36a8.png",
+      "bytes": 668012,
+      "sha256": "6d5ab9686a2a45b31562c44276de9394d9fa490bbfdee92c5262e97b68d5eb28"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-a9af438f1e5065.png",
+      "bytes": 2910905,
+      "sha256": "0c9b0403638681a6f9c246f9c2893853c810fca0a9721dce6288c3b10bd263bb"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-ac67bf0f4ef9d3.png",
+      "bytes": 2832623,
+      "sha256": "d571c934f271c3c19fe847e590d934bcab7233ae48288a17fadd55b551ab78a1"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-af350f85175fd4.png",
+      "bytes": 573761,
+      "sha256": "2395d5a5d53eb8c4df8635d5010cd4c9d403547c08ff6d6588e82d98ecfadedf"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-b2a2fb12313ef2.png",
+      "bytes": 1025784,
+      "sha256": "543f221c3c6ddbe6179d637351ed461803f962fde23f7e8a61a9f5aa27b930ef"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-c729ebfe446f6c.png",
+      "bytes": 2849157,
+      "sha256": "2c24f8c6f599da668c3647866a2bb431c761cdaf7ddc5447fe687d456ff36117"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-cb448e744228ef.png",
+      "bytes": 546699,
+      "sha256": "7356626fac2392098319f723e11dc3b9108e4da53ffd811f4a40bb955ce7d88b"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-cdc8e7c259d60e.png",
+      "bytes": 1062006,
+      "sha256": "b1578927dd972ff048d4f013f741e41df33b67da44019bff29e24618a0f3711b"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-d0bbfbd29b2f48.png",
+      "bytes": 1065556,
+      "sha256": "eb1224ae97049109da47e4e8c9818b33caead71f239a397ebb83f5fb3cb11090"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-d7d74ef621a616.png",
+      "bytes": 594678,
+      "sha256": "51d6a83797b97d8ba469dbf9128a650fb0ba51db91d9ab29dec9f74f5d7c84b8"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-dada4da9929b2e.png",
+      "bytes": 687178,
+      "sha256": "3e327d234978c8488392c9172147a87636807ddb6be96908c7156b0c83ff26b3"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-dcc43493593cfa.png",
+      "bytes": 3010863,
+      "sha256": "dce5fe34241e1d3f83fb2816fa0500ddff10b301349d8a934eda9ebe5b6fe97f"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-f1b71e744f62ee.png",
+      "bytes": 723248,
+      "sha256": "f21f2863129962d892a941c5ba43f9c1cfdd6f90b309f6507a07e82402cd5619"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-f2e39f58dabd35.png",
+      "bytes": 901529,
+      "sha256": "cd0143856d1fa740c060bf812ab44fc9ec53f6c490d1833573d900fa20eb309d"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-f77376b68d38fd.png",
+      "bytes": 565480,
+      "sha256": "dedf4de62fd0b1789589b0c135f3d64ce8b034165afe551ef962e8d97f2aeeba"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Liveries/extra-fcfca56527f23a.png",
+      "bytes": 2787883,
+      "sha256": "2417ee81a50a27a2f38aee4d96dcc386d1c20e4a1f44f82773a78a29812818b8"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/a332-ge.bvh",
+      "bytes": 6288896,
+      "sha256": "ca75a1917b75c29701b0213bf5ec77a1a8d0cc49d3697919c65cb860fdfd2822"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/a332-ge.mesh",
+      "bytes": 25595520,
+      "sha256": "7c7de26b6d3e3df4b50b988ba6ab47584cd4f08ba1cd4469b45469ccedecd477"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/a332-pw.bvh",
+      "bytes": 5938784,
+      "sha256": "942913e06ed707befb8e2db2c5f7344a9a49fbb0d0da5c6beea4baebc2130406"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/a332-pw.mesh",
+      "bytes": 24683136,
+      "sha256": "712f0f18aa275386635391796f1b32858c64042f87d07830f415cf96d4d0d6c8"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/a332-rr.bvh",
+      "bytes": 8413348,
+      "sha256": "b0cf7262cbf633876093928ec5506d9d3dc18abf934cd9e5e7044791c5e9b67e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/a332-rr.mesh",
+      "bytes": 30890304,
+      "sha256": "c48143c201d608e4a34471d857cd7c1f9f91a1f549ecf026d8fe2338b9a5159b"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/a332-windows.png",
+      "bytes": 12294,
+      "sha256": "35ee486dbfe1caab178fbffaa2cd505ddf97462b79e0efac3597191c1c80b316"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/a333-ge.bvh",
+      "bytes": 6312792,
+      "sha256": "3a0e433c11c93529756c5b616f1801636313ce4103b43d01e37c8854835b2370"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/a333-ge.mesh",
+      "bytes": 25635072,
+      "sha256": "e9e0f0ff63507e7501f6150085fc7cb391daea5f459e618350fd343407add284"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/a333-pw.bvh",
+      "bytes": 5946200,
+      "sha256": "df538c3ea7a25c2f5b4e078e05239f857b7ffb2353591a43fde0a3a1cd0d6efe"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/a333-pw.mesh",
+      "bytes": 24722688,
+      "sha256": "c5bbff3f208b2cccfc3c0367f287e611f449db7c5b457d59c75612935ce368bb"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/a333-rr.bvh",
+      "bytes": 8420764,
+      "sha256": "f48b9a72488d76ac66a2ae88d9258b99ed5c1ab4fc7cf88ad4b74547a8c31e0c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/a333-rr.mesh",
+      "bytes": 30929856,
+      "sha256": "951ea88fd0307ae8ce6465a249e0e37e5a32bab6ee4aece97674e4a691c9fd12"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/a333-windows.png",
+      "bytes": 12369,
+      "sha256": "73867fb046e5c9e1f0ccc233e6a205333db0e2ac385c05779181b01813652eb2"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/a359-xwb.bvh",
+      "bytes": 27953228,
+      "sha256": "a0709918e0fc786fd72190a5831ceddc9a799e1ca214d2c23ab5cc6aca2cb8b6"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/a359-xwb.mesh",
+      "bytes": 107012544,
+      "sha256": "3e1e647684dd4837103d6f6c948e6da5fe2bd487c11cfcd6d25ff01b3302fd6f"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/airbus-windows.png",
+      "bytes": 79047,
+      "sha256": "5b1098e47571d481df48cc035905b5585dc2f1f863aca556e52349cf688f897c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/airbus.bvh",
+      "bytes": 36141064,
+      "sha256": "1754db2de92ac4754354da24b38b554164c3830d3091afbe12b246425e30773b"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/airbus.mesh",
+      "bytes": 136828416,
+      "sha256": "f5ed444b93ca319b920188310bf457b0f5bd775be267118034cbd3d3ea15e104"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b77w-ge90.bvh",
+      "bytes": 26954584,
+      "sha256": "2e50ed01f2427b13e42ad18e4506d6ae106c3e3a7946b5d364978e6d4ed68268"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b77w-ge90.mesh",
+      "bytes": 105359616,
+      "sha256": "34e74ac93612110f23af173d68530347529bea8228adee20a29e85d97d70516e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b788-genx.bvh",
+      "bytes": 30641180,
+      "sha256": "a7fc6f1b8edd0f6f3e3c0127322859cf52feedb0b0583a65e9c240efbf0f9bf1"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b788-genx.mesh",
+      "bytes": 111461568,
+      "sha256": "7d7238d8d13ac3c3fc478bc9be196eb1a87e48e63c637d0a9c70758cedbe1f63"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b788-trent.bvh",
+      "bytes": 31034652,
+      "sha256": "18c540b5f8a22962a4803f9a21b81b8d5ead18d02b976fe5b49a6366fa817a39"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b788-trent.mesh",
+      "bytes": 112112832,
+      "sha256": "5766c1e2ac8d7daf5444be7f2cf45a60767147172d34b3faf4355edcf30a7bae"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b789-genx-cxa-windows.png",
+      "bytes": 23074,
+      "sha256": "23956a8d86aab12ec41c108f8dc688f2561230dde19ca311871de788c5d0e0d9"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b789-genx-cxa.bvh",
+      "bytes": 30301300,
+      "sha256": "6f7ac29aabb69f4eafc32ad74ec79ed47855b1f567de50518f55d4121025c455"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b789-genx-cxa.mesh",
+      "bytes": 110899008,
+      "sha256": "1558be4a3cc68bebf4f6f62552e8face757b2bb765b65e92728b09c24d2a5b47"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b789-genx.bvh",
+      "bytes": 30580628,
+      "sha256": "c457336f9f287fe42e48174522470c286af7622ea87455282431ca83108417fc"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b789-genx.mesh",
+      "bytes": 111361344,
+      "sha256": "52c04942dfa4b1a344d8164dbc0355c6a8f30121dc8b2c9f58edc312e7429d8f"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b789-trent.bvh",
+      "bytes": 30974100,
+      "sha256": "cb9ad209a16d6620eb7b4514d83310871cab0bd5e948b350516e92be1b4bf049"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b789-trent.mesh",
+      "bytes": 112012608,
+      "sha256": "f5b862997cfdf6fd34721e452128b56097a7295d8c7b7138babd1888a0cfd884"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b78x-genx.bvh",
+      "bytes": 30692452,
+      "sha256": "7383eb1c8a8807995ccd21f3864a2f3185b36da13b5d77d9dab7771071a53a08"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b78x-genx.mesh",
+      "bytes": 111546432,
+      "sha256": "d788d477f188933978ba2997ba7508da46dfe4d2b03eecaeea9c9acb6c9ff2f5"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b78x-trent.bvh",
+      "bytes": 31085924,
+      "sha256": "8ea7f993c5b60f66eb8e9cb497aa514d9293e6cf40e38c02096d9c67f0213579"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b78x-trent.mesh",
+      "bytes": 112197696,
+      "sha256": "33ef88fbcf07a512d457b59fe4150ad50fe91e719dc2104fa8537e94461dabcc"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/boeing.bvh",
+      "bytes": 20011280,
+      "sha256": "01eb272464e98b69888edb442ef063581fb852cbc1e465bd25cc3e7039c276a3"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/boeing.mesh",
+      "bytes": 78764928,
+      "sha256": "30bef2123b60d0c9a808e2f8163cd8f3067780ac35b9225ba53598d71deb7db6"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Textures/AirChina-A320.png",
+      "bytes": 3972319,
+      "sha256": "de62bb56789c1509bebcc7183e3aa135c824ec12b448be1f1281e48240253a2f"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Textures/AirChina.png",
+      "bytes": 434758,
+      "sha256": "3194df6c6e6bbbb893e691cabc55e5c39cd064cc9a409f12927e43c14457ab1f"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Textures/Engine-CFM56-Normal.png",
+      "bytes": 397843,
+      "sha256": "65762593ccadb9664a9349dada085db96755b3f298ee72eaf7d6cf4e8c4abe75"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Textures/Fuse-Main-Normal.png",
+      "bytes": 868460,
+      "sha256": "245251936f76b421fb6ea61254290300856be509a315a5b7edc1621141b1594f"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Textures/Fuse-Main.png",
+      "bytes": 1824963,
+      "sha256": "b8724354014b483c2100e4062f78c68cc2f4394132d05a2a27efd41030a54159"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Textures/Static-Elements.png",
+      "bytes": 1033775,
+      "sha256": "8685bfe5fd628f3ca3bc2b949b4f0e2d6ac8eff480c685ae84728e935ecaefc9"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Textures/engine-CFM56.png",
+      "bytes": 477526,
+      "sha256": "bb0ab4429993b90409b5e7fecf4bfd92cceca3a0a80c5c891e4842ec62c0d7b3"
+    },
+    {
+      "path": "ThirdParty/AirChina-A320/CCA-fuselage.xcf",
+      "bytes": 102023715,
+      "sha256": "b7f76df4ac90782e58779e8682caa2d189d0097f3310a814685839a6c113010f"
+    },
+    {
+      "path": "ThirdParty/GeoFS/xiamen.webp",
+      "bytes": 121504,
+      "sha256": "e272c6b771d40f3e6072d3fa6cd8964ad464513672413ad6ae924fd842e365fb"
+    },
+    {
+      "path": "ThirdParty/GeoFS/xiamenun.webp",
+      "bytes": 157672,
+      "sha256": "622751dc905b3c50f02c33c85f7ec57744d180338fbd2077c7fff644f9281220"
+    }
+  ]
+}

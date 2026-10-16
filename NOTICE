@@ -1,0 +1,15 @@
+Winglight
+Copyright (c) 2026 Andy Wang and Winglight contributors.
+
+Winglight original code is licensed under GNU GPL version 2 only.
+The full license is in LICENSE. Third-party authors retain their copyrights
+and original license grants, including GPL v2-or-later grants where stated.
+See THIRD_PARTY.md, ThirdParty/NOTICE.txt, and ThirdParty/Licenses/.
+
+Derived aircraft meshes and textures originate from FlightGear community
+projects; FlightGear itself is not linked or required at runtime. MIT-licensed
+GeoFS LiverySelector artwork retains its upstream MIT notice.
+
+Airline and manufacturer names, logos, and liveries identify represented
+aircraft. No affiliation or endorsement is implied. This is a visual simulator,
+not a flight-training or aircraft-maintenance tool.
