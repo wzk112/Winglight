@@ -54,6 +54,26 @@ Checks on 2026-10-16, Apple Silicon, Swift 6.4:
   `SOURCE.txt` with its exact Git commit and corresponding-source downloads.
   The compatible 1.5.0 resource archive remains unchanged.
 
+### Published download verification
+
+- Published `v1.5.1` at commit `f5dac60a3efc0bd68fad19801606b7dd8693531a`.
+  Downloaded GitHub's tagged source archive anonymously and compared all 852
+  tracked files against the tag's Git blob hashes: every file matched.
+- Uploaded `Winglight-1.5.1-macOS-arm64.zip` (1,016,769,875 bytes) and
+  `SHA256SUMS.txt`. GitHub's server digests match the local files. App ZIP SHA-256:
+  `84ca5fc295ca47edc5336ef267759ba5e2af4e8dbecc3fe8637da0e57685e4f2`.
+- After publication, anonymously downloaded the complete ZIP and checksum file
+  through the public release URLs. Byte count and SHA-256 matched. Extracted
+  with `ditto`, then repeated deep/strict code-signature, version/architecture,
+  all 501 runtime resource and all 40 upstream evidence-file checks: passed.
+- Ran the downloaded app's production Metal storm renderer without using build
+  cache resources. Its full 4720 × 3280 RGBA16F capture is bit-identical to the
+  pre-upload release capture. The downloaded app's executable SHA-256 is
+  `2523721a1dc6280fc97a67ea9f767b1d17ff4c806b30be6ed47d80a55bf49e4f`.
+- Raw release receipts, test/build logs and download/runtime validation reports
+  are retained in the local release archive. Temporary staging/download copies
+  can be removed; the public assets and signed `dist/Winglight.app` are retained.
+
 CoreLocation previously returned `locationUnknown` on the development Mac.
 Permission/timeout unit tests cannot prove live coordinate retrieval. Manual
 city fallback remains available. HDR luminance, sustained frame rate, energy use
