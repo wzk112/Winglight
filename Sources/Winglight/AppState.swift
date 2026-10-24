@@ -1,4 +1,8 @@
+#if os(macOS)
 import AppKit
+#else
+import UIKit
+#endif
 import SwiftUI
 import Combine
 import WinglightCore
@@ -31,6 +35,7 @@ import WinglightCore
     @Published var glow = 1.0
     @Published var coreSize = 5.0
     @Published var viewPreset = ViewPreset.orbit
+    // Camera input only invalidates the Metal view, not every SwiftUI panel.
     var cameraYaw = -0.65 { didSet { if oldValue != cameraYaw { renderRequests.send() } } }
     var auditCameraTarget: SIMD3<Float>? = nil
     var auditUnlit = false
@@ -55,7 +60,9 @@ import WinglightCore
     @Published var renderResolution = ""
     @Published var displayName = "正在检测屏幕"
     @Published var rendererError: String?
-    enum Panel { case info, settings, aircraft, liveries }
+    enum Panel { case info, settings, aircraft, liveries, controls }
+    func openControls() { activePanel = .controls }
+    func dismissPanel() { activePanel = nil }
     @Published private(set) var activePanel: Panel?
     private func setPanel(_ panel: Panel, visible: Bool) {
         if visible { if activePanel != panel { activePanel=panel } }
@@ -96,9 +103,15 @@ import WinglightCore
     @Published var backgroundMotion = true {
         didSet { guard oldValue != backgroundMotion else { return };let now=CACurrentMediaTime();updateMotion(at:now);backgroundSpeed.set(backgroundMotion ? 1 : 0,at:now,duration:1.0) }
     }
+    #if os(iOS)
+    @Published var quality = RenderQuality(rawValue:UserDefaults.standard.string(forKey:"renderQuality") ?? "") ?? .balanced
+    #else
     @Published var quality = RenderQuality(rawValue:UserDefaults.standard.string(forKey:"renderQuality") ?? "") ?? .ultra
+    #endif
     @Published var testStart: Double?
+    #if os(macOS)
     weak var window: NSWindow?
+    #endif
     private var origin = CACurrentMediaTime()
     private var elapsed = 0.0
     private var daylightBlend=EasedValue(2)
@@ -183,6 +196,7 @@ import WinglightCore
         }
         cameraDistance = preset == .orbit ? orbitDistance : 76
     }
+    #if os(macOS)
     func updateDisplay(_ screen: NSScreen?) {
         guard let screen else { return }
         let h = screen.maximumExtendedDynamicRangeColorComponentValue
@@ -191,6 +205,16 @@ import WinglightCore
         if abs(potential-p) > 0.01 { potential = p }
         if displayName != screen.localizedName { displayName = screen.localizedName }
     }
+    #else
+    func updateDisplay(_ screen: UIScreen?) {
+        guard let screen else { return }
+        let h=Double(screen.currentEDRHeadroom),p=Double(screen.potentialEDRHeadroom)
+        if abs(headroom-h)>0.01 { headroom=h }
+        if abs(potential-p)>0.01 { potential=p }
+        let name=UIDevice.current.userInterfaceIdiom == .pad ? "iPad 屏幕" : "iPhone 屏幕"
+        if displayName != name { displayName=name }
+    }
+    #endif
     var peak: Double { Lighting.peak(headroom: headroom, hdr: hdr, strength: strength) }
 }
 

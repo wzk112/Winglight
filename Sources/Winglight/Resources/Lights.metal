@@ -387,9 +387,7 @@ vertex FlareOut flareVertex(uint id [[vertex_id]],uint instance [[instance_id]],
     float2 pixel=l.geometry.xy+corners[id]*extent;
     return {float4(pixel/u.size*float2(2,-2)+float2(-1,1),0,1),pixel,instance};
 }
-struct ColorAttachment { float4 color [[color(0),raster_order_group(0)]]; };
-fragment ColorAttachment flareFragment(FlareOut in [[stage_in]],ColorAttachment previous,
-    constant Uniforms &u [[buffer(0)]],constant LampData *lamps [[buffer(1)]]) {
+float4 flareRadiance(FlareOut in,constant Uniforms &u,constant LampData *lamps) {
     LampData lamp=lamps[in.lamp];
     if (lamp.geometry.w<=0 || lamp.info.y>.5) discard_fragment();
     float2 delta=in.pixel-lamp.geometry.xy;float radius=lamp.geometry.z,d=length(delta);
@@ -400,7 +398,26 @@ fragment ColorAttachment flareFragment(FlareOut in [[stage_in]],ColorAttachment 
     star+=exp(-abs(delta.x)/(radius*.17))*exp(-abs(delta.y)/(radius*5))*.045;
     float shape=min(1.0,core+halo+wide+star*lamp.info.x);
     float peak=mix(1.0,u.options.z,lamp.info.x);
-    return {float4(min(previous.color.rgb+lamp.color.rgb*lamp.geometry.w*peak*shape,max(1.0,u.options.z)),1)};
+    return float4(lamp.color.rgb*lamp.geometry.w*peak*shape,1);
+}
+struct ColorAttachment { float4 color [[color(0),raster_order_group(0)]]; };
+fragment ColorAttachment flareFragment(FlareOut in [[stage_in]],ColorAttachment previous,
+    constant Uniforms &u [[buffer(0)]],constant LampData *lamps [[buffer(1)]]) {
+    float4 light=flareRadiance(in,u,lamps);
+    return {float4(min(previous.color.rgb+light.rgb,max(1.0,u.options.z)),1)};
+}
+
+// The iOS Simulator GPU does not expose framebuffer fetch. Accumulate the
+// same positive radiance separately and apply the same bound after composition.
+fragment float4 portableFlareFragment(FlareOut in [[stage_in]],constant Uniforms &u [[buffer(0)]],constant LampData *lamps [[buffer(1)]]) {
+    return flareRadiance(in,u,lamps);
+}
+fragment float4 portableCopyFragment(VertexOut in [[stage_in]],texture2d<float> scene [[texture(0)]],texture2d<float> previous [[texture(1)]],texture2d<float> lights [[texture(2)]],constant float &blend [[buffer(0)]],constant float &peak [[buffer(1)]]) {
+    constexpr sampler s(filter::nearest);
+    float4 current=scene.sample(s,in.uv);
+    float4 base=blend>=1 ? current : mix(previous.sample(s,in.uv),current,blend);
+    float4 light=lights.sample(s,in.uv);
+    return float4(light.a>0 ? min(base.rgb+light.rgb,max(1.0,peak)) : base.rgb,1);
 }
 
 struct RainOut { float4 clip [[position]];float2 uv;float fade; };

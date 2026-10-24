@@ -1,5 +1,15 @@
 # Changelog
 
+## iOS / iPadOS 1.6.0 — 2026-10-25
+
+- 新增原生 iOS/iPadOS 18+ 应用：iPad 宽窗口侧栏，竖屏、窄窗口和 iPhone 使用控制面板。
+- 与 Mac 共用完整 Metal 渲染器、全部机型和 309 个涂装组合、灯光、天气、日照、气流与画质设置。
+- 支持触控旋转、捏合、双击复位、沉浸模式、外接键盘、场景生命周期和内存警告处理。
+- 新增 Xcode 工程、iOS Metal 构建、IPA 打包脚本与横竖屏／GPU 回归测试。
+- 同步当前 Mac 开发树的发动机 UV、轴心、面板交互和资源校验改进；保留已发布的 Mac 1.5.2 包。
+
+
+
 ## 1.5.2 — 2026-10-25
 
 - Avoid resetting Metal's display-link/demand-drawing mode on every input event;

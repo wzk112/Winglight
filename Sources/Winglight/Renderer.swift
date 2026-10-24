@@ -1,4 +1,8 @@
+#if os(macOS)
 import AppKit
+#else
+import UIKit
+#endif
 import SwiftUI
 import Combine
 @preconcurrency import Metal
@@ -31,6 +35,7 @@ struct MeshUniforms {
     var shadow0: simd_float4x4; var shadow1: simd_float4x4; var sun: simd_float4x4
     var weather: SIMD4<Float>; var surface: SIMD4<Float>; var lightning: SIMD4<Float>
 }
+#if os(macOS)
 @MainActor final class OrbitView: MTKView {
     weak var appState: AppState?
     private var dragLocation: NSPoint?
@@ -119,6 +124,8 @@ struct AircraftStage: NSViewRepresentable {
     static func dismantleNSView(_ view: OrbitView,coordinator: Renderer) { view.isPaused = true;view.delegate = nil }
 }
 
+#endif
+
 @MainActor final class Renderer: NSObject, MTKViewDelegate {
     let state: AppState
     var queue: MTLCommandQueue?
@@ -134,6 +141,9 @@ struct AircraftStage: NSViewRepresentable {
     var flowDepth: MTLDepthStencilState?
     var depthState: MTLDepthStencilState?, backgroundDepth: MTLDepthStencilState?
     var sceneTexture: MTLTexture?, depthTexture: MTLTexture?
+    #if targetEnvironment(simulator)
+    private var portableLightTexture: MTLTexture?
+    #endif
     private var previousScene: MTLTexture?
     private var sceneTransitionStart=0.0
     private let sceneTransitionDuration=0.42
@@ -147,7 +157,7 @@ struct AircraftStage: NSViewRepresentable {
     var atlasTextures = [MTLTexture]()
     var fallbackTexture: MTLTexture?
     private var loadedLivery = Livery.neutral
-    private var loadedAsset: String?
+    private(set) var loadedAsset: String?
     private var requestedLiveryID = ""
     private var liveryRequest: LiveryRequest?
     private let liveryQueue = DispatchQueue(label:"local.winglight.liveries",qos:.userInitiated,autoreleaseFrequency:.workItem)
@@ -169,13 +179,24 @@ struct AircraftStage: NSViewRepresentable {
     func configure(_ view: MTKView) {
         guard let device = view.device else { state.rendererError = "此设备没有可用的 Metal 渲染器。";return }
         do {
-            guard let url = Bundle.module.url(forResource:"Lights",withExtension:"metallib") else { throw failure("找不到预编译着色器") }
+            #if os(iOS)
+            let lib = try device.makeDefaultLibrary(bundle:WinglightResources.bundle)
+            #else
+            guard let url = WinglightResources.bundle.url(forResource:"Lights",withExtension:"metallib") else { throw failure("找不到预编译着色器") }
             let lib = try device.makeLibrary(URL:url)
+            #endif
             func make(_ vertex: String,_ fragment: String?,_ samples: Int = 1,_ depth: Bool = false,_ color: Bool = true) throws -> MTLRenderPipelineState {
                 let p = MTLRenderPipelineDescriptor()
                 p.vertexFunction = lib.makeFunction(name:vertex)
                 if let fragment { p.fragmentFunction = lib.makeFunction(name:fragment) }
                 if color { p.colorAttachments[0].pixelFormat = .rgba16Float }
+                #if targetEnvironment(simulator)
+                if fragment == "portableFlareFragment" {
+                    let c=p.colorAttachments[0]!
+                    c.isBlendingEnabled=true;c.sourceRGBBlendFactor = .one;c.destinationRGBBlendFactor = .one
+                    c.sourceAlphaBlendFactor = .one;c.destinationAlphaBlendFactor = .one
+                }
+                #endif
                 if vertex == "flowVertex" || vertex == "rainVertex" {
                     let c = p.colorAttachments[0]!
                     c.isBlendingEnabled = true;c.sourceRGBBlendFactor = .sourceAlpha;c.destinationRGBBlendFactor = .oneMinusSourceAlpha
@@ -185,8 +206,13 @@ struct AircraftStage: NSViewRepresentable {
                 p.rasterSampleCount = samples
                 return try device.makeRenderPipelineState(descriptor:p)
             }
+            #if targetEnvironment(simulator)
+            composite = try make("sceneVertex","portableCopyFragment")
+            flarePipeline = try make("flareVertex","portableFlareFragment")
+            #else
             composite = try make("sceneVertex","copyFragment")
             flarePipeline = try make("flareVertex","flareFragment")
+            #endif
             shadowPipeline = try make("shadowVertex",nil,1,true,false)
             for samples in [1,2,4] where device.supportsTextureSampleCount(samples) {
                 meshPipelines[samples] = try make("meshVertex","meshFragment",samples,true)
@@ -201,7 +227,7 @@ struct AircraftStage: NSViewRepresentable {
             backgroundDepth = device.makeDepthStencilState(descriptor:dd)
             let loader = MTKTextureLoader(device:device)
             for name in ["Fuse-Main-Normal","Engine-CFM56-Normal"] {
-                guard let url=Bundle.module.url(forResource:name,withExtension:"png",subdirectory:"Textures") else { throw failure("找不到表面细节纹理") }
+                guard let url=WinglightResources.bundle.url(forResource:name,withExtension:"png",subdirectory:"Textures") else { throw failure("找不到表面细节纹理") }
                 normalTextures.append(try loader.newTexture(URL:url,options:[.SRGB:false,.generateMipmaps:true,.textureStorageMode:MTLStorageMode.private.rawValue]))
             }
             let white=MTLTextureDescriptor.texture2DDescriptor(pixelFormat:.rgba8Unorm_srgb,width:1,height:1,mipmapped:false)
@@ -236,7 +262,7 @@ struct AircraftStage: NSViewRepresentable {
     private func cacheLivery(_ key: String,_ atlases: [MTLTexture]) {
         liveryCache[key]=atlases;liveryOrder.removeAll { $0==key };liveryOrder.append(key)
         func bytes(_ entry: [MTLTexture]) -> Int { entry.reduce(0) { $0+$1.width*$1.height*4*4/3 } }
-        while liveryOrder.count>1 && (liveryOrder.count>3 || liveryCache.values.reduce(0,{ $0+bytes($1) })>384*1024*1024) {
+        while liveryOrder.count>1 && (liveryOrder.count>3 || liveryCache.values.reduce(0,{ $0+bytes($1) })>WinglightPlatform.liveryCacheBudget) {
             liveryCache.removeValue(forKey:liveryOrder.removeFirst())
         }
     }
@@ -246,9 +272,17 @@ struct AircraftStage: NSViewRepresentable {
         // Retain one recently used assembly, including its expensive flow/BVH
         // preparation. Bound memory; never evict the newly selected assembly.
         func bytes() -> Int { modelOrder.reduce(0) { $0+(models[$1]?.0.length ?? 0)+(flows[$1]?.0.length ?? 0)+(occluders[$1]?.storageByteCount ?? 0) } }
-        while modelOrder.count>1 && (modelOrder.count>2 || bytes()>384*1024*1024) {
+        while modelOrder.count>1 && (modelOrder.count>2 || bytes()>WinglightPlatform.modelCacheBudget) {
             let old=modelOrder.removeFirst();models.removeValue(forKey:old);occluders.removeValue(forKey:old);flows.removeValue(forKey:old)
         }
+    }
+    func releaseInactiveResources() {
+        liveryCache.removeAll();liveryOrder.removeAll()
+        models=models.filter { $0.key == loadedAsset }
+        flows=flows.filter { $0.key == loadedAsset }
+        occluders=occluders.filter { $0.key == loadedAsset }
+        modelOrder=modelOrder.filter { $0 == loadedAsset }
+        previousScene=nil
     }
     func updateLivery(_ view: OrbitView) {
         let requested=state.livery,aircraft=state.settings.aircraft,asset=state.assetID,geometry=state.sceneGeometry
@@ -268,7 +302,7 @@ struct AircraftStage: NSViewRepresentable {
                 let vertexData: (MTLBuffer,Int),bvh: AirframeOcclusion,flowData: (MTLBuffer,Int)
                 if let cachedModel,let cachedBVH,let cachedFlow { vertexData=cachedModel;bvh=cachedBVH;flowData=cachedFlow }
                 else {
-                    guard let url=Bundle.module.url(forResource:asset,withExtension:"mesh",subdirectory:"Models"),let bvhURL=Bundle.module.url(forResource:asset,withExtension:"bvh",subdirectory:"Models") else { throw NSError(domain:"Winglight",code:1,userInfo:[NSLocalizedDescriptionKey:"模型文件缺失："+asset]) }
+                    guard let url=WinglightResources.bundle.url(forResource:asset,withExtension:"mesh",subdirectory:"Models"),let bvhURL=WinglightResources.bundle.url(forResource:asset,withExtension:"bvh",subdirectory:"Models") else { throw NSError(domain:"Winglight",code:1,userInfo:[NSLocalizedDescriptionKey:"模型文件缺失："+asset]) }
                     let data=try Data(contentsOf:url,options:.mappedIfSafe)
                     guard data.count>0,data.count%64==0,let vertices=data.withUnsafeBytes({device.makeBuffer(bytes:$0.baseAddress!,length:data.count,options:.storageModeShared)}) else { throw NSError(domain:"Winglight",code:2) }
                     vertexData=(vertices,data.count/64)
@@ -293,14 +327,14 @@ struct AircraftStage: NSViewRepresentable {
                     }
                     atlases=result
                 }
-                let maskURL=Bundle.module.url(forResource:asset+"-windows",withExtension:"png",subdirectory:"Models") ?? Bundle.module.url(forResource:aircraft.rawValue+"-windows",withExtension:"png",subdirectory:"Models")
+                let maskURL=WinglightResources.bundle.url(forResource:asset+"-windows",withExtension:"png",subdirectory:"Models") ?? WinglightResources.bundle.url(forResource:aircraft.rawValue+"-windows",withExtension:"png",subdirectory:"Models")
                 let mask=try maskURL.map { try MTKTextureLoader(device:device).newTexture(URL:$0,options:[.SRGB:false,.generateMipmaps:true,.textureStorageMode:MTLStorageMode.private.rawValue]) }
                 guard !request.cancelled else { return }
                 DispatchQueue.main.async {
                     guard let self,!request.cancelled,self.requestedLiveryID==key else { return }
                     self.windowMask=mask
                     self.cacheModel(asset,vertices:vertexData,bvh:bvh,flow:flowData)
-                    if self.state.qaTime == nil && !NSWorkspace.shared.accessibilityDisplayShouldReduceMotion {
+                    if self.state.qaTime == nil && !WinglightPlatform.reduceMotion {
                         self.previousScene=self.sceneTexture;self.sceneTexture=nil
                         self.sceneTransitionStart=CACurrentMediaTime();self.state.beginSceneTransition(self.sceneTransitionDuration)
                     }
@@ -309,7 +343,12 @@ struct AircraftStage: NSViewRepresentable {
                     else { self.textures=[atlases[0],atlases[0],atlases[1]] }
                     self.state.liveryLoading=false;self.state.liveryError=nil
                     self.shadowAircraft=nil;self.visibilityAircraft=nil
-                    view?.needsDisplay=true;view?.scheduleRendering()
+                    #if os(macOS)
+                    view?.needsDisplay=true
+                    #else
+                    view?.setNeedsDisplay()
+                    #endif
+                    view?.scheduleRendering()
                 }
             } catch {
                 DispatchQueue.main.async {
@@ -358,10 +397,18 @@ struct AircraftStage: NSViewRepresentable {
         let near: Float = 0.5, far: Float = 400
         var projection: simd_float4x4
         if state.viewPreset == .orbit {
+            #if os(iOS)
+            let f = min(1,aspect)/tan(Float.pi/9)
+            #else
             let f = 1/tan(Float.pi/9)
+            #endif
             projection = simd_float4x4(columns:(SIMD4(f/aspect,0,0,0),SIMD4(0,f,0,0),SIMD4(0,0,far/(near-far),-1),SIMD4(0,0,far*near/(near-far),0)))
         } else {
+            #if os(iOS)
+            let halfHeight = Float(state.settings.aircraft.length)*0.60*distance/76/min(1,aspect)
+            #else
             let halfHeight = Float(state.settings.aircraft.length)*0.60*distance/76
+            #endif
             projection = simd_float4x4(columns:(SIMD4(1/(halfHeight*aspect),0,0,0),SIMD4(0,1/halfHeight,0,0),SIMD4(0,0,1/(near-far),0),SIMD4(0,0,near/(near-far),1)))
         }
         return (projection*view,eye,direction)
@@ -374,9 +421,15 @@ struct AircraftStage: NSViewRepresentable {
         let samples = meshPipelines[requestedSamples] != nil ? requestedSamples : 1
         guard let device = view.device, let composite, let flarePipeline, let shadowPipeline, let meshPipeline = meshPipelines[samples], let backgroundPipeline = backgroundPipelines[samples], let queue,
               loadedAsset == state.assetID,let (vertices,vertexCount) = models[state.assetID], view.bounds.width > 20, view.bounds.height > 20 else { return nil }
-        let now = CACurrentMediaTime(), screen = view.window?.screen ?? NSScreen.main
+        #if os(macOS)
+        let screen = view.window?.screen ?? NSScreen.main
         let current = auditHeadroom ?? Double(screen?.maximumExtendedDynamicRangeColorComponentValue ?? 1)
-        let lightning=StormLighting.sample(time:state.backgroundTime,strength:state.weatherValue.w,headroom:current,hdr:state.hdr,reduceMotion:NSWorkspace.shared.accessibilityDisplayShouldReduceMotion)
+        #else
+        let screen = view.window?.windowScene?.screen
+        let current = auditHeadroom ?? Double(screen?.currentEDRHeadroom ?? 1)
+        #endif
+        let now = CACurrentMediaTime()
+        let lightning=StormLighting.sample(time:state.backgroundTime,strength:state.weatherValue.w,headroom:current,hdr:state.hdr,reduceMotion:WinglightPlatform.reduceMotion)
         if now-lastDisplayUpdate > 1 {
             lastDisplayUpdate = now
             DispatchQueue.main.async { [weak self] in self?.state.updateDisplay(screen) }
@@ -386,6 +439,9 @@ struct AircraftStage: NSViewRepresentable {
             let d = MTLTextureDescriptor.texture2DDescriptor(pixelFormat:.rgba16Float,width:w,height:h,mipmapped:false)
             d.usage = [.renderTarget,.shaderRead];d.storageMode = .private
             sceneTexture = device.makeTexture(descriptor:d)
+            #if targetEnvironment(simulator)
+            portableLightTexture=device.makeTexture(descriptor:d)
+            #endif
             d.pixelFormat = .depth32Float;depthTexture = device.makeTexture(descriptor:d)
             if samples > 1 {
                 d.textureType = .type2DMultisample;d.sampleCount = samples;d.usage = .renderTarget;d.storageMode = device.hasUnifiedMemory ? .memoryless : .private
@@ -403,7 +459,7 @@ struct AircraftStage: NSViewRepresentable {
             pass=MTLRenderPassDescriptor();pass.colorAttachments[0].texture=destination;pass.colorAttachments[0].loadAction = .clear;pass.colorAttachments[0].storeAction = .store
         } else { guard let descriptor=view.currentRenderPassDescriptor else { return nil };pass=descriptor }
         guard let sceneTexture,let depthTexture,let outputTexture=destination ?? drawable?.texture,let buffer = queue.makeCommandBuffer() else { return nil }
-        if let previous=renderedPreset,previous != state.viewPreset,state.qaTime == nil,!NSWorkspace.shared.accessibilityDisplayShouldReduceMotion {
+        if let previous=renderedPreset,previous != state.viewPreset,state.qaTime == nil,!WinglightPlatform.reduceMotion {
             previousScene=self.sceneTexture;self.sceneTexture=nil
             sceneTransitionStart=CACurrentMediaTime();state.beginSceneTransition(sceneTransitionDuration)
             // Allocate the new scene on the next frame; preserve this complete frame.
@@ -413,7 +469,9 @@ struct AircraftStage: NSViewRepresentable {
         let (cameraMVP,worldEye,worldDirection) = camera(aspect:Float(w)/Float(h))
         let model = modelTransform(),inverse = model.inverse
         var framing = matrix_identity_float4x4
+        #if os(macOS)
         framing.columns.3.x = state.focus ? 0 : Float(246/view.bounds.width)
+        #endif
         let mvp = framing*cameraMVP*model,eye = (inverse*SIMD4(worldEye,1)).xyz,direction = (inverse*SIMD4(worldDirection,0)).xyz
         let orthographic=state.viewPreset != .orbit
         if visibilityEye != eye || visibilityDirection != direction || visibilityAircraft != state.assetID || visibilityOrthographic != orthographic {
@@ -423,8 +481,8 @@ struct AircraftStage: NSViewRepresentable {
         let sunChanged = simd_distance(sunDirection,shadowSun)>0.002 || shadowAircraft != state.assetID
         if sunChanged { shadowSun = sunDirection }
         let matrices = lightMatrices(sunDirection:shadowSun)
-        var meshUniforms = MeshUniforms(mvp:mvp,eye:SIMD4(eye,1),options:SIMD4(state.auditUnlit ? 2 : (state.wireframe ? 1 : 0),state.settings.logo ? 1 : 0,!state.livery.isNeutral && loadedLivery.aircraft == state.settings.aircraft.rawValue ? (loadedLivery.engineTexture == nil ? 1 : 2) : 0,state.settings.aircraft.isWidebody ? 2 : (state.settings.aircraft == .airbus ? 0 : 1)),conditions:SIMD4(Float(state.flightTime),state.environmentValue,state.backgroundWeights.z,state.sunDirection.y),sunlight:SIMD4(sunDirection,state.solar.followsClock && state.solar.position != nil ? 1 : 0),engineGeometry:SIMD4(Float(state.sceneGeometry.engineXY[0]),Float(state.sceneGeometry.engineXY[1]),state.backgroundWeights.w,state.assetID == "b789-genx-cxa" ? 1 : 0),logoSource:SIMD4(SIMD3<Float>(state.sceneGeometry.point("logo")),1),logoTarget:SIMD4(SIMD3<Float>(state.sceneGeometry.point("logoTarget")),1),shadow0:matrices[0],shadow1:matrices[1],sun:matrices[2],weather:state.weatherValue,surface:SIMD4(state.cabinLights ? 1 : 0,windowMask == nil ? 0 : 1,Float(state.backgroundTime),NSWorkspace.shared.accessibilityDisplayShouldReduceMotion ? 1 : 0),lightning:lightning)
-        var u = GPUUniforms(size:SIMD2(Float(w),Float(h)),time:Float(state.backgroundTime),environment:state.environmentValue,options:SIMD4(state.backdrop.index,state.grid && !state.focus ? 1 : 0,Float(Lighting.peak(headroom:current,hdr:state.hdr,strength:state.strength)),Float(state.glow)),motion:SIMD4(Float(state.motionIntensity),0,0,NSWorkspace.shared.accessibilityDisplayShouldReduceMotion ? 1 : 0),backgrounds:state.backgroundWeights,weather:state.weatherValue,lightning:lightning)
+        var meshUniforms = MeshUniforms(mvp:mvp,eye:SIMD4(eye,1),options:SIMD4(state.auditUnlit ? 2 : (state.wireframe ? 1 : 0),state.settings.logo ? 1 : 0,!state.livery.isNeutral && loadedLivery.aircraft == state.settings.aircraft.rawValue ? (loadedLivery.engineTexture == nil ? 1 : 2) : 0,state.settings.aircraft.isWidebody ? 2 : (state.settings.aircraft == .airbus ? 0 : 1)),conditions:SIMD4(Float(state.flightTime),state.environmentValue,state.backgroundWeights.z,state.sunDirection.y),sunlight:SIMD4(sunDirection,state.solar.followsClock && state.solar.position != nil ? 1 : 0),engineGeometry:SIMD4(Float(state.sceneGeometry.engineXY[0]),Float(state.sceneGeometry.engineXY[1]),state.backgroundWeights.w,state.assetID == "b789-genx-cxa" ? 1 : 0),logoSource:SIMD4(SIMD3<Float>(state.sceneGeometry.point("logo")),1),logoTarget:SIMD4(SIMD3<Float>(state.sceneGeometry.point("logoTarget")),1),shadow0:matrices[0],shadow1:matrices[1],sun:matrices[2],weather:state.weatherValue,surface:SIMD4(state.cabinLights ? 1 : 0,windowMask == nil ? 0 : 1,Float(state.backgroundTime),WinglightPlatform.reduceMotion ? 1 : 0),lightning:lightning)
+        var u = GPUUniforms(size:SIMD2(Float(w),Float(h)),time:Float(state.backgroundTime),environment:state.environmentValue,options:SIMD4(state.backdrop.index,state.grid && !state.focus ? 1 : 0,Float(Lighting.peak(headroom:current,hdr:state.hdr,strength:state.strength)),Float(state.glow)),motion:SIMD4(Float(state.motionIntensity),0,0,WinglightPlatform.reduceMotion ? 1 : 0),backgrounds:state.backgroundWeights,weather:state.weatherValue,lightning:lightning)
         // Aircraft, lights and shadow maps share model space. Whole-airframe motion
         // never separates lights from their housings or invalidates occlusion.
         if shadowAircraft != state.assetID || sunChanged {
@@ -524,6 +582,21 @@ struct AircraftStage: NSViewRepresentable {
             }
             return GPULamp(geometry:SIMD4(screenPoint.x,screenPoint.y,Float(pixelRadius),Float(intensity)*visibility),color:SIMD4(lamp.rgb,1),info:SIMD4(flash ? 1 : 0,occluded ? 1 : 0,ndc.z,tolerance))
         }
+        #if targetEnvironment(simulator)
+        guard let portableLightTexture else { return nil }
+        let lightPass=MTLRenderPassDescriptor()
+        lightPass.colorAttachments[0].texture=portableLightTexture
+        lightPass.colorAttachments[0].loadAction = .clear;lightPass.colorAttachments[0].storeAction = .store
+        lightPass.colorAttachments[0].clearColor=MTLClearColorMake(0,0,0,0)
+        if let enc=buffer.makeRenderCommandEncoder(descriptor:lightPass) {
+            enc.setRenderPipelineState(flarePipeline)
+            enc.setVertexBytes(&u,length:MemoryLayout<GPUUniforms>.stride,index:0)
+            enc.setFragmentBytes(&u,length:MemoryLayout<GPUUniforms>.stride,index:0)
+            enc.setVertexBytes(&gpu,length:MemoryLayout<GPULamp>.stride*gpu.count,index:1)
+            enc.setFragmentBytes(&gpu,length:MemoryLayout<GPULamp>.stride*gpu.count,index:1)
+            enc.drawPrimitives(type:.triangle,vertexStart:0,vertexCount:6,instanceCount:gpu.count);enc.endEncoding()
+        }
+        #endif
         if let enc = buffer.makeRenderCommandEncoder(descriptor:pass) {
             enc.label = "EDR composition and bounded light sprites"
             enc.setRenderPipelineState(composite);enc.setFragmentTexture(sceneTexture,index:0)
@@ -532,13 +605,20 @@ struct AircraftStage: NSViewRepresentable {
             if previousScene == nil || previousScene?.width != w || previousScene?.height != h { blend=1 }
             enc.setFragmentTexture(previousScene ?? sceneTexture,index:1);enc.setFragmentBytes(&blend,length:4,index:0)
             if blend>=1 { previousScene=nil }
+            #if targetEnvironment(simulator)
+            enc.setFragmentTexture(portableLightTexture,index:2)
+            enc.setFragmentBytes(&u.options.z,length:4,index:1)
+            #endif
             enc.drawPrimitives(type:.triangle,vertexStart:0,vertexCount:3)
+            #if !targetEnvironment(simulator)
             enc.setRenderPipelineState(flarePipeline)
             enc.setVertexBytes(&u,length:MemoryLayout<GPUUniforms>.stride,index:0)
             enc.setFragmentBytes(&u,length:MemoryLayout<GPUUniforms>.stride,index:0)
             enc.setVertexBytes(&gpu,length:MemoryLayout<GPULamp>.stride*gpu.count,index:1)
             enc.setFragmentBytes(&gpu,length:MemoryLayout<GPULamp>.stride*gpu.count,index:1)
-            enc.drawPrimitives(type:.triangle,vertexStart:0,vertexCount:6,instanceCount:gpu.count);enc.endEncoding()
+            enc.drawPrimitives(type:.triangle,vertexStart:0,vertexCount:6,instanceCount:gpu.count)
+            #endif
+            enc.endEncoding()
         }
         frames += 1
         if let output = state.qaOutput, !state.qaCaptured, !state.liveryLoading, frames > 90, state.qaTime != nil || lamps.contains(where:{$0.kind == .strobe && $0.intensity > 0.99}) {

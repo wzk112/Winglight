@@ -21,19 +21,19 @@ struct Livery: Codable, Identifiable, Hashable {
     func asset(for aircraft: Aircraft) -> String { model ?? aircraft.defaultAsset }
     var atlasURLs: [URL]? {
         guard let textures else { return nil }
-        let urls=textures.compactMap { Bundle.module.url(forResource:$0,withExtension:nil,subdirectory:"Liveries") }
+        let urls=textures.compactMap { WinglightResources.bundle.url(forResource:$0,withExtension:nil,subdirectory:"Liveries") }
         return urls.count == textures.count ? urls : nil
     }
     var rawValue: String { id }
     var isNeutral: Bool { id == "neutral" }
-    var textureURL: URL? { Bundle.module.url(forResource:texture,withExtension:nil,subdirectory:"Liveries") }
+    var textureURL: URL? { WinglightResources.bundle.url(forResource:texture,withExtension:nil,subdirectory:"Liveries") }
     var engineURL: URL? {
-        if let engineTexture { return Bundle.module.url(forResource:engineTexture,withExtension:nil,subdirectory:"Liveries") }
-        return Bundle.module.url(forResource:"engine-CFM56",withExtension:"png",subdirectory:"Textures")
+        if let engineTexture { return WinglightResources.bundle.url(forResource:engineTexture,withExtension:nil,subdirectory:"Liveries") }
+        return WinglightResources.bundle.url(forResource:"engine-CFM56",withExtension:"png",subdirectory:"Textures")
     }
     static let neutral = Livery(id:"neutral",code:"",title:"素色",english:"Unpainted",region:"",aircraft:"",texture:"",engineTexture:nil,resolution:0,note:"")
     static let catalog: [Livery] = {
-        guard let url=Bundle.module.url(forResource:"catalog",withExtension:"json",subdirectory:"Liveries"),let data=try? Data(contentsOf:url),let result=try? JSONDecoder().decode([Livery].self,from:data) else { return [] }
+        guard let url=WinglightResources.bundle.url(forResource:"catalog",withExtension:"json",subdirectory:"Liveries"),let data=try? Data(contentsOf:url),let result=try? JSONDecoder().decode([Livery].self,from:data) else { return [] }
         return result
     }()
     static func available(for aircraft: Aircraft) -> [Livery] { catalog.filter { $0.aircraft == aircraft.rawValue } }
@@ -61,6 +61,18 @@ struct LiveryPicker: View {
     private var filtered: [Livery] {
         available.filter { $0.matches(search) && (region == "全部" || $0.region == region) && (!favoritesOnly || state.favoriteLiveries.contains($0.id)) && (!specialsOnly || $0.special == true || $0.code.hasPrefix("CCA-")) }
     }
+    private var regionPicker: some View {
+        Picker("地区",selection:$region) {
+            ForEach(["全部","中国","亚洲与中东","欧洲","美洲","大洋洲","非洲"],id:\.self) { Text($0).tag($0) }
+        }.frame(maxWidth:190)
+    }
+    private var filterButtons: some View {
+        HStack {
+            Toggle(isOn:$favoritesOnly) { Label("收藏",systemImage:"star") }.toggleStyle(.button)
+            Toggle("彩绘",isOn:$specialsOnly).toggleStyle(.button)
+            Button("素色") { state.chooseLivery(.neutral) }
+        }.controlSize(.small).fixedSize()
+    }
     var body: some View {
         VStack(alignment:.leading,spacing:16) {
             HStack {
@@ -74,17 +86,12 @@ struct LiveryPicker: View {
             }
             HStack(spacing:10) {
                 Image(systemName:"magnifyingglass").foregroundStyle(.secondary)
-                TextField("搜索航空公司或代码",text:$search).textFieldStyle(.plain).focused($searchFocused)
+                TextField("搜索航空公司或代码",text:$search).textFieldStyle(.plain).focused($searchFocused).submitLabel(.search).onSubmit { searchFocused=false }
                 if !search.isEmpty { Button { search="" } label: { Image(systemName:"xmark.circle.fill") }.buttonStyle(.plain).foregroundStyle(.secondary) }
             }.padding(11).background(.primary.opacity(0.05),in:RoundedRectangle(cornerRadius:11))
-            HStack {
-                Picker("地区",selection:$region) {
-                    ForEach(["全部","中国","亚洲与中东","欧洲","美洲","大洋洲","非洲"],id:\.self) { Text($0).tag($0) }
-                }.frame(width:190)
-                Spacer()
-                Toggle(isOn:$favoritesOnly) { Label("收藏",systemImage:"star") }.toggleStyle(.button).controlSize(.small)
-                Toggle("彩绘",isOn:$specialsOnly).toggleStyle(.button).controlSize(.small)
-                Button("素色") { state.chooseLivery(.neutral) }.controlSize(.small)
+            ViewThatFits(in:.horizontal) {
+                HStack { regionPicker;filterButtons }
+                VStack(alignment:.leading,spacing:12) { regionPicker;filterButtons }
             }
             ScrollView {
                 LazyVStack(spacing:6) {
@@ -106,13 +113,13 @@ struct LiveryPicker: View {
                                 }.contentShape(Rectangle())
                             }.buttonStyle(.plain)
                             Button { state.toggleFavorite(livery) } label: {
-                                Image(systemName:state.favoriteLiveries.contains(livery.id) ? "star.fill" : "star").foregroundStyle(state.favoriteLiveries.contains(livery.id) ? Color.orange : Color.secondary).frame(width:24,height:36)
+                                Image(systemName:state.favoriteLiveries.contains(livery.id) ? "star.fill" : "star").foregroundStyle(state.favoriteLiveries.contains(livery.id) ? Color.orange : Color.secondary).frame(width:44,height:44)
                             }.buttonStyle(.plain).help("收藏 \(livery.title)")
                         }.padding(10).background(state.livery.id == livery.id ? Color.accentColor.opacity(0.09) : Color.primary.opacity(0.025),in:RoundedRectangle(cornerRadius:12))
                     }
                     if filtered.isEmpty { ContentUnavailableView("没有匹配的涂装",systemImage:"magnifyingglass",description:Text("试试航空公司中文名、英文名或三字代码。")) }
                 }
-            }.frame(height:340)
+            }.scrollDismissesKeyboard(.interactively).panelViewport(height:340)
             HStack(alignment:.top,spacing:10) {
                 if state.liveryLoading { ProgressView().controlSize(.small) }
                 VStack(alignment:.leading,spacing:4) {
@@ -122,6 +129,10 @@ struct LiveryPicker: View {
                 Spacer()
                 Button("完成") { state.showLiveries=false }.buttonStyle(.borderedProminent)
             }.frame(minHeight:36)
-        }.padding(24).frame(width:550).onAppear { searchFocused=true }
+        }.padding(24).desktopPanel(width:550).onAppear {
+            #if os(macOS)
+            searchFocused=true
+            #endif
+        }
     }
 }

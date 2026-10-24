@@ -4,6 +4,7 @@ import WinglightCore
 struct AircraftPicker: View {
     @ObservedObject var state: AppState
     @State private var search=""
+    @FocusState private var searchFocused: Bool
     private var aircraft: [Aircraft] { Aircraft.allCases.filter { search.isEmpty || ($0.title+" "+$0.shortName).localizedStandardContains(search) } }
     var body: some View {
         VStack(alignment:.leading,spacing:18) {
@@ -15,7 +16,7 @@ struct AircraftPicker: View {
                 Spacer()
                 Button { state.showAircraft=false } label: { Image(systemName:"xmark").frame(width:28,height:28).background(.primary.opacity(0.07),in:Circle()) }.buttonStyle(.plain).accessibilityLabel("关闭机型库")
             }
-            HStack { Image(systemName:"magnifyingglass");TextField("搜索机型，例如 77W、787、A350",text:$search).textFieldStyle(.plain) }.padding(12).background(.primary.opacity(0.05),in:RoundedRectangle(cornerRadius:11))
+            HStack { Image(systemName:"magnifyingglass");TextField("搜索机型，例如 77W、787、A350",text:$search).textFieldStyle(.plain).focused($searchFocused).submitLabel(.search).onSubmit { searchFocused=false } }.padding(12).background(.primary.opacity(0.05),in:RoundedRectangle(cornerRadius:11))
             ScrollView {
                 LazyVGrid(columns:[GridItem(.flexible()),GridItem(.flexible())],spacing:10) {
                     ForEach(aircraft) { model in
@@ -31,7 +32,7 @@ struct AircraftPicker: View {
                         }.buttonStyle(.plain).accessibilityLabel(model.title)
                     }
                 }
-            }.frame(height:416)
-        }.padding(24).frame(width:570)
+            }.scrollDismissesKeyboard(.interactively).panelViewport(height:416)
+        }.padding(24).desktopPanel(width:570)
     }
 }

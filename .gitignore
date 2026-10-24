@@ -17,3 +17,9 @@ Sources/Winglight/Resources/Liveries/*.png
 Sources/Winglight/Resources/Lights.metallib
 ThirdParty/**/*.xcf
 ThirdParty/GeoFS/*.webp
+
+# Local Xcode state and signing credentials
+xcuserdata/
+*.xcuserstate
+*.mobileprovision
+*.p12

@@ -92,6 +92,16 @@ final class SolarControllerTests: XCTestCase {
         solar.locate();XCTAssertTrue(solar.requesting);XCTAssertEqual(provider.starts,2)
         solar.cancelLocation()
     }
+    #if os(iOS)
+    @MainActor func testWhenInUseAuthorizationStartsAndAcceptsFix() {
+        let (solar,provider,_,_)=fixture(status:.notDetermined)
+        solar.locate();provider.authorizationStatus = .authorizedWhenInUse
+        solar.authorizationChanged(.authorizedWhenInUse)
+        XCTAssertEqual(provider.starts,1);XCTAssertEqual(solar.authorizationLabel,"已允许")
+        solar.receive([CLLocation(coordinate:CLLocationCoordinate2D(latitude:-37.8,longitude:144.9),altitude:0,horizontalAccuracy:20,verticalAccuracy:0,timestamp:Date(timeIntervalSince1970:1_790_000_000))])
+        XCTAssertNotNil(solar.coordinate);XCTAssertFalse(solar.requesting)
+    }
+    #endif
     @MainActor func testPermissionWaitAndMacAuthorization() {
         let (solar,provider,_,advance)=fixture(status:.notDetermined)
         solar.locate();XCTAssertEqual(provider.permissionRequests,1);XCTAssertEqual(provider.starts,0)

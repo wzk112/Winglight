@@ -17,6 +17,12 @@ struct GlassSlider: View {
     private let thumbWidth: CGFloat=28
     private var fraction: Double { min(1,max(0,((draggedValue ?? value)-range.lowerBound)/(range.upperBound-range.lowerBound))) }
     var body: some View {
+        #if os(iOS)
+        Slider(value:$value,in:range,onEditingChanged:{ editing in if !editing { onEditingEnded() } })
+            .frame(minHeight:44)
+            .accessibilityLabel(label).accessibilityValue(formattedValue)
+            .accessibilityAdjustableAction { direction in adjust(direction == .increment ? 1 : -1) }
+        #else
         GeometryReader { proxy in
             let travel=max(1,proxy.size.width-thumbWidth)
             ZStack(alignment:.leading) {
@@ -45,6 +51,7 @@ struct GlassSlider: View {
             .focused($focused)
             .onKeyPress(.leftArrow) { adjust(-1);return .handled }
             .onKeyPress(.rightArrow) { adjust(1);return .handled }
+        #endif
     }
     @ViewBuilder private var thumb: some View {
         if #available(macOS 26.0, iOS 26.0, *) {

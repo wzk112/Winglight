@@ -1,16 +1,23 @@
 import SwiftUI
 import WinglightCore
 
+#if os(macOS)
 private let accent = Color(nsColor:NSColor(name:nil) { appearance in
     appearance.bestMatch(from:[.darkAqua,.aqua]) == .darkAqua
         ? NSColor(red:0.49,green:0.83,blue:0.89,alpha:1)
         : NSColor(red:0.04,green:0.33,blue:0.39,alpha:1)
 })
+#else
+private let accent = Color.accentColor
+#endif
 
 struct ContentView: View {
     @ObservedObject var state: AppState
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     var body: some View {
+        #if os(iOS)
+        MobileContentView(state:state)
+        #else
         ZStack {
             AircraftStage(state:state).ignoresSafeArea()
                 .allowsHitTesting(state.activePanel == nil).accessibilityHidden(state.activePanel != nil)
@@ -75,16 +82,17 @@ struct ContentView: View {
         .frame(minWidth:940,minHeight:720)
         .preferredColorScheme(state.interfaceScheme).tint(accent)
         .onChange(of:state.quality) { _,value in UserDefaults.standard.set(value.rawValue,forKey:"renderQuality") }
+    #endif
     }
-    private var sidebar: some View {
+    var sidebar: some View {
         VStack(spacing:12) {
             HStack(spacing:10) {
                 Image(systemName:"airplane").font(.system(size:19,weight:.medium)).foregroundStyle(accent)
                 Text("Winglight").font(.system(size:18,weight:.semibold,design:.rounded))
                 Spacer()
-                Button { state.showSettings=true } label: { Image(systemName:"slider.horizontal.3").frame(width:26,height:26) }
-                    .help("设置").keyboardShortcut(",",modifiers:.command)
-                Button { state.showInfo=true } label: { Image(systemName:"info.circle").frame(width:20,height:26) }.help("资料与说明")
+                Button { state.showSettings=true } label: { Image(systemName:"slider.horizontal.3").frame(width:26,height:26).mobileTouchTarget() }
+                    .help("设置").accessibilityLabel("设置").keyboardShortcut(",",modifiers:.command)
+                Button { state.showInfo=true } label: { Image(systemName:"info.circle").frame(width:20,height:26).mobileTouchTarget() }.help("资料与说明").accessibilityLabel("资料与说明")
             }.buttonStyle(.plain).padding(.horizontal,17).padding(.vertical,13).floatingGlass(18)
             ScrollView {
                 WingGlassContainer { VStack(spacing:12) {
@@ -100,17 +108,18 @@ struct ContentView: View {
                                 Image(systemName:"chevron.up.chevron.down").font(.system(size:12,weight:.medium)).foregroundStyle(accent)
                             }.padding(12).background(accent.opacity(0.10),in:RoundedRectangle(cornerRadius:12))
                         }.buttonStyle(.plain).accessibilityLabel("选择机型")
-                        HStack {
-                            Text("涂装").foregroundStyle(.secondary)
-                            Spacer()
-                            Button { state.showLiveries=true } label: {
+                        Button { state.showLiveries=true } label: {
+                            HStack {
+                                Text("涂装").foregroundStyle(.secondary)
+                                Spacer()
                                 HStack(spacing:4) {
                                     Text(state.livery.title).lineLimit(1)
                                     if state.liveryLoading { ProgressView().controlSize(.mini) }
                                     else { Image(systemName:"chevron.down").font(.system(size:9,weight:.semibold)) }
-                                }.font(.system(size:11,weight:.medium))
-                            }.buttonStyle(.plain).foregroundStyle(accent).accessibilityLabel("打开涂装库")
-                        }.padding(.top,3)
+                                }.font(.system(size:11,weight:.medium)).foregroundStyle(accent)
+                            }.touchRow().contentShape(Rectangle())
+                        }.buttonStyle(.plain).accessibilityLabel("打开涂装库")
+
                     }
                     panel("场景",icon:"sun.horizon") {
                         LazyVGrid(columns:[GridItem(.flexible(),spacing:7),GridItem(.flexible())],spacing:7) {
@@ -144,7 +153,7 @@ struct ContentView: View {
                     }
                 }.padding(.horizontal,1).padding(.vertical,2) }
             }.scrollIndicators(.never).clipped()
-        }.font(.system(size:12)).toggleStyle(.switch).controlSize(.mini)
+        }.font(.system(size:12)).toggleStyle(.switch).platformControlSize()
     }
     private var header: some View {
         HStack(spacing:12) {
@@ -184,15 +193,15 @@ struct ContentView: View {
             Circle().fill(color.opacity(binding.wrappedValue ? 0.85 : 0.2)).frame(width:6,height:6)
                 .overlay { Circle().strokeBorder(.primary.opacity(0.12),lineWidth:0.5) }
             Text(title);Spacer();Toggle(title,isOn:binding).labelsHidden()
-        }.frame(height:22)
+        }.touchRow()
     }
     private func switchRow(_ title: String,_ binding: Binding<Bool>) -> some View {
-        HStack { Text(title);Spacer();Toggle(title,isOn:binding).labelsHidden() }.frame(minHeight:22)
+        HStack { Text(title);Spacer();Toggle(title,isOn:binding).labelsHidden() }.touchRow()
     }
-    private var info: some View {
+    var info: some View {
         VStack(alignment:.leading,spacing:16) {
-            Text("Winglight 1.5.2").font(.title2)
-            Text("原生 macOS 飞机三维可视化应用。模型来自 FlightGear 开源项目，已校正机长、翼展和机身宽度；其他曲面与灯位仍为近似。")
+            Text("Winglight " + (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "开发版")).font(.title2)
+            Text("原生飞机三维可视化应用。模型来自 FlightGear 开源项目，已校正机长、翼展和机身宽度；其他曲面与灯位仍为近似。")
             Text("内置 \(Livery.catalog.count) 款机型专用涂装，支持搜索与收藏。涵盖 9 个机型；787 与 A330 按涂装搭配不同发动机。历史涂装、特殊彩绘及适配限制见列表。")
             Text("A320 翼灯为 50 ms 亮、60 ms 灭、50 ms 亮，尾闪 110 ms。A330 已核实翼尖双闪配置，其他机型的精确脉宽与相位尚未核实。亮度设置不改变时序。")
             Text("气流采用绕体流管和尾涡近似，颜色仅辅助辨认流动变化，不是 CFD 计算结果；飞机摆动、风扇及背景为视觉动画。日照使用 NOAA / Meeus 太阳位置算法，日出日落采用标准大气折射，不包含地形。天气为手动视觉模拟，机头方向定义为北。")
@@ -201,7 +210,7 @@ struct ContentView: View {
                 Link("太阳计算依据",destination:URL(string:"https://gml.noaa.gov/grad/solcalc/calcdetails.html")!)
                 Spacer();Button("完成") { state.showInfo=false }.keyboardShortcut(.defaultAction)
             }
-        }.font(.system(size:12)).foregroundStyle(.secondary).lineSpacing(5).padding(28).frame(width:590)
+        }.font(.system(size:12)).foregroundStyle(.secondary).lineSpacing(5).padding(28).desktopPanel(width:590)
     }
 }
 
@@ -253,7 +262,7 @@ struct SettingsView: View {
             }.id(state.settingsTab).transition(.opacity)
                 .animation(reduceMotion ? nil : .easeInOut(duration:0.20),value:state.settingsTab)
                 .padding(.horizontal,16).padding(.bottom,20)
-        }.frame(width:590,height:570).preferredColorScheme(state.interfaceScheme).tint(accent)
+        }.desktopPanel(width:590,height:570).preferredColorScheme(state.interfaceScheme).tint(accent)
 
     }
     private func slider(_ label: String,value: Binding<Double>,range: ClosedRange<Double>,format: String,scale: Double) -> some View {
@@ -264,16 +273,16 @@ struct SettingsView: View {
     }
 }
 
-private struct WingGlassContainer<Content: View>: View {
+struct WingGlassContainer<Content: View>: View {
     @ViewBuilder var content: Content
     var body: some View {
-        if #available(macOS 26.0, *) { GlassEffectContainer(spacing:16) { content } }
+        if #available(macOS 26.0, iOS 26.0, *) { GlassEffectContainer(spacing:16) { content } }
         else { content }
     }
 }
-private extension View {
+extension View {
     @ViewBuilder func floatingGlass(_ radius: CGFloat,readable: Bool = false) -> some View {
-        if #available(macOS 26.0, *) {
+        if #available(macOS 26.0, iOS 26.0, *) {
             self.glassEffect((readable ? Glass.regular : Glass.clear).tint(.primary.opacity(0.035)),in:RoundedRectangle(cornerRadius:radius)).shadow(color:.black.opacity(0.12),radius:16,y:6)
         } else {
             self.background(.ultraThinMaterial,in:RoundedRectangle(cornerRadius:radius))
@@ -305,7 +314,7 @@ struct SceneTimeControl: View {
     }
 }
 
-private struct SolarSummary: View {
+struct SolarSummary: View {
     @ObservedObject var solar: SolarController
     var body: some View {
         if solar.followsClock && solar.position != nil {
@@ -325,7 +334,7 @@ private struct SceneSolarControls: View {
     var showLocation: () -> Void
     var body: some View {
         VStack(alignment:.leading,spacing:8) {
-            HStack { Text("按时间计算日照");Spacer();Toggle("按时间计算日照",isOn:$solar.followsClock).labelsHidden() }.frame(minHeight:22)
+            HStack { Text("按时间计算日照");Spacer();Toggle("按时间计算日照",isOn:$solar.followsClock).labelsHidden() }.touchRow()
             if solar.followsClock { locationControl;SceneTimeControl(solar:solar) }
             else { Picker("时段",selection:$environment) { ForEach(SkyEnvironment.allCases) { Text($0.title).tag($0) } }.pickerStyle(.segmented).labelsHidden() }
         }
@@ -359,8 +368,18 @@ private struct SolarSettingsPane: View {
     @ObservedObject var solar: SolarController
     @State private var latitude=0.0
     @State private var longitude=0.0
+    private var cityButtons: some View {
+        HStack {
+            Button("墨尔本") { solar.setLocation(latitude:-37.8136,longitude:144.9631,name:"墨尔本",timeZoneID:"Australia/Melbourne") }.accessibilityIdentifier("cityMelbourne")
+            Button("北京") { solar.setLocation(latitude:39.9042,longitude:116.4074,name:"北京",timeZoneID:"Asia/Shanghai") }
+            Button("伦敦") { solar.setLocation(latitude:51.5074,longitude:-0.1278,name:"伦敦",timeZoneID:"Europe/London") }
+        }.buttonStyle(.bordered)
+    }
     var body: some View {
 Form {
+                    #if os(iOS)
+                    Section("常用城市") { cityButtons }
+                    #endif
                     Section("日照") {
                         Toggle("按时间计算日照",isOn:$solar.followsClock)
                         SceneTimeControl(solar:solar)
@@ -370,20 +389,18 @@ Form {
                             if solar.requesting {
                                 ProgressView().controlSize(.small)
                                 Button("取消") { solar.cancelLocation() }
-                            } else { Button(solar.locationIssue ? "重试定位" : "使用 Mac 定位") { solar.locate() } }
+                            } else { Button(solar.locationIssue ? "重试定位" : "使用设备定位") { solar.locate() } }
                         }
                         if !solar.status.isEmpty { Text(solar.status).font(.caption).foregroundStyle(.secondary).fixedSize(horizontal:false,vertical:true) }
                         HStack { LabeledContent("系统授权",value:solar.authorizationLabel);Spacer();Button("打开定位设置") { solar.openLocationSettings() } }
-                        Text("Mac 通过周围 Wi-Fi 确定位置。授权后仍无结果时，可以手动选城市，日照计算同样有效。").font(.caption).foregroundStyle(.secondary)
+                        Text("定位由系统提供。授权后仍无结果时，可以手动选城市，日照计算同样有效。").font(.caption).foregroundStyle(.secondary)
                         HStack { LabeledContent("日出",value:solar.clock(solar.events?.sunrise));LabeledContent("日落",value:solar.clock(solar.events?.sunset)) }
                         if let p=solar.position { LabeledContent("太阳高度",value:String(format:"%.1f°",p.elevation)) }
                     }
                     Section("手动地点") {
-                        HStack {
-                            Button("墨尔本") { solar.setLocation(latitude:-37.8136,longitude:144.9631,name:"墨尔本",timeZoneID:"Australia/Melbourne") }
-                            Button("北京") { solar.setLocation(latitude:39.9042,longitude:116.4074,name:"北京",timeZoneID:"Asia/Shanghai") }
-                            Button("伦敦") { solar.setLocation(latitude:51.5074,longitude:-0.1278,name:"伦敦",timeZoneID:"Europe/London") }
-                        }
+                        #if os(macOS)
+                        cityButtons
+                        #endif
                         TextField("纬度",value:$latitude,format:.number.precision(.fractionLength(4)))
                         TextField("经度",value:$longitude,format:.number.precision(.fractionLength(4)))
                         Button("应用经纬度") { solar.timeZone = .current;solar.setLocation(latitude:latitude,longitude:longitude,name:"自定义地点") }
@@ -392,5 +409,49 @@ Form {
                 }.formStyle(.grouped).scrollContentBackground(.hidden)            .onAppear { latitude=solar.coordinate?.latitude ?? 0;longitude=solar.coordinate?.longitude ?? 0 }
             .onChange(of:solar.coordinate?.latitude) { _,value in if let value { latitude=value } }
             .onChange(of:solar.coordinate?.longitude) { _,value in if let value { longitude=value } }
+    }
+}
+
+extension View {
+    @ViewBuilder func desktopPanel(width: CGFloat, height: CGFloat? = nil) -> some View {
+        #if os(macOS)
+        self.frame(width:width,height:height)
+        #else
+        self.frame(maxWidth:.infinity,maxHeight:height == nil ? nil : .infinity)
+        #endif
+    }
+    @ViewBuilder func panelViewport(height: CGFloat) -> some View {
+        #if os(macOS)
+        self.frame(height:height)
+        #else
+        self.frame(maxHeight:.infinity)
+        #endif
+    }
+}
+
+extension View {
+    @ViewBuilder func platformControlSize() -> some View {
+        #if os(iOS)
+        self.controlSize(.regular)
+        #else
+        self.controlSize(.mini)
+        #endif
+    }
+    @ViewBuilder func touchRow() -> some View {
+        #if os(iOS)
+        self.frame(minHeight:44)
+        #else
+        self.frame(minHeight:22)
+        #endif
+    }
+}
+
+extension View {
+    @ViewBuilder func mobileTouchTarget() -> some View {
+        #if os(iOS)
+        self.frame(minWidth:44,minHeight:44).contentShape(Rectangle())
+        #else
+        self
+        #endif
     }
 }

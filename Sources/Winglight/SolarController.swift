@@ -1,4 +1,8 @@
+#if os(macOS)
 import AppKit
+#else
+import UIKit
+#endif
 import Combine
 import CoreLocation
 import WinglightCore
@@ -49,6 +53,9 @@ extension CLLocationManager: LocationProvider {}
     var authorizationLabel: String {
         switch authorization {
         case .authorizedAlways: return "已允许"
+        #if os(iOS)
+        case .authorizedWhenInUse: return "已允许"
+        #endif
         case .denied: return "未允许"
         case .restricted: return "受系统限制"
         default: return "尚未授权"
@@ -84,7 +91,13 @@ extension CLLocationManager: LocationProvider {}
         }
     }
     deinit { timer?.invalidate();deadlineTimer?.invalidate();timeTransition?.invalidate();scrubTimer?.invalidate() }
-    private var isAuthorized: Bool { authorization == .authorizedAlways }
+    private var isAuthorized: Bool {
+        #if os(iOS)
+        return authorization == .authorizedAlways || authorization == .authorizedWhenInUse
+        #else
+        return authorization == .authorizedAlways
+        #endif
+    }
     func locate() {
         // An earlier requestLocation failure can leave Core Location's one-shot
         // request pending. Explicitly stop it before every new bounded session.
@@ -92,9 +105,12 @@ extension CLLocationManager: LocationProvider {}
         authorization=manager.authorizationStatus;locationIssue=false
         switch authorization {
         case .notDetermined:
-            phaseOfRequest = .permission;status="请在 macOS 提示中允许位置访问。"
+            phaseOfRequest = .permission;status="请在系统提示中允许位置访问。"
             armDeadline(seconds:45);manager.requestWhenInUseAuthorization()
         case .authorizedAlways: beginUpdates()
+        #if os(iOS)
+        case .authorizedWhenInUse: beginUpdates()
+        #endif
         case .denied, .restricted: fail("定位未获允许。可打开系统定位设置，或手动选择城市。")
         @unknown default: fail("系统定位状态不可用，可重试或手动选择城市。")
         }
@@ -156,7 +172,7 @@ extension CLLocationManager: LocationProvider {}
         finishRequest();usesMacLocation=true;locationIssue=false;lastFixDate=location.timestamp
         preferences.removeObject(forKey:"solarManualLocation")
         applyLocation(latitude:location.coordinate.latitude,longitude:location.coordinate.longitude,name:"当前位置",timeZoneID:TimeZone.current.identifier)
-        status="已取得 Mac 位置"
+        status="已取得设备位置"
     }
     func locationManager(_ manager: CLLocationManager,didFailWithError error: Error) { receive(error:error) }
     func receive(error: Error) {
@@ -173,8 +189,13 @@ extension CLLocationManager: LocationProvider {}
         } else { fail("系统定位暂时不可用，可重试或手动选城市。") }
     }
     func openLocationSettings() {
+        #if os(macOS)
         guard let url=URL(string:"x-apple.systempreferences:com.apple.preference.security?Privacy_LocationServices") else { return }
         NSWorkspace.shared.open(url)
+        #else
+        guard let url=URL(string:UIApplication.openSettingsURLString) else { return }
+        UIApplication.shared.open(url)
+        #endif
     }
     func setLocation(latitude: Double,longitude: Double,name: String,timeZoneID: String? = nil,persist: Bool = true) {
         guard latitude.isFinite,longitude.isFinite,abs(latitude)<=90,abs(longitude)<=180 else { status="请输入有效经纬度";return }

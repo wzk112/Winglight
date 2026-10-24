@@ -97,3 +97,9 @@ Metal renderer into an offline movie. `DemoExport.swift` defines the shot schema
 camera interpolation and output settings. `scripts/RecordDemoWindow.swift` records
 the actual application window through ScreenCaptureKit with host permission.
 Video music, editorial chapter cards and fonts are not bundled with Winglight.
+
+## iOS / iPadOS
+
+The native app at `Apps/iOS/Winglight.xcodeproj` shares the renderer and state with
+macOS. See [iOS build and feature guide](IOS.md) for signing, IPA packaging and
+adaptive iPad/iPhone behavior.

@@ -1,9 +1,19 @@
 # Winglight
 
-原生 macOS 飞机三维可视化应用，以 SwiftUI / AppKit 和 Metal 构建。支持九种机型、17 套模型装配和 **309 个机型／涂装组合**，可观察外部灯光、几何遮挡、日照、天气和飞行动效。
+原生 macOS / iOS / iPadOS 飞机三维可视化应用，以 SwiftUI 和 Metal 构建。支持九种机型、17 套模型装配和 **309 个机型／涂装组合**，可观察外部灯光、几何遮挡、日照、天气和飞行动效。
 
-Native macOS aircraft visualizer built with SwiftUI, AppKit, and Metal.
+Native macOS, iPadOS and iOS aircraft visualizer built with SwiftUI and Metal.
 GPL v2; bundled artwork retains its upstream license and attribution.
+
+## iPad / iPhone 1.6.0
+
+[iOS 发布页](https://github.com/wzk112/Winglight/releases/tag/ios-v1.6.0) ·
+[完整 IPA（需自行签名）](https://github.com/wzk112/Winglight/releases/download/ios-v1.6.0/Winglight-1.6.0-iOS-unsigned.ipa) ·
+[iOS 适配、功能与构建](docs/IOS.md)
+
+需要 **iOS / iPadOS 18+**。优先适配 iPad，兼顾 iPhone、横竖屏和窄窗口。
+复用电脑版全部场景功能和原始资源，内置 9 种机型与 309 个机型／涂装组合。
+公开 IPA 需用自己的账号签名后安装；应用内不再下载资源。
 
 ## 下载 1.5.2
 
