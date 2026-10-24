@@ -31,11 +31,11 @@ import WinglightCore
     @Published var glow = 1.0
     @Published var coreSize = 5.0
     @Published var viewPreset = ViewPreset.orbit
-    @Published var cameraYaw = -0.65
+    var cameraYaw = -0.65 { didSet { if oldValue != cameraYaw { renderRequests.send() } } }
     var auditCameraTarget: SIMD3<Float>? = nil
     var auditUnlit = false
-    @Published var cameraPitch = 0.38
-    @Published var cameraDistance = 68.0
+    var cameraPitch = 0.38 { didSet { if oldValue != cameraPitch { renderRequests.send() } } }
+    var cameraDistance = 68.0 { didSet { if oldValue != cameraDistance { renderRequests.send() } } }
     @Published var wireframe = false
     @Published var showDimensions = false
     @Published var labels = true
@@ -55,15 +55,21 @@ import WinglightCore
     @Published var renderResolution = ""
     @Published var displayName = "正在检测屏幕"
     @Published var rendererError: String?
-    @Published var showInfo = false
-    @Published var showSettings = false
+    enum Panel { case info, settings, aircraft, liveries }
+    @Published private(set) var activePanel: Panel?
+    private func setPanel(_ panel: Panel, visible: Bool) {
+        if visible { if activePanel != panel { activePanel=panel } }
+        else if activePanel == panel { activePanel=nil }
+    }
+    var showInfo: Bool { get { activePanel == .info } set { setPanel(.info,visible:newValue) } }
+    var showSettings: Bool { get { activePanel == .settings } set { setPanel(.settings,visible:newValue) } }
     @Published var settingsTab = 0
     @Published var livery = Livery.airChina { didSet { settings.geometry=sceneGeometry } }
     var assetID: String { livery.asset(for:settings.aircraft) }
     var sceneGeometry: AircraftGeometry { AircraftGeometry.catalog[assetID] ?? settings.aircraft.geometry }
     var orbitDistance: Double { 68 * max(1,settings.aircraft.length/39.47,settings.aircraft.span/35.79) }
-    @Published var showAircraft = false
-    @Published var showLiveries = false
+    var showAircraft: Bool { get { activePanel == .aircraft } set { setPanel(.aircraft,visible:newValue) } }
+    var showLiveries: Bool { get { activePanel == .liveries } set { setPanel(.liveries,visible:newValue) } }
     @Published var liveryLoading = false
     @Published var liveryError: String?
     @Published var favoriteLiveries = Set(UserDefaults.standard.stringArray(forKey:"favoriteLiveries") ?? [])

@@ -13,6 +13,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             AircraftStage(state:state).ignoresSafeArea()
+                .allowsHitTesting(state.activePanel == nil).accessibilityHidden(state.activePanel != nil)
             Group {
                 HStack(alignment:.top,spacing:18) {
                     if !state.focus { sidebar.frame(width:242).transition(.move(edge:.leading).combined(with:.opacity)) }
@@ -43,6 +44,7 @@ struct ContentView: View {
                     }
                 }.padding(18)
             }
+            .allowsHitTesting(state.activePanel == nil).accessibilityHidden(state.activePanel != nil)
             if state.liveryLoading && !state.showLiveries {
                 VStack { Spacer();HStack(spacing:8) { ProgressView().controlSize(.small);Text("正在载入 \(state.settings.aircraft.modelName)").font(.system(size:12)) }.padding(13).floatingGlass(16);Spacer() }.allowsHitTesting(false)
             }
@@ -189,8 +191,8 @@ struct ContentView: View {
     }
     private var info: some View {
         VStack(alignment:.leading,spacing:16) {
-            Text("Winglight 1.5").font(.title2)
-            Text("原生 macOS 飞机灯光模拟器。模型来自 FlightGear 开源项目，已校正机长、翼展和机身宽度；其他曲面与灯位仍为近似。")
+            Text("Winglight 1.5.2").font(.title2)
+            Text("原生 macOS 飞机三维可视化应用。模型来自 FlightGear 开源项目，已校正机长、翼展和机身宽度；其他曲面与灯位仍为近似。")
             Text("内置 \(Livery.catalog.count) 款机型专用涂装，支持搜索与收藏。涵盖 9 个机型；787 与 A330 按涂装搭配不同发动机。历史涂装、特殊彩绘及适配限制见列表。")
             Text("A320 翼灯为 50 ms 亮、60 ms 灭、50 ms 亮，尾闪 110 ms。A330 已核实翼尖双闪配置，其他机型的精确脉宽与相位尚未核实。亮度设置不改变时序。")
             Text("气流采用绕体流管和尾涡近似，颜色仅辅助辨认流动变化，不是 CFD 计算结果；飞机摆动、风扇及背景为视觉动画。日照使用 NOAA / Meeus 太阳位置算法，日出日落采用标准大气折射，不包含地形。天气为手动视觉模拟，机头方向定义为北。")
@@ -289,7 +291,7 @@ struct SceneTimeControl: View {
                 Spacer()
                 Text(solar.clock(solar.date)).monospacedDigit().fontWeight(.medium)
             }
-            GlassSlider(value:Binding(get:{min(23.9833,solar.hour)},set:{solar.previewHour($0)}),range:0...23.9833,label:"场景时间",formattedValue:solar.clock(solar.date),onEditingEnded:{solar.endScrubbing()})
+            GlassSlider(value:Binding(get:{min(23.9833,solar.hour)},set:{solar.previewHour($0)}),range:0...23.9833,label:"场景时间",formattedValue:solar.clock(solar.date),step:1.0/60,onEditingEnded:{solar.endScrubbing()})
                 .disabled(solar.coordinate == nil)
             HStack {
                 Text("00:00");Spacer();Text("12:00");Spacer();Text("23:59")

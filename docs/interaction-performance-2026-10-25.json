@@ -1,0 +1,34 @@
+{
+  "device": "Apple M5 Pro",
+  "scenario": "A320 clouds, continuous 60 Hz manual solar time sweep; native window; 600 rendered frames per run",
+  "before": {
+    "cpuMeanMS": 6.768983265113396,
+    "cpuP95MS": 14.203083352185786,
+    "device": "Apple M5 Pro",
+    "frameMeanMS": 20.198013263870962,
+    "frameP95MS": 28.18791673053056,
+    "frames": 600,
+    "gpuMaxMS": 12.071791687048972,
+    "gpuMeanMS": 6.955694859692206,
+    "gpuP95MS": 9.250000002793968,
+    "height": 3280,
+    "msaaSamples": 4,
+    "quality": "ultra",
+    "width": 4720
+  },
+  "after": {
+    "cpuMeanMS": 0.27361694354719174,
+    "cpuP95MS": 0.38229173514992,
+    "device": "Apple M5 Pro",
+    "frameMeanMS": 16.916704930675525,
+    "frameP95MS": 18.277708324603736,
+    "frames": 600,
+    "gpuMaxMS": 9.726833319291472,
+    "gpuMeanMS": 7.282369099169348,
+    "gpuP95MS": 9.263625019229949,
+    "height": 3280,
+    "msaaSamples": 4,
+    "quality": "ultra",
+    "width": 4720
+  }
+}

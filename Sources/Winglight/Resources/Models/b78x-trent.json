@@ -72,7 +72,7 @@
   ],
   "triangles": 584363,
   "vertices": 1753089,
-  "sha256": "33ef88fbcf07a512d457b59fe4150ad50fe91e719dc2104fa8537e94461dabcc",
+  "sha256": "802c0df4b935c0635eac01308d4a6b8d14a3b441c92fcd671aebadbbc850fb28",
   "constraints": [
     {
       "name": "length",

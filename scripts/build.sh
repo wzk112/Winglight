@@ -25,8 +25,8 @@ cat > "$APP_PATH/Contents/Info.plist" <<'PLIST'
 <key>CFBundleIdentifier</key><string>local.winglight.simulator</string>
 <key>CFBundleExecutable</key><string>Winglight</string>
 <key>CFBundlePackageType</key><string>APPL</string>
-<key>CFBundleShortVersionString</key><string>1.5.1</string>
-<key>CFBundleVersion</key><string>10</string>
+<key>CFBundleShortVersionString</key><string>1.5.2</string>
+<key>CFBundleVersion</key><string>12</string>
 <key>NSLocationUsageDescription</key><string>根据所在位置计算日出、日落和太阳方向，使场景日照跟随当前时间。位置仅在本机用于计算。</string>
 <key>NSLocationWhenInUseUsageDescription</key><string>根据所在位置计算日出、日落和太阳方向，使场景日照跟随当前时间。位置仅在本机用于计算。</string>
 <key>LSMinimumSystemVersion</key><string>15.0</string>

@@ -1,5 +1,23 @@
 # Changelog
 
+## 1.5.2 — 2026-10-25
+
+- Avoid resetting Metal's display-link/demand-drawing mode on every input event;
+  orbit/zoom updates now invalidate the renderer without rebuilding the sidebar.
+- Keep a bounded cache of the current and most recent aircraft assembly, BVH,
+  and collision-filtered airflow; never pair a cached model with another model's paint.
+- Present one modal panel at a time, hide background controls from accessibility
+  while a panel is open, and give glass sliders explicit keyboard focus and useful steps.
+- Center both 737 donor engines on the calibrated rotor axes and close the
+  missing internal sightline behind the fans with compressor backing. Preserve native
+  fan UVs and spinner textures, smooth the A320 intake material boundary, and
+  restrict Xiamen's text-island correction to its own model.
+- Publish a complete 1.5.2 resource pack containing the corrected meshes; normal
+  source builds fetch and verify all 504 resources without running mesh conversion.
+  Keep the 1.5.0 pack immutable and retain the 18-file refinement provenance.
+- Include the offline Metal demo exporter and native window recording utility.
+  See `docs/ENGINE_UI_AUDIT.md` for coverage and remaining source limits.
+
 ## 1.5.1 — 2026-10-16
 
 - Publish a complete macOS 15+ Apple Silicon application ZIP, checksums and

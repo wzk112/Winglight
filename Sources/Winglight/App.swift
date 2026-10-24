@@ -24,6 +24,11 @@ import WinglightCore
         func value(_ flag: String) -> String? {
             guard let i = args.firstIndex(of:flag), args.indices.contains(i+1) else { return nil }; return args[i+1]
         }
+        if let plan=value("--export-demo") {
+            NSApp.setActivationPolicy(.prohibited)
+            Task { do { try await DemoExport.run(plan:plan);exit(0) } catch { fputs("DEMO: \(error)\n",stderr);exit(1) } }
+            return
+        }
         if let directory=value("--audit-performance") {
             NSApp.setActivationPolicy(.prohibited)
             Task {
@@ -73,7 +78,7 @@ import WinglightCore
         if args.contains("--landing") { state.settings.landing = true }
         if args.contains("--autoplay") { state.togglePlayback() }
         let window = NSWindow(contentRect:NSRect(x:0,y:0,width:1180,height:820),styleMask:[.titled,.closable,.miniaturizable,.resizable,.fullSizeContentView],backing:.buffered,defer:false)
-        window.title = "Winglight · 飞机灯光模拟"
+        window.title = "Winglight · 飞机三维可视化"
         window.minSize = NSSize(width:940,height:744)
         window.titlebarAppearsTransparent = true
         window.titleVisibility = .hidden

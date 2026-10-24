@@ -7,6 +7,7 @@ __pycache__/
 *.py[cod]
 *.partial
 Validation/
+outputs/
 # Binary assets are published as a checksummed GitHub Release asset pack.
 Sources/Winglight/Resources/Models/*.mesh
 Sources/Winglight/Resources/Models/*.bvh

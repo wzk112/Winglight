@@ -5,11 +5,46 @@ import hashlib
 import json
 from pathlib import Path, PurePosixPath
 import shutil
+import subprocess
+import sys
 import tarfile
 import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / 'assets-manifest.json'
+DERIVED = ROOT / 'derived-assets-manifest.json'
+
+
+def current_manifest(base):
+    """The published archive stays immutable; tracked recipes refine its meshes."""
+    if not DERIVED.exists():
+        return base
+    derived = json.loads(DERIVED.read_text())
+    overrides = {entry['path']: entry for entry in derived['files']}
+    known = {entry['path'] for entry in base['files']}
+    if not set(overrides).issubset(known):
+        raise SystemExit('Derived manifest contains an unknown resource.')
+    current = {**base, 'files': [overrides.get(e['path'], e) for e in base['files']]}
+    if current['files'] == base['files']:
+        return base  # A newer immutable pack already includes these refinements.
+    if derived['baseArchiveSHA256'] != base['archive']['sha256']:
+        raise SystemExit('Derived meshes target a different base resource archive.')
+    return current
+
+
+def rebuild(base):
+    python = ROOT / '.venv/bin/python3'
+    python = str(python) if python.exists() else sys.executable
+    if subprocess.run([python, '-c', 'import numpy, mapbox_earcut'], capture_output=True).returncode:
+        raise SystemExit('Mesh rebuild needs the asset toolchain. Run:\n'
+                         'python3 -m venv .venv\n'
+                         '.venv/bin/python -m pip install -r scripts/requirements-assets.txt\n'
+                         'python3 scripts/assets.py rebuild')
+    for arguments in [('convert_models.py',), ('convert_widebody.py',),
+                      ('convert_xiamen.py', '--mesh-only'), ('calibrate_lamps.py',)]:
+        subprocess.run([python, str(ROOT / 'scripts' / arguments[0]), *arguments[1:]],
+                       cwd=ROOT, check=True)
+    verify(current_manifest(base))
 
 
 def digest(path):
@@ -32,7 +67,7 @@ def verify(manifest, root=ROOT):
     print(f"Verified {len(manifest['files'])} resources.")
 
 
-def pack(output):
+def pack(output, version):
     patterns = [
         'Sources/Winglight/Resources/Models/*.mesh',
         'Sources/Winglight/Resources/Models/*.bvh',
@@ -58,8 +93,8 @@ def pack(output):
             info.mode = 0o644
             with path.open('rb') as stream:
                 archive.addfile(info, stream)
-    manifest = dict(schema=1, version='1.5.0',
-                    url='https://github.com/wzk112/Winglight/releases/download/v1.5.0/' + output.name,
+    manifest = dict(schema=1, version=version,
+                    url=f'https://github.com/wzk112/Winglight/releases/download/v{version}/' + output.name,
                     archive=dict(name=output.name, bytes=output.stat().st_size, sha256=digest(output)),
                     files=entries, notices=notice_entries)
     MANIFEST.write_text(json.dumps(manifest, indent=2) + '\n')
@@ -109,20 +144,27 @@ def fetch(manifest, source=None):
     if seen != set(expected):
         raise SystemExit('Incomplete archive.')
     verify(manifest)
+    if current_manifest(manifest)['files'] != manifest['files']:
+        rebuild(manifest)
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command', choices=['verify', 'fetch', 'pack'])
+    parser.add_argument('command', choices=['verify', 'fetch', 'pack', 'rebuild'])
     parser.add_argument('--archive', type=Path, help='Existing archive for offline fetch, or output path for pack')
+    parser.add_argument('--version', help='New immutable resource-pack version (required for pack)')
     args = parser.parse_args()
     if args.command == 'pack':
-        pack(args.archive or ROOT / 'dist/Winglight-1.5.0-assets.tar.gz')
+        if not args.version or not all(c.isdigit() or c == '.' for c in args.version):
+            parser.error('pack requires --version, for example --version 1.5.2')
+        pack(args.archive or ROOT / f'dist/Winglight-{args.version}-assets.tar.gz', args.version)
     else:
         if not MANIFEST.exists():
             raise SystemExit('assets-manifest.json is missing.')
         manifest = json.loads(MANIFEST.read_text())
         if args.command == 'fetch':
             fetch(manifest, args.archive)
+        elif args.command == 'rebuild':
+            rebuild(manifest)
         else:
-            verify(manifest)
+            verify(current_manifest(manifest))

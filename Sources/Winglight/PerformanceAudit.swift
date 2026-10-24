@@ -55,6 +55,9 @@ import WinglightCore
                 state.backdrop=scene.background;state.weather=scene.weather;state.quality=scene.quality
                 state.wireframe=scene.wireframe;state.qaTime=scene.time
                 renderer.updateLivery(view)
+                // Loading is published asynchronously, including cached returns.
+                // Let that update run before treating a cached buffer as ready.
+                try await Task.sleep(nanoseconds:50_000_000)
                 var ticks=0
                 while (state.liveryLoading || renderer.models[state.assetID] == nil) && ticks<1200 {
                     try await Task.sleep(nanoseconds:50_000_000);ticks+=1

@@ -3,7 +3,7 @@ Run with Python 3 + NumPy. Air China texture provenance is recorded in ThirdPart
 Coordinates: x starboard, y up, z aft; metres. See MODEL_ACCURACY.md.
 """
 from pathlib import Path
-import io, shlex, json, struct, hashlib
+import io, shlex, json, struct, hashlib, sys
 import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 DEST = ROOT/'Sources/Winglight/Resources/Models'
@@ -144,13 +144,35 @@ def upgrade_737_details(objects):
         old_lip=next(o for o in old_engine if o['name'] in ['engnose','engnose.003'])
         new_lip=next(o for o in new_engine if o['name'] in ['engnose','engnose.003'])
         shift=old_lip['vertices'].min(0)-new_lip['vertices'].min(0)
-        shift[2]=0  # retain the original engine centreline at raw z +/-5.164
+        # The donor's right assembly is offset laterally as well. A lip's
+        # asymmetric bounding box is not the rotor axis (the 737 inlet is flat
+        # underneath). Align the circular fan, moving the whole engine together.
+        fan=next(o for o in new_engine if o['name'].lower()=='fan')
+        axis=(fan['vertices'].min(0)+fan['vertices'].max(0))*.5
+        shift[1]=-1.20-axis[1]
+        shift[2]=np.sign(axis[2])*5.164-axis[2]
         for o in new_engine:
             o['vertices']+=shift;o['source']='737YV/'+filename
         objects[:]=[o for o in objects if not (o['file']==filename and engine(o))]+new_engine
     glazing=[o for o in read_ac(ROOT/'ThirdParty/737YV/737-800.ac') if o['name']=='rearwindows.ext']
     for o in glazing:o['source']='737YV/737-800.ac'
     objects[:]=[o for o in objects if o['name'] not in ['windowslh','windowsrh']]+glazing
+
+
+def add_737_compressor_backstops(objects):
+    """Opaque interior behind the fan, not a view-facing overlay.
+
+    The donor exterior leaves a sightline from blade gaps to the far cowl and
+    sky. A dark compressor backing closes that path within each intake. This
+    is a visual interior approximation, not an engineering compressor model.
+    """
+    for fan in [o for o in objects if o['name'].lower()=='fan']:
+        v=fan['vertices'];low=v.min(0);high=v.max(0);center=(low+high)*.5
+        radius=max(high[0]-low[0],high[1]-low[1])*.5
+        z=high[2]+.035;count=96
+        vertices=[[center[0],center[1],z]]+[[center[0]+radius*np.cos(a),center[1]+radius*np.sin(a),z] for a in np.linspace(0,2*np.pi,count,endpoint=False)]
+        faces=[([0,i+1,(i+1)%count+1],0,[[0,0]]*3) for i in range(count)]
+        objects.append(dict(name='engcore-backing-'+str(int(np.sign(center[0]))),file='procedural',source='Winglight compressor backing',texture='',vertices=np.array(vertices),faces=faces,part=4))
 
 
 def subdivide_surface(o,levels):
@@ -306,8 +328,8 @@ def mesh(objects,a):
         row[:,12:14]=uvs.reshape(-1,2);row[:,14]=tex;row[:,15]=part
         if part==6:
             side=np.sign(v[:,0].mean());row[:,11]=side
-            center=np.array(o.get('fanCenter',[side*(5.75 if a=='airbus' else 4.83),-2.26943 if a=='airbus' else -1.20]))
-            row[:,12:14]=row[:,:2]-center;row[:,14]=0
+            # Keep native fan/spinner artwork. Procedural spinner coordinates
+            # are derived from the engine axis in the vertex shader instead.
         if a=='airbus' and n.startswith('enginecfm'):
             # The intake is a separate polished alloy region, including the
             # rolled inner lip. Classify complete triangles, never interpolate IDs.
@@ -366,11 +388,14 @@ def build_bvh(data,path):
     path.write_bytes(struct.pack('<4s3I',b'WBVH',len(nodes),len(triangles),1)+b''.join(nodes)+triangles[order].astype('<f4').tobytes())
 
 if __name__ == '__main__':
-    reports={}
+    wanted=sys.argv[1:]
+    reports=json.loads((DEST/'audit.json').read_text()) if wanted and (DEST/'audit.json').exists() else {}
     for a,folder,names in [('airbus','A320',['A320-216.ac','CFM56.ac']),('boeing','737',['737-800.ac','LWing.ac','RWing.ac','HorzStab.ac','VertStab.ac','winglet.ac'])]:
+        if wanted and a not in wanted:continue
         objs=[o for name in names for o in read_ac(ROOT/'ThirdParty'/folder/name) if selected(o,a)]
         if a=='boeing':upgrade_737_details(objs)
         dims=calibrate(objs,a);panes=seal_cockpit_glazing(objs,a);add_glazing_rebates(objs,a)
+        if a=='boeing':add_737_compressor_backstops(objs)
         for o in objs:
             n=o['name'].lower()
             levels=3 if n=='fuselage' else (2 if n.startswith('enginecfm') else (1 if any(k in n for k in ['engnose','engfancase','reverser']) or n.startswith(('door','dorr')) else 0))

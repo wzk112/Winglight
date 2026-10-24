@@ -45,9 +45,10 @@ struct MeshUniforms {
     float4x4 mvp;float4 eye;float4 options;float4 conditions;float4 sunlight;float4 engineGeometry;float4 logoSource;float4 logoTarget;
     float4x4 shadow0;float4x4 shadow1;float4x4 sun;float4 weather;float4 surface;float4 lightning;
 };
-struct MeshOut { float4 clip [[position]];float3 position;float3 normal;float4 color;float4 uv;float3 barycentric; };
+struct MeshOut { float4 clip [[position]];float3 position;float3 normal;float4 color;float4 uv;float3 barycentric;float2 rotor; };
 vertex MeshOut meshVertex(uint id [[vertex_id]],device const MeshVertex *vertices [[buffer(0)]],constant MeshUniforms &u [[buffer(1)]]) {
     MeshVertex v = vertices[id];
+    float2 rotor=v.position.xy-float2(v.color.w*u.engineGeometry.x,u.engineGeometry.y);
     if (v.uv.w == 6) {
         float side = v.color.w;
         float2 center = float2(side*u.engineGeometry.x,u.engineGeometry.y);
@@ -56,7 +57,7 @@ vertex MeshOut meshVertex(uint id [[vertex_id]],device const MeshVertex *vertice
         v.position.xy = center+r*(v.position.xy-center);v.normal.xy = r*v.normal.xy;
     }
     float3 bary = float3(0);bary[id%3] = 1;
-    return {u.mvp*v.position,v.position.xyz,v.normal.xyz,v.color,v.uv,bary};
+    return {u.mvp*v.position,v.position.xyz,v.normal.xyz,v.color,v.uv,bary,rotor};
 }
 vertex float4 shadowVertex(uint id [[vertex_id]],device const MeshVertex *vertices [[buffer(0)]],constant float4x4 &matrix [[buffer(1)]]) {
     return matrix*vertices[id].position;
@@ -108,7 +109,7 @@ fragment float4 meshFragment(MeshOut in [[stage_in]],constant MeshUniforms &u [[
             float2 uv=in.uv.xy;
             // The original CXA side projection mirrors Latin text, but its
             // Chinese wordmark was left unmirrored. Correct this UV island only.
-            if (tid==13 && part==1 && p.x>0 && uv.x>.223 && uv.x<.298 && uv.y>.377 && uv.y<.399) uv.x=.521-uv.x;
+            if (u.engineGeometry.w>.5 && tid==13 && part==1 && p.x>0 && uv.x>.223 && uv.x<.298 && uv.y>.377 && uv.y<.399) uv.x=.521-uv.x;
             base=atlases[tid-10].sample(tex,uv).rgb;
         }
         else if (!airbus && tid==4) {
@@ -134,13 +135,22 @@ fragment float4 meshFragment(MeshOut in [[stage_in]],constant MeshUniforms &u [[
     }
     if (part==7) {base=float3(.67,.70,.71);rough=.25;}
     if (part==9) {base=float3(.021,.025,.028);rough=.65;}
-    if (part==8 || part==12) {base=float3(.65,.69,.72);rough=part==8 ? .19 : .30;metallic=.92;}
+    if ((part==8 && !airbus) || part==12) {base=float3(.65,.69,.72);rough=part==8 ? .19 : .30;metallic=.92;}
+    if (airbus && tid==2 && (part==4 || part==8)) {
+        // A continuous inlet station avoids a sawtooth paint/metal boundary
+        // from classifying whole triangles on dark or brightly painted cowls.
+        float lip=1-smoothstep(-7.22,-7.18,p.z);
+        base=mix(base,float3(.65,.69,.72),lip);rough=mix(rough,.19,lip);metallic=.92*lip;
+    }
     if (part==5 || part==13) {base=float3(.012,.023,.032);rough=.095;}
     if (part==6) {
         base=float3(.16,.185,.21);rough=.36;metallic=.8;
-        float2 q=in.uv.xy;float radius=length(q);
+        bool nativeFan=tid>=10 && tid<26;
+        if (nativeFan) { base=atlases[tid-10].sample(tex,in.uv.xy).rgb;metallic=.45; }
+        else if (airbus && tid==2) { base=engine.sample(tex,in.uv.xy).rgb;nativeFan=true;metallic=.45; }
+        float2 q=in.rotor;float radius=length(q);
         // Spinner markings are surface coordinates and rotate with the mesh.
-        if (radius<.235) {
+        if (!nativeFan && radius<.235) {
             float turn=atan2(q.y,q.x)+radius*27;
             float aa=max(fwidth(turn),.02);
             float spiral=(1-smoothstep(.20-aa,.20+aa,abs(sin(turn*.5))))*smoothstep(.03,.07,radius);

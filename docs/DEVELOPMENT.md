@@ -20,7 +20,7 @@ set `SIGNING_IDENTITY`. Stable signing helps retain location permission identity
 Offline restoration:
 
 ```sh
-python3 scripts/assets.py fetch --archive /path/to/Winglight-1.5.0-assets.tar.gz
+python3 scripts/assets.py fetch --archive /path/to/Winglight-1.5.2-assets.tar.gz
 python3 scripts/assets.py verify
 ```
 
@@ -50,8 +50,8 @@ python3 -m venv .venv
 
 Fetch scripts require network for missing files and use fixed revisions. Source
 AC3D files are committed. Generate masks after catalog/geometry changes.
-After intentional changes, update `scripts/assets.py`'s release version/URL and
-run `python3 scripts/assets.py pack`. Use a new version for changed pack content;
+After intentional changes, run `python3 scripts/assets.py pack --version X.Y.Z`.
+The script writes the matching version, URL and hashes to `assets-manifest.json`. Use a new version for changed pack content;
 do not overwrite a published pack while retaining an old integrity manifest.
 
 ## Diagnostics
@@ -82,10 +82,18 @@ license texts in `Contents/Resources/Legal`. Preserve GPL corresponding source,
 conversion instructions, artist credits and original grants for distributed versions.
 See [THIRD_PARTY.md](../THIRD_PARTY.md).
 
-The 1.5.1 Apple Silicon application ZIP contains the signed `Winglight.app`,
-installation/release notes, notices and `SOURCE.txt`. The source reference is the
-exact release commit at `v1.5.1`, complemented by the unchanged 1.5.0 resource
-archive. `SHA256SUMS.txt` identifies both downloads. Apple Development signing
-is disclosed separately from Developer ID notarization; the current public build
+The 1.5.2 Apple Silicon application ZIP contains the signed `Winglight.app`,
+installation/release notes, notices and `SOURCE.txt`. Its source is the exact
+release commit at `v1.5.2`, complemented by the complete 1.5.2 resource archive.
+`SHA256SUMS.txt` identifies the application, source and resource downloads.
+Apple Development signing is separate from Developer ID notarization; this build
 has not been notarized. Validate the extracted archive, then download the public
-asset and verify its hash and signature again before reporting publication complete.
+assets and verify hashes, signature and rendered output before reporting completion.
+
+## Demo export
+
+`Winglight --export-demo /absolute/path/plan.json` renders through the application's
+Metal renderer into an offline movie. `DemoExport.swift` defines the shot schema,
+camera interpolation and output settings. `scripts/RecordDemoWindow.swift` records
+the actual application window through ScreenCaptureKit with host permission.
+Video music, editorial chapter cards and fonts are not bundled with Winglight.

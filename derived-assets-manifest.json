@@ -1,0 +1,97 @@
+{
+  "schema": 1,
+  "description": "Native fan UV preservation and centered 737 donor engines; rebuild with scripts/assets.py rebuild.",
+  "baseArchiveSHA256": "e16818c130ab0397e8f6d2a213be3c1827fa9464b1c5bb16f85c6b0357680748",
+  "files": [
+    {
+      "path": "Sources/Winglight/Resources/Models/a332-ge.mesh",
+      "bytes": 25595520,
+      "sha256": "c3a330f7985a95fcfc4447b2c9a1dd3f80860198c49436471266ad85bc0d88ab"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/a332-pw.mesh",
+      "bytes": 24683136,
+      "sha256": "fc34ca337ddf04f6f6e691945af6e3c4767ae061dc4f5552bd5ab77b1aa1dfaa"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/a332-rr.mesh",
+      "bytes": 30890304,
+      "sha256": "19a5e02f2fe6ad5e1bfb7659e37a9577d1c0ffc987e7c1f49548b71338951441"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/a333-ge.mesh",
+      "bytes": 25635072,
+      "sha256": "a2ad1da587aef70cd1e52a7be7122f8072a4a4ece5fcb82f1ed1c004b4279838"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/a333-pw.mesh",
+      "bytes": 24722688,
+      "sha256": "3e9556d8fb7f50d15cf19778fe7ebc70d83c00a82b3d267ee5dea741f6700c02"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/a333-rr.mesh",
+      "bytes": 30929856,
+      "sha256": "e53caf7bc777d40d2052316fa6f797b0544ab4377d16d0e6ba3a499757e7c371"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/a359-xwb.mesh",
+      "bytes": 107012544,
+      "sha256": "6d62a44793a721cc8e546f3a981a7ddbd5bc01f86cfb0ef32cf3f30399e9cd4e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/airbus.mesh",
+      "bytes": 136828416,
+      "sha256": "c513dede3b76712e674f90d2fdf29966eee3bea0c68ea9f5ef56e613aea5df0b"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b77w-ge90.mesh",
+      "bytes": 105359616,
+      "sha256": "8d871b036ce273835b8772a354d5f459bf04bfd63a4ce89eb50075d5eb6c65ac"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b788-genx.mesh",
+      "bytes": 111461568,
+      "sha256": "f592d1c6041bce091bd52863d665236ee9a26c4007c6714b8b78d2fd4f763131"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b788-trent.mesh",
+      "bytes": 112112832,
+      "sha256": "18530e323f1f6db9985a33fff94c15947b9647c5d75b4ce5247bb33274d048bd"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b789-genx-cxa.mesh",
+      "bytes": 110899008,
+      "sha256": "f78c829bd930dc6235454c9b8313e4a27270478f6206586534e44df3ffb2bfe9"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b789-genx.mesh",
+      "bytes": 111361344,
+      "sha256": "e9525ae1cb77e985c37856482f2135a9b92fbbc52e1d9d312def7eea9073b0c0"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b789-trent.mesh",
+      "bytes": 112012608,
+      "sha256": "8313a313281d763b0c9926920b8243526c5be47dc08fb44fc6eb741ef25ee34e"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b78x-genx.mesh",
+      "bytes": 111546432,
+      "sha256": "dc58cb7c26f18f55c1e9e451bf0acd133dbe3921e2ba99910b515ee0ba02e98c"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/b78x-trent.mesh",
+      "bytes": 112197696,
+      "sha256": "802c0df4b935c0635eac01308d4a6b8d14a3b441c92fcd671aebadbbc850fb28"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/boeing.bvh",
+      "bytes": 20018192,
+      "sha256": "b50fd9a86322c9906a536f22c1713ce259531bedda3aef338a7695c8a74659e0"
+    },
+    {
+      "path": "Sources/Winglight/Resources/Models/boeing.mesh",
+      "bytes": 78801792,
+      "sha256": "adf92266965218d95d1f775c5e216a053e5b4cc53d8684596b5305caf165c8ca"
+    }
+  ]
+}

@@ -58,12 +58,13 @@ struct MeshUniforms {
     func scheduleRendering() {
         guard let s = appState else { return }
         let visible = window?.occlusionState.contains(.visible) ?? false
-        preferredFramesPerSecond = min(s.quality.fps,window?.screen?.maximumFramesPerSecond ?? 60)
+        let fps=min(s.quality.fps,window?.screen?.maximumFramesPerSecond ?? 60)
+        if preferredFramesPerSecond != fps { preferredFramesPerSecond=fps }
         let continuous=s.active && visible && !NSApp.isHidden
         if isPaused == continuous { (delegate as? Renderer)?.lastFrame=0 }
         // Use either display-link drawing or demand drawing, never both.
-        enableSetNeedsDisplay = !continuous
-        isPaused = !continuous
+        if enableSetNeedsDisplay == continuous { enableSetNeedsDisplay = !continuous }
+        if isPaused == continuous { isPaused = !continuous }
         if visible && !continuous { needsDisplay = true }
     }
     deinit { windowObservers.forEach { NotificationCenter.default.removeObserver($0) } }
@@ -79,7 +80,7 @@ struct MeshUniforms {
         let location = convert(event.locationInWindow,from:nil)
         defer { dragLocation = location }
         guard let previous = dragLocation else { return }
-        s.viewPreset = .orbit
+        if s.viewPreset != .orbit { s.viewPreset = .orbit }
         s.cameraYaw -= (location.x-previous.x)*0.007
         s.cameraPitch = min(1.565,max(-1.565,s.cameraPitch-(location.y-previous.y)*0.007))
     }
@@ -146,6 +147,7 @@ struct AircraftStage: NSViewRepresentable {
     var atlasTextures = [MTLTexture]()
     var fallbackTexture: MTLTexture?
     private var loadedLivery = Livery.neutral
+    private var loadedAsset: String?
     private var requestedLiveryID = ""
     private var liveryRequest: LiveryRequest?
     private let liveryQueue = DispatchQueue(label:"local.winglight.liveries",qos:.userInitiated,autoreleaseFrequency:.workItem)
@@ -157,6 +159,7 @@ struct AircraftStage: NSViewRepresentable {
     var visibilityEye = SIMD3<Float>(repeating:0),visibilityDirection = SIMD3<Float>(repeating:0)
     var visibilityAircraft: String?,visibilityOrthographic = false
     var models = [String:(MTLBuffer,Int)]()
+    private var modelOrder = [String]()
     var allocatedSamples = 0, frames = 0
     var lastDisplayUpdate = 0.0
     var gpuTimings = [Double](), frameTimes = [Double](),cpuTimings = [Double]()
@@ -237,6 +240,16 @@ struct AircraftStage: NSViewRepresentable {
             liveryCache.removeValue(forKey:liveryOrder.removeFirst())
         }
     }
+    private func cacheModel(_ asset: String,vertices: (MTLBuffer,Int),bvh: AirframeOcclusion,flow: (MTLBuffer,Int)) {
+        models[asset]=vertices;occluders[asset]=bvh;flows[asset]=flow
+        modelOrder.removeAll { $0==asset };modelOrder.append(asset)
+        // Retain one recently used assembly, including its expensive flow/BVH
+        // preparation. Bound memory; never evict the newly selected assembly.
+        func bytes() -> Int { modelOrder.reduce(0) { $0+(models[$1]?.0.length ?? 0)+(flows[$1]?.0.length ?? 0)+(occluders[$1]?.storageByteCount ?? 0) } }
+        while modelOrder.count>1 && (modelOrder.count>2 || bytes()>384*1024*1024) {
+            let old=modelOrder.removeFirst();models.removeValue(forKey:old);occluders.removeValue(forKey:old);flows.removeValue(forKey:old)
+        }
+    }
     func updateLivery(_ view: OrbitView) {
         let requested=state.livery,aircraft=state.settings.aircraft,asset=state.assetID,geometry=state.sceneGeometry
         let desired=requested.isNeutral ? Livery.defaultLivery(for:aircraft) : requested
@@ -286,12 +299,12 @@ struct AircraftStage: NSViewRepresentable {
                 DispatchQueue.main.async {
                     guard let self,!request.cancelled,self.requestedLiveryID==key else { return }
                     self.windowMask=mask
-                    self.models=[asset:vertexData];self.occluders=[asset:bvh];self.flows=[asset:flowData]
+                    self.cacheModel(asset,vertices:vertexData,bvh:bvh,flow:flowData)
                     if self.state.qaTime == nil && !NSWorkspace.shared.accessibilityDisplayShouldReduceMotion {
                         self.previousScene=self.sceneTexture;self.sceneTexture=nil
                         self.sceneTransitionStart=CACurrentMediaTime();self.state.beginSceneTransition(self.sceneTransitionDuration)
                     }
-                    self.loadedLivery=desired;self.cacheLivery(desired.id,atlases)
+                    self.loadedLivery=desired;self.loadedAsset=asset;self.cacheLivery(desired.id,atlases)
                     if aircraft.isWidebody { self.atlasTextures=atlases+Array(repeating:fallback,count:16-atlases.count) }
                     else { self.textures=[atlases[0],atlases[0],atlases[1]] }
                     self.state.liveryLoading=false;self.state.liveryError=nil
@@ -360,7 +373,7 @@ struct AircraftStage: NSViewRepresentable {
         let requestedSamples = state.quality.samples
         let samples = meshPipelines[requestedSamples] != nil ? requestedSamples : 1
         guard let device = view.device, let composite, let flarePipeline, let shadowPipeline, let meshPipeline = meshPipelines[samples], let backgroundPipeline = backgroundPipelines[samples], let queue,
-              let (vertices,vertexCount) = models[state.assetID], view.bounds.width > 20, view.bounds.height > 20 else { return nil }
+              loadedAsset == state.assetID,let (vertices,vertexCount) = models[state.assetID], view.bounds.width > 20, view.bounds.height > 20 else { return nil }
         let now = CACurrentMediaTime(), screen = view.window?.screen ?? NSScreen.main
         let current = auditHeadroom ?? Double(screen?.maximumExtendedDynamicRangeColorComponentValue ?? 1)
         let lightning=StormLighting.sample(time:state.backgroundTime,strength:state.weatherValue.w,headroom:current,hdr:state.hdr,reduceMotion:NSWorkspace.shared.accessibilityDisplayShouldReduceMotion)
@@ -410,7 +423,7 @@ struct AircraftStage: NSViewRepresentable {
         let sunChanged = simd_distance(sunDirection,shadowSun)>0.002 || shadowAircraft != state.assetID
         if sunChanged { shadowSun = sunDirection }
         let matrices = lightMatrices(sunDirection:shadowSun)
-        var meshUniforms = MeshUniforms(mvp:mvp,eye:SIMD4(eye,1),options:SIMD4(state.auditUnlit ? 2 : (state.wireframe ? 1 : 0),state.settings.logo ? 1 : 0,!state.livery.isNeutral && loadedLivery.aircraft == state.settings.aircraft.rawValue ? (loadedLivery.engineTexture == nil ? 1 : 2) : 0,state.settings.aircraft.isWidebody ? 2 : (state.settings.aircraft == .airbus ? 0 : 1)),conditions:SIMD4(Float(state.flightTime),state.environmentValue,state.backgroundWeights.z,state.sunDirection.y),sunlight:SIMD4(sunDirection,state.solar.followsClock && state.solar.position != nil ? 1 : 0),engineGeometry:SIMD4(Float(state.sceneGeometry.engineXY[0]),Float(state.sceneGeometry.engineXY[1]),state.backgroundWeights.w,0),logoSource:SIMD4(SIMD3<Float>(state.sceneGeometry.point("logo")),1),logoTarget:SIMD4(SIMD3<Float>(state.sceneGeometry.point("logoTarget")),1),shadow0:matrices[0],shadow1:matrices[1],sun:matrices[2],weather:state.weatherValue,surface:SIMD4(state.cabinLights ? 1 : 0,windowMask == nil ? 0 : 1,Float(state.backgroundTime),NSWorkspace.shared.accessibilityDisplayShouldReduceMotion ? 1 : 0),lightning:lightning)
+        var meshUniforms = MeshUniforms(mvp:mvp,eye:SIMD4(eye,1),options:SIMD4(state.auditUnlit ? 2 : (state.wireframe ? 1 : 0),state.settings.logo ? 1 : 0,!state.livery.isNeutral && loadedLivery.aircraft == state.settings.aircraft.rawValue ? (loadedLivery.engineTexture == nil ? 1 : 2) : 0,state.settings.aircraft.isWidebody ? 2 : (state.settings.aircraft == .airbus ? 0 : 1)),conditions:SIMD4(Float(state.flightTime),state.environmentValue,state.backgroundWeights.z,state.sunDirection.y),sunlight:SIMD4(sunDirection,state.solar.followsClock && state.solar.position != nil ? 1 : 0),engineGeometry:SIMD4(Float(state.sceneGeometry.engineXY[0]),Float(state.sceneGeometry.engineXY[1]),state.backgroundWeights.w,state.assetID == "b789-genx-cxa" ? 1 : 0),logoSource:SIMD4(SIMD3<Float>(state.sceneGeometry.point("logo")),1),logoTarget:SIMD4(SIMD3<Float>(state.sceneGeometry.point("logoTarget")),1),shadow0:matrices[0],shadow1:matrices[1],sun:matrices[2],weather:state.weatherValue,surface:SIMD4(state.cabinLights ? 1 : 0,windowMask == nil ? 0 : 1,Float(state.backgroundTime),NSWorkspace.shared.accessibilityDisplayShouldReduceMotion ? 1 : 0),lightning:lightning)
         var u = GPUUniforms(size:SIMD2(Float(w),Float(h)),time:Float(state.backgroundTime),environment:state.environmentValue,options:SIMD4(state.backdrop.index,state.grid && !state.focus ? 1 : 0,Float(Lighting.peak(headroom:current,hdr:state.hdr,strength:state.strength)),Float(state.glow)),motion:SIMD4(Float(state.motionIntensity),0,0,NSWorkspace.shared.accessibilityDisplayShouldReduceMotion ? 1 : 0),backgrounds:state.backgroundWeights,weather:state.weatherValue,lightning:lightning)
         // Aircraft, lights and shadow maps share model space. Whole-airframe motion
         // never separates lights from their housings or invalidates occlusion.

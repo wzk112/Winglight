@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "version": "1.5.0",
-  "url": "https://github.com/wzk112/Winglight/releases/download/v1.5.0/Winglight-1.5.0-assets.tar.gz",
+  "version": "1.5.2",
+  "url": "https://github.com/wzk112/Winglight/releases/download/v1.5.2/Winglight-1.5.2-assets.tar.gz",
   "archive": {
-    "name": "Winglight-1.5.0-assets.tar.gz",
-    "bytes": 1100985330,
-    "sha256": "e16818c130ab0397e8f6d2a213be3c1827fa9464b1c5bb16f85c6b0357680748"
+    "name": "Winglight-1.5.2-assets.tar.gz",
+    "bytes": 1100548440,
+    "sha256": "e6cff9644212998f33dd7ff696642f233e8011c61efc21e18393b7f93d4f4ca0"
   },
   "files": [
     {
@@ -2296,7 +2296,7 @@
     {
       "path": "Sources/Winglight/Resources/Models/a332-ge.mesh",
       "bytes": 25595520,
-      "sha256": "7c7de26b6d3e3df4b50b988ba6ab47584cd4f08ba1cd4469b45469ccedecd477"
+      "sha256": "c3a330f7985a95fcfc4447b2c9a1dd3f80860198c49436471266ad85bc0d88ab"
     },
     {
       "path": "Sources/Winglight/Resources/Models/a332-pw.bvh",
@@ -2306,7 +2306,7 @@
     {
       "path": "Sources/Winglight/Resources/Models/a332-pw.mesh",
       "bytes": 24683136,
-      "sha256": "712f0f18aa275386635391796f1b32858c64042f87d07830f415cf96d4d0d6c8"
+      "sha256": "fc34ca337ddf04f6f6e691945af6e3c4767ae061dc4f5552bd5ab77b1aa1dfaa"
     },
     {
       "path": "Sources/Winglight/Resources/Models/a332-rr.bvh",
@@ -2316,7 +2316,7 @@
     {
       "path": "Sources/Winglight/Resources/Models/a332-rr.mesh",
       "bytes": 30890304,
-      "sha256": "c48143c201d608e4a34471d857cd7c1f9f91a1f549ecf026d8fe2338b9a5159b"
+      "sha256": "19a5e02f2fe6ad5e1bfb7659e37a9577d1c0ffc987e7c1f49548b71338951441"
     },
     {
       "path": "Sources/Winglight/Resources/Models/a332-windows.png",
@@ -2331,7 +2331,7 @@
     {
       "path": "Sources/Winglight/Resources/Models/a333-ge.mesh",
       "bytes": 25635072,
-      "sha256": "e9e0f0ff63507e7501f6150085fc7cb391daea5f459e618350fd343407add284"
+      "sha256": "a2ad1da587aef70cd1e52a7be7122f8072a4a4ece5fcb82f1ed1c004b4279838"
     },
     {
       "path": "Sources/Winglight/Resources/Models/a333-pw.bvh",
@@ -2341,7 +2341,7 @@
     {
       "path": "Sources/Winglight/Resources/Models/a333-pw.mesh",
       "bytes": 24722688,
-      "sha256": "c5bbff3f208b2cccfc3c0367f287e611f449db7c5b457d59c75612935ce368bb"
+      "sha256": "3e9556d8fb7f50d15cf19778fe7ebc70d83c00a82b3d267ee5dea741f6700c02"
     },
     {
       "path": "Sources/Winglight/Resources/Models/a333-rr.bvh",
@@ -2351,7 +2351,7 @@
     {
       "path": "Sources/Winglight/Resources/Models/a333-rr.mesh",
       "bytes": 30929856,
-      "sha256": "951ea88fd0307ae8ce6465a249e0e37e5a32bab6ee4aece97674e4a691c9fd12"
+      "sha256": "e53caf7bc777d40d2052316fa6f797b0544ab4377d16d0e6ba3a499757e7c371"
     },
     {
       "path": "Sources/Winglight/Resources/Models/a333-windows.png",
@@ -2366,7 +2366,7 @@
     {
       "path": "Sources/Winglight/Resources/Models/a359-xwb.mesh",
       "bytes": 107012544,
-      "sha256": "3e1e647684dd4837103d6f6c948e6da5fe2bd487c11cfcd6d25ff01b3302fd6f"
+      "sha256": "6d62a44793a721cc8e546f3a981a7ddbd5bc01f86cfb0ef32cf3f30399e9cd4e"
     },
     {
       "path": "Sources/Winglight/Resources/Models/airbus-windows.png",
@@ -2381,7 +2381,7 @@
     {
       "path": "Sources/Winglight/Resources/Models/airbus.mesh",
       "bytes": 136828416,
-      "sha256": "f5ed444b93ca319b920188310bf457b0f5bd775be267118034cbd3d3ea15e104"
+      "sha256": "c513dede3b76712e674f90d2fdf29966eee3bea0c68ea9f5ef56e613aea5df0b"
     },
     {
       "path": "Sources/Winglight/Resources/Models/b77w-ge90.bvh",
@@ -2391,7 +2391,7 @@
     {
       "path": "Sources/Winglight/Resources/Models/b77w-ge90.mesh",
       "bytes": 105359616,
-      "sha256": "34e74ac93612110f23af173d68530347529bea8228adee20a29e85d97d70516e"
+      "sha256": "8d871b036ce273835b8772a354d5f459bf04bfd63a4ce89eb50075d5eb6c65ac"
     },
     {
       "path": "Sources/Winglight/Resources/Models/b788-genx.bvh",
@@ -2401,7 +2401,7 @@
     {
       "path": "Sources/Winglight/Resources/Models/b788-genx.mesh",
       "bytes": 111461568,
-      "sha256": "7d7238d8d13ac3c3fc478bc9be196eb1a87e48e63c637d0a9c70758cedbe1f63"
+      "sha256": "f592d1c6041bce091bd52863d665236ee9a26c4007c6714b8b78d2fd4f763131"
     },
     {
       "path": "Sources/Winglight/Resources/Models/b788-trent.bvh",
@@ -2411,7 +2411,7 @@
     {
       "path": "Sources/Winglight/Resources/Models/b788-trent.mesh",
       "bytes": 112112832,
-      "sha256": "5766c1e2ac8d7daf5444be7f2cf45a60767147172d34b3faf4355edcf30a7bae"
+      "sha256": "18530e323f1f6db9985a33fff94c15947b9647c5d75b4ce5247bb33274d048bd"
     },
     {
       "path": "Sources/Winglight/Resources/Models/b789-genx-cxa-windows.png",
@@ -2426,7 +2426,7 @@
     {
       "path": "Sources/Winglight/Resources/Models/b789-genx-cxa.mesh",
       "bytes": 110899008,
-      "sha256": "1558be4a3cc68bebf4f6f62552e8face757b2bb765b65e92728b09c24d2a5b47"
+      "sha256": "f78c829bd930dc6235454c9b8313e4a27270478f6206586534e44df3ffb2bfe9"
     },
     {
       "path": "Sources/Winglight/Resources/Models/b789-genx.bvh",
@@ -2436,7 +2436,7 @@
     {
       "path": "Sources/Winglight/Resources/Models/b789-genx.mesh",
       "bytes": 111361344,
-      "sha256": "52c04942dfa4b1a344d8164dbc0355c6a8f30121dc8b2c9f58edc312e7429d8f"
+      "sha256": "e9525ae1cb77e985c37856482f2135a9b92fbbc52e1d9d312def7eea9073b0c0"
     },
     {
       "path": "Sources/Winglight/Resources/Models/b789-trent.bvh",
@@ -2446,7 +2446,7 @@
     {
       "path": "Sources/Winglight/Resources/Models/b789-trent.mesh",
       "bytes": 112012608,
-      "sha256": "f5b862997cfdf6fd34721e452128b56097a7295d8c7b7138babd1888a0cfd884"
+      "sha256": "8313a313281d763b0c9926920b8243526c5be47dc08fb44fc6eb741ef25ee34e"
     },
     {
       "path": "Sources/Winglight/Resources/Models/b78x-genx.bvh",
@@ -2456,7 +2456,7 @@
     {
       "path": "Sources/Winglight/Resources/Models/b78x-genx.mesh",
       "bytes": 111546432,
-      "sha256": "d788d477f188933978ba2997ba7508da46dfe4d2b03eecaeea9c9acb6c9ff2f5"
+      "sha256": "dc58cb7c26f18f55c1e9e451bf0acd133dbe3921e2ba99910b515ee0ba02e98c"
     },
     {
       "path": "Sources/Winglight/Resources/Models/b78x-trent.bvh",
@@ -2466,17 +2466,17 @@
     {
       "path": "Sources/Winglight/Resources/Models/b78x-trent.mesh",
       "bytes": 112197696,
-      "sha256": "33ef88fbcf07a512d457b59fe4150ad50fe91e719dc2104fa8537e94461dabcc"
+      "sha256": "802c0df4b935c0635eac01308d4a6b8d14a3b441c92fcd671aebadbbc850fb28"
     },
     {
       "path": "Sources/Winglight/Resources/Models/boeing.bvh",
-      "bytes": 20011280,
-      "sha256": "01eb272464e98b69888edb442ef063581fb852cbc1e465bd25cc3e7039c276a3"
+      "bytes": 20018192,
+      "sha256": "b50fd9a86322c9906a536f22c1713ce259531bedda3aef338a7695c8a74659e0"
     },
     {
       "path": "Sources/Winglight/Resources/Models/boeing.mesh",
-      "bytes": 78764928,
-      "sha256": "30bef2123b60d0c9a808e2f8163cd8f3067780ac35b9225ba53598d71deb7db6"
+      "bytes": 78801792,
+      "sha256": "adf92266965218d95d1f775c5e216a053e5b4cc53d8684596b5305caf165c8ca"
     },
     {
       "path": "Sources/Winglight/Resources/Textures/AirChina-A320.png",
@@ -2542,8 +2542,8 @@
     },
     {
       "path": "THIRD_PARTY.md",
-      "bytes": 6873,
-      "sha256": "8dc60ff28934bff31590e0cd6860e571f806caa1eacc7d2222c99561092a3ee8"
+      "bytes": 8266,
+      "sha256": "2598c0f6c0b285d261f422377cc9fbe413bea5ffc60fef8ec1fd200c9dd3a6a1"
     },
     {
       "path": "ThirdParty/Licenses/FGMEMBERS_A350XWB/COPYING",
@@ -2752,8 +2752,8 @@
     },
     {
       "path": "ThirdParty/NOTICE.txt",
-      "bytes": 7921,
-      "sha256": "b9b0095353cade1c1099d471795cedc8de7f5555ef87eed27f17a66d81de28c2"
+      "bytes": 8382,
+      "sha256": "a8f89e7775a95ef653a7587418d6365419da4243fba60b8a221b131ce7a22a53"
     }
   ]
 }

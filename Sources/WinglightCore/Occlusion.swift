@@ -8,6 +8,7 @@ public struct AirframeOcclusion: Sendable {
     struct Triangle: Sendable { var a: SIMD3<Float>;var b: SIMD3<Float>;var c: SIMD3<Float> }
     let nodes: [Node]
     let triangles: [Triangle]
+    public var storageByteCount: Int { nodes.count*MemoryLayout<Node>.stride+triangles.count*MemoryLayout<Triangle>.stride }
     public init(data: Data) throws {
         guard data.count>=16,String(data:data.prefix(4),encoding:.ascii)=="WBVH" else { throw CocoaError(.fileReadCorruptFile) }
         let parsed: ([Node],[Triangle]) = try data.withUnsafeBytes { raw in

@@ -15,6 +15,8 @@ import WinglightCore
         state.auditUnlit=CommandLine.arguments.contains("--audit-unlit")
         state.focus=true;state.quality = .balanced;state.flightMotion=false;state.backgroundMotion=true;state.backdrop = .studio;state.qaTime=0.22
         let args=CommandLine.arguments
+        let engines=args.contains("--engine-details") || args.contains("--engine-paints")
+        let engineDetails=args.contains("--engine-details")
         func argument(_ name: String) -> String? { guard let i=args.firstIndex(of:name),args.indices.contains(i+1) else { return nil };return args[i+1] }
         if let value=argument("--environment"),let mode=SkyEnvironment(rawValue:value) { state.environment=mode }
         if let value=argument("--background"),let mode=Backdrop(rawValue:value) { state.backdrop=mode }
@@ -34,7 +36,7 @@ import WinglightCore
         let selected=Livery.catalog.filter { item in
             guard let filter else { return true }
             return filter.split(separator:",").contains { item.id==$0 || item.aircraft==$0 }
-        }.filter { item in !details || assets.insert(item.model ?? item.aircraft).inserted }
+        }.filter { item in !(details || engineDetails) || assets.insert(item.model ?? item.aircraft).inserted }
         for livery in selected {
             guard let aircraft=Aircraft(rawValue:livery.aircraft) else { continue }
             state.select(aircraft);state.livery=livery;state.qaTime=Double(argument("--qa-time") ?? "0.22") ?? 0.22;state.liveryLoading=true
@@ -46,10 +48,27 @@ import WinglightCore
             else if state.liveryLoading { row["error"]="timeout" }
             else {
                 var images=[String]()
-                let angles=details ? ["cockpit-left","cockpit-right","forward-left","forward-right","mid-left","mid-right","aft-left","aft-right","wing-left","wing-right","belly"] : ["left","right","nose","tail"]
+                let angles=engines ? (engineDetails ? ["outer-left","outer-right","front-left","front-right","inner-left","inner-right","rear-left","rear-right","under-left","under-right"] : ["outer-left","outer-right"]) : (details ? ["cockpit-left","cockpit-right","forward-left","forward-right","mid-left","mid-right","aft-left","aft-right","wing-left","wing-right","belly"] : ["left","right","nose","tail"])
                 for angle in angles {
                     state.auditCameraTarget=nil
-                    if details {
+                    if engines,let (buffer,count)=renderer.models[state.assetID] {
+                        let vertices=buffer.contents().bindMemory(to:Float.self,capacity:count*16)
+                        let side: Float=angle.hasSuffix("left") ? -1 : 1
+                        var low=SIMD3<Float>(repeating:.greatestFiniteMagnitude),high = -low
+                        for i in 0..<count where vertices[i*16+15]==6 && vertices[i*16]*side>0 {
+                            let p=SIMD3(vertices[i*16],vertices[i*16+1],vertices[i*16+2]);low=simd_min(low,p);high=simd_max(high,p)
+                        }
+                        let radius=max(high.x-low.x,high.y-low.y)*0.5
+                        var center=(low+high)*0.5;center.z+=radius*1.1
+                        state.setView(.orbit);state.cameraDistance=Double(radius*10);state.cameraPitch=0.08
+                        state.cameraYaw=Double(side)*1.15
+                        if angle.hasPrefix("front") { state.cameraYaw=0;center.z-=radius;state.cameraDistance=Double(radius*6.3) }
+                        if angle.hasPrefix("inner") { state.cameraYaw=Double(-side)*0.65;state.cameraPitch = -0.15 }
+                        if angle.hasPrefix("rear") { state.cameraYaw=Double(side)*2.45;state.cameraPitch = -0.1 }
+                        if angle.hasPrefix("under") { state.cameraPitch = -0.85 }
+                        state.auditCameraTarget=center
+                    }
+                    else if details {
                         let side: Double=angle.hasSuffix("left") ? -1 : 1
                         let length=aircraft.length,width=aircraft.bodyWidth
                         state.setView(.orbit);state.cameraYaw=side * .pi/2;state.cameraPitch=0.08;state.cameraDistance=width*3.3

@@ -90,3 +90,14 @@ them. Fetch recipes no longer request these files. The public catalog contains
 Manufacturer documents cited in `MODEL_ACCURACY.md` and `LIGHTING_REFERENCE.md`
 are references; their diagrams are not bundled. Airline/manufacturer names and
 marks retain their owners' rights and imply no affiliation or endorsement.
+
+## Release 1.5.2
+
+This release adds no third-party artwork or runtime dependency. The new immutable
+Winglight-1.5.2-assets.tar.gz includes all 504 resources, with corrected fan UVs,
+737 rotor alignment and compressor backing. `derived-assets-manifest.json` records
+the 18 binary refinements against the unchanged 1.5.0 pack. Original AC3D/XCF/WebP
+sources, fixed upstream revisions, license texts and credits remain available in
+the tagged source plus its matching pack. The full application bundles the same
+runtime resources and license inventory. Demo music and editorial fonts are not
+included in the distributed application or resource pack.

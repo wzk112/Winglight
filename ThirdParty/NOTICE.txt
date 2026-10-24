@@ -136,3 +136,11 @@ revision supplies no verified license grant. Older local counts above refer
 to historical builds, not this public release. See THIRD_PARTY.md.
 A350XWB explicitly permits GPL version 2 or later in its upstream README.
 All other upstream license grants and author notices remain unchanged.
+
+Model refinements — 2026-10-25
+==============================
+Winglight's conversion recipes preserve native fan UVs, align both 737 donor
+rotors with the calibrated engine axes, and add internal compressor backing.
+Runtime materials smooth A320 intake boundaries and restrict Xiamen projection
+correction to its designated assembly. Original source artwork remains unchanged.
+The 1.5.2 resource pack includes these refinements with per-file SHA-256 checks.

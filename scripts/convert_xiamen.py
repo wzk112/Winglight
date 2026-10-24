@@ -34,7 +34,10 @@ for obj in audit['objects']:
  start=end
 v=v[keep]
 ident='b789-genx-cxa';(m/(ident+'.mesh')).write_bytes(v.tobytes());sys.path.insert(0,str(r/'scripts'));from convert_models import build_bvh;build_bvh(v,m/(ident+'.bvh'))
-info=json.loads((m/'b789-genx.json').read_text());info['id']=ident;info['textureSlots'].append('projection');info['triangles']=len(v)//3;info['vertices']=len(v);info['sha256']=hashlib.sha256(v.tobytes()).hexdigest();info['adaptation']='Original 2K GeoFS side projections on detailed GEnx exterior; approximate UV transfer.';(m/(ident+'.json')).write_text(json.dumps(info,indent=2))
+info=json.loads((m/'b789-genx.json').read_text());info['id']=ident;info['textureSlots'].append('projection');info['triangles']=len(v)//3;info['vertices']=len(v);info['sha256']=hashlib.sha256(v.tobytes()).hexdigest();info['adaptation']='Original 2K GeoFS side projections on detailed GEnx exterior; approximate UV transfer.'
+info['objects']=[o for o in info['objects'] if o['name']!='windows-dim']
+(m/(ident+'.json')).write_text(json.dumps(info,indent=2))
+if '--mesh-only' in sys.argv:sys.exit(0)
 p=r/'Sources/WinglightCore/Resources/Aircraft.json';items=json.loads(p.read_text());items=[q for q in items if q['id']!=ident];items.append({k:info[k] for k in items[0]});p.write_text(json.dumps(items,indent=2))
 sys.path.insert(0,str(r/'scripts'));import fetch_widebody_liveries as fetch
 paint,ps=fetch.fetch('787','Models/787-9.png');engine,es=fetch.fetch('787','Models/Liveries-engines/GEnx.png');wing,ws=fetch.fetch('787','Models/wings.png')
